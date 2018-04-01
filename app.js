@@ -122,11 +122,12 @@ bot.on('ready', () => {
 	bossChannel.fetchMessages({ limit: 1})
 	.then(messages => {
 		const fetchedMsg = messages.first(); 
-		fetchedMsg.delete();
+		if (fetchedMsg) {fetchedMsg.delete();}else{console.log('cant delete message, there is no message to delete');}
+		
 	});
 
 
-	bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# كزاركا - Kzarka  \n <المتوقع: "+kzTime+" >                             "+kzDone+" \n\n# بهق - Bheg  \n <المتوقع: "+bhTime+" >                             "+bhDone+" \n\n# ابو خشم احمر - Red Nose  \n <المتوقع: "+rnTime+" >                             "+rnDone+" \n\n# الشجرة - Dim Tree Spirit  \n <المتوقع: "+dtTime+" >                             "+dtDone+" \n\n# ابو الوحل - Giant Mudster  \n <المتوقع: "+mdTime+" >                             "+mdDone+" ``` \n\n** التحديث مباشر **");
+	bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Kzarka  \n <المتوقع: "+kzTime+" >                             "+kzDone+" \n\n# Bheg  \n <المتوقع: "+bhTime+" >                             "+bhDone+" \n\n# Red Nose  \n <المتوقع: "+rnTime+" >                             "+rnDone+" \n\n# Dim Tree Spirit  \n <المتوقع: "+dtTime+" >                             "+dtDone+" \n\n#  Giant Mudster  \n <المتوقع: "+mdTime+" >                             "+mdDone+" ``` \n\n** التحديث مباشر **");
 	  bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 	  bossHrs.dastardBheg.bhHrs = moment.duration(bh - now).humanize();
 	  bossHrs.dimTreeSpirit.dtHrs = moment.duration(dt - now).humanize();
