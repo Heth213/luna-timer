@@ -118,11 +118,14 @@ bot.on('ready', () => {
 	if (bossHrs.kzarka.kzHrs !== kzAfter || bossHrs.dastardBheg.bhHrs !== bhAfter || bossHrs.dimTreeSpirit.dtHrs !== dtAfter || bossHrs.giantMudster.mdHrs !== mdAfter || bossHrs.redNose.rnHrs !== rnAfter){
 	var bossChannel = bot.channels.get('429950207250137088');  //#timers [Lunarium]
 	//deleting & sending embed 
+	if (bossChannel) {
 	bossChannel.fetchMessages({ limit: 1})
 	.then(messages => {
 		const fetchedMsg = messages.first(); 
 		fetchedMsg.delete();
 	});
+
+}else{console.log('no channel?');}
 	bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# كزاركا - Kzarka  \n <المتوقع: "+kzTime+" >                             "+kzDone+" \n\n# بهق - Bheg  \n <المتوقع: "+bhTime+" >                             "+bhDone+" \n\n# ابو خشم احمر - Red Nose  \n <المتوقع: "+rnTime+" >                             "+rnDone+" \n\n# الشجرة - Dim Tree Spirit  \n <المتوقع: "+dtTime+" >                             "+dtDone+" \n\n# ابو الوحل - Giant Mudster  \n <المتوقع: "+mdTime+" >                             "+mdDone+" ``` \n\n** التحديث مباشر **");
 	  bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 	  bossHrs.dastardBheg.bhHrs = moment.duration(bh - now).humanize();
