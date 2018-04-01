@@ -125,17 +125,19 @@ bot.on('ready', () => {
 		fetchedMsg.delete();
 	});
 
-}else{console.log('no channel?');}
+
 	bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# كزاركا - Kzarka  \n <المتوقع: "+kzTime+" >                             "+kzDone+" \n\n# بهق - Bheg  \n <المتوقع: "+bhTime+" >                             "+bhDone+" \n\n# ابو خشم احمر - Red Nose  \n <المتوقع: "+rnTime+" >                             "+rnDone+" \n\n# الشجرة - Dim Tree Spirit  \n <المتوقع: "+dtTime+" >                             "+dtDone+" \n\n# ابو الوحل - Giant Mudster  \n <المتوقع: "+mdTime+" >                             "+mdDone+" ``` \n\n** التحديث مباشر **");
 	  bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 	  bossHrs.dastardBheg.bhHrs = moment.duration(bh - now).humanize();
 	  bossHrs.dimTreeSpirit.dtHrs = moment.duration(dt - now).humanize();
 	  bossHrs.giantMudster.mdHrs = moment.duration(md - now).humanize();
 	  bossHrs.redNose.rnHrs = moment.duration(rn - now).humanize();
-	}else{}
-}else{
+	}else{console.log('no channel?');} // IF BOSS CHANNEL EXIST
+	}else{} //IF TIMES - NOT EQUAL TO AFTER
+}else{//IF TIMES - IS NULL
 	console.log('all null');
 }
+
 };
 
 
