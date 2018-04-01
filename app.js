@@ -127,7 +127,7 @@ bot.on('ready', () => {
 	});
 
 
-	bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Kzarka  \n <المتوقع: "+kzTime+" >                             "+kzDone+" \n\n# Bheg  \n <المتوقع: "+bhTime+" >                             "+bhDone+" \n\n# Red Nose  \n <المتوقع: "+rnTime+" >                             "+rnDone+" \n\n# Dim Tree Spirit  \n <المتوقع: "+dtTime+" >                             "+dtDone+" \n\n#  Giant Mudster  \n <المتوقع: "+mdTime+" >                             "+mdDone+" ``` \n\n** التحديث مباشر **");
+	bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Kzarka  \n <المتوقع: "+kzTime+">                             "+kzDone+" \n\n# Bheg  \n <المتوقع: "+bhTime+">                             "+bhDone+" \n\n# Red Nose  \n <المتوقع: "+rnTime+">                             "+rnDone+" \n\n# Dim Tree Spirit  \n <المتوقع: "+dtTime+">                             "+dtDone+" \n\n# Giant Mudster  \n <المتوقع: "+mdTime+">                             "+mdDone+" ``` \n\n** التحديث مباشر **");
 	  bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 	  bossHrs.dastardBheg.bhHrs = moment.duration(bh - now).humanize();
 	  bossHrs.dimTreeSpirit.dtHrs = moment.duration(dt - now).humanize();
