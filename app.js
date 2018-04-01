@@ -90,24 +90,24 @@ bot.on('ready', () => {
 	 var mdAfter = moment.duration(md - now).humanize();
 	 var rnAfter = moment.duration(rn - now).humanize();
 	 if (kz > now) {
-	 	var kzDone = '[-](بعد ' + kzAfter + ')\n <البداية: '+kzSliced2+'>\n\n';}
-	 	else {kzDone = '[سيظهر قريبا](-)[الحد الاقصى: '+kzSliced+']\n\n';}
+	 	var kzDone = '[-](بعد ' + kzAfter + ')\n <البداية: '+kzSliced2+'>\n';}
+	 	else {kzDone = '[سيظهر قريبا](-)[الحد الاقصى: '+kzSliced+']\n';}
 
 	 	if (bh > now) {
-	 		var bhDone = '[-](بعد ' + bhAfter+ ')\n <البداية: '+bhSliced2+'>\n\n';}
-	 		else {bhDone = '[سيظهر قريبا](-)[الحد الاقصى: '+bhSliced+']\n\n';}
+	 		var bhDone = '[-](بعد ' + bhAfter+ ')\n <البداية: '+bhSliced2+'>\n';}
+	 		else {bhDone = '[سيظهر قريبا](-)[الحد الاقصى: '+bhSliced+']\n';}
 
 	 		if (dt > now) {
-	 			var dtDone = '[-](بعد ' + dtAfter+ ')\n <البداية: '+dtSliced2+'>\n\n';}
-	 			else {dtDone = '[سيظهر قريبا](-)[الحد الاقصى: '+dtSliced+']\n\n';}
+	 			var dtDone = '[-](بعد ' + dtAfter+ ')\n <البداية: '+dtSliced2+'>\n';}
+	 			else {dtDone = '[سيظهر قريبا](-)[الحد الاقصى: '+dtSliced+']\n';}
 
 	 			if (md > now) {
-	 				var mdDone = '[-](بعد ' + mdAfter+ ')\n <البداية: '+mdSliced2+'>\n\n';}
-	 				else {mdDone = '[سيظهر قريبا](-)[الحد الاقصى: '+mdSliced+']\n\n';}
+	 				var mdDone = '[-](بعد ' + mdAfter+ ')\n <البداية: '+mdSliced2+'>\n';}
+	 				else {mdDone = '[سيظهر قريبا](-)[الحد الاقصى: '+mdSliced+']\n';}
 
 	 				if (rn > now) {
-	 					var rnDone = '[-](بعد ' + rnAfter+ ')\n <البداية: '+rnSliced2+'>\n\n';}
-	 					else {rnDone = '[سيظهر قريبا](-)[الحد الاقصى: '+rnSliced+']\n\n';}
+	 					var rnDone = '[-](بعد ' + rnAfter+ ')\n <البداية: '+rnSliced2+'>\n';}
+	 					else {rnDone = '[سيظهر قريبا](-)[الحد الاقصى: '+rnSliced+']\n';}
 
 
 
