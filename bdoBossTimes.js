@@ -19,6 +19,9 @@ function retrieveTimeData(){
                         kzarkaNext = $("table").next().next().next().next().next().find("tbody > tr").next().next().find("td").next().html();
 						kzarkaEst = $("table").next().next().next().next().next().find("tbody > tr").next().next().next().find("td").next().html();
 						
+						kutumNext = $("table").find("tbody > tr").next().next().find("td").next().html();
+						kutumEst = $("table").find("tbody > tr").next().next().next().find("td").next().html();
+						
 						bhegNext = $("table").next().find("tbody > tr").next().next().find("td").next().html();
 						bhegEst = $("table").next().find("tbody > tr").next().next().next().find("td").next().html();
 						
@@ -33,6 +36,10 @@ function retrieveTimeData(){
 
 							module.exports.kzarkaN = kzarkaNext;
 							module.exports.kzarkaT = kzarkaEst;
+							
+							
+							module.exports.kutumN = kutumNext;
+							module.exports.kutumT = kutumEst;
 				
 							module.exports.bhegN = bhegNext;
 							module.exports.bhegT = bhegEst;
