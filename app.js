@@ -239,6 +239,12 @@ bot.on('message', async message => {
  
             }else{message.channel.send('WRONG CHANNEL ID');};
 	}
+    
+           function sleep(ms){
+    return new Promise(resolve=>{
+        setTimeout(resolve,ms)
+    })
+}
 
 });
 //Login Bot User
