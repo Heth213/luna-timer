@@ -210,6 +210,11 @@ bot.on('message', async message => {
 	   }
        }else{};
        
+           	if (command === 'voice-all') {
+                 if (message.member.roles.find("name", "Lunarium Officer")){
+		voiceAll();
+                 }else{message.channel.send('لا تملك الصلاحية');}
+	};
     
     if (command === 'voice') {
            if (message.member.roles.find("name", "Lunarium Officer")){
@@ -273,6 +278,15 @@ bot.on('message', async message => {
  
             }else{};
 	}
+    
+               function voiceAll() {
+		var vChannel = bot.channels;
+       for (let [snowflake, Channel] of vChannel){
+           if (Channel.type == "voice"){
+           voiceMembers(Channel.id);
+           }
+	}
+           }
     
     
            function sleep(ms){
