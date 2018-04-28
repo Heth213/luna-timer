@@ -181,6 +181,65 @@ setTimeout(sendBossTimers, 15000);
    };
    settheGame();
 
+bot.on('message', async message => {
+    const prefix = "%";
+   	const args = message.content.slice(prefix.length).trim().split(/ +/g);
+   	const command = args.shift().toLowerCase();
 
+   	if(message.author.bot) return;
+   	if(message.content.indexOf(prefix) !== 0) return;
+    
+    
+    
+    if (command === 'voice') {
+           if (message.member.roles.find("name", "Lunarium Officer")){
+           
+              if (isNaN(args[0])){
+			message.channel.send('voice channel ID please.');
+			return;
+		}
+		if(args[0]){
+			voiceMembers(args[0])
+            if (args[1]){voiceMembers(args[1])}
+            if (args[2]){voiceMembers(args[2])}
+            if (args[3]){voiceMembers(args[3])}
+            if (args[4]){voiceMembers(args[4])}
+            if (args[5]){voiceMembers(args[5])}
+            if (args[6]){voiceMembers(args[6])}
+		}else{
+			message.reply("voice channel ID please.")
+		}
+           
+       
+		
+	   }
+       }else{message.channel.send('لا تملك الصلاحية');};
+    
+    
+    
+       //get members in voice channel ID
+       	async function voiceMembers(ChID) {
+		var vChannel = bot.channels.get(ChID);
+            if (vChannel){
+                message.channel.send('Voice Channel: ' + vChannel);
+            var vMembers = vChannel.members;
+                if (vMembers){
+            for (let [snowflake, guildMember] of vMembers)
+            {
+                var array = [];
+                array.push('<@'+guildMember.user.id+'>'); 
+                message.channel.send('<@'+guildMember.user.id+'>'); 
+                await sleep(850);
+                
+            }     
+                    message.channel.send('العدد: ' + array.length);
+                    
+                }
+                
+ 
+            }else{message.channel.send('WRONG CHANNEL ID');};
+	}
+
+});
 //Login Bot User
 bot.login(process.env.B0T_ToKEN);
