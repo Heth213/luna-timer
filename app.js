@@ -184,12 +184,32 @@ setTimeout(sendBossTimers, 15000);
 bot.on('message', async message => {
     const prefix = "%";
    	const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const arg = message.content.slice(prefix.length).split("+");
    	const command = args.shift().toLowerCase();
 
    	if(message.author.bot) return;
    	if(message.content.indexOf(prefix) !== 0) return;
     
-    
+          if (command === 'vname') {
+ if (message.member.roles.find("name", "Lunarium Officer")){
+           
+		if(arg[0]){
+			voiceNMembers(arg[0])
+            if (arg[1]){voiceNMembers(arg[1])}
+            if (arg[2]){voiceNMembers(arg[2])}
+            if (arg[3]){voiceNMembers(arg[3])}
+            if (arg[4]){voiceNMembers(arg[4])}
+            if (arg[5]){voiceNMembers(arg[5])}
+            if (arg[6]){voiceNMembers(arg[6])}
+		}else{
+			message.reply("voice channel ID please.")
+		}
+           
+       
+		
+	   }
+       }else{};
+       
     
     if (command === 'voice') {
            if (message.member.roles.find("name", "Lunarium Officer")){
@@ -218,27 +238,42 @@ bot.on('message', async message => {
     
     
        //get members in voice channel ID
-       	async function voiceMembers(ChID) {
+       	  async function voiceMembers(ChID) {
 		var vChannel = bot.channels.get(ChID);
             if (vChannel){
-                message.channel.send('Voice Channel: ' + vChannel);
             var vMembers = vChannel.members;
                 if (vMembers){
             for (let [snowflake, guildMember] of vMembers)
             {
-                var array = [];
-                array.push('<@'+guildMember.user.id+'>'); 
                 message.channel.send('<@'+guildMember.user.id+'>'); 
-                await sleep(850);
+                await sleep(1000);
                 
             }     
-                    message.channel.send('العدد: ' + array.length);
                     
                 }
                 
  
             }else{message.channel.send('WRONG CHANNEL ID');};
 	}
+    
+            async function voiceNMembers(ChN) {
+		var vChannel = bot.channels.find("name", ChN);
+            if (vChannel){
+            var vMembers = vChannel.members;
+                if (vMembers){
+            for (let [snowflake, guildMember] of vMembers)
+            {
+                message.channel.send('<@'+guildMember.user.id+'>'); 
+                await sleep(1000);
+                
+            }     
+                    
+                }
+                
+ 
+            }else{};
+	}
+    
     
            function sleep(ms){
     return new Promise(resolve=>{
