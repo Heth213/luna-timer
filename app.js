@@ -137,7 +137,7 @@ bot.on('ready', () => {
 	});
 
 
-	bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Kzarka  \n <المتوقع: "+kzTime+">                          "+kzDone+"\n# Kutum  \n <المتوقع: "+kuTime+">                          "+kuDone+" \n# Bheg  \n <المتوقع: "+bhTime+">                          "+bhDone+" \n# Red Nose  \n <المتوقع: "+rnTime+">                          "+rnDone+" \n# Dim Tree Spirit  \n <المتوقع: "+dtTime+">                          "+dtDone+" \n# Giant Mudster  \n <المتوقع: "+mdTime+">                          "+mdDone+" ``` \n** التحديث مباشر **");
+	bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Kzarka  \n <المتوقع: "+kzTime+">                          "+kzDone+"\n# Kutum  \n <المتوقع: "+kuTime+">                          "+kuDone+" \n# Bheg  \n <المتوقع: "+bhTime+">                          "+bhDone+" \n# Red Nose  \n <المتوقع: "+rnTime+">                          "+rnDone+" \n# Dim Tree Spirit  \n <المتوقع: "+dtTime+">                          "+dtDone+" \n# Giant Mudster  \n <المتوقع: "+mdTime+">                          "+mdDone+" ``` \n المصدر: <https://goo.gl/812LxH>  \n نسخة الويب: <http://lunarium-bdo.com/Apps/Bosses/> ");
 	  bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 	  	  bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
 	  bossHrs.dastardBheg.bhHrs = moment.duration(bh - now).humanize();
