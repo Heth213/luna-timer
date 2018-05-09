@@ -220,7 +220,6 @@ settheGame();
 bot.on('message', async message => {
 	const prefix = "%";
 	const args = message.content.slice(prefix.length).trim().split(/ +/g);
-	const arg = message.content.slice(prefix.length).split(/++/g);
 	const command = args.shift().toLowerCase();
 
 	if (message.author.bot) return;
@@ -229,8 +228,8 @@ bot.on('message', async message => {
 	if (command === 'purge') {
 		if (message.member.roles.find("name", "Lunarium Officer")) {
 
-			if (arg[0]) {
-				Purge(arg[0]);
+			if (args[0]) {
+				Purge(args[0]);
 			} else {
 				message.reply("اكتب عدد الرسائل الذي تريد مسحها")
 			}
