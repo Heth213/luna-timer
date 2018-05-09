@@ -193,7 +193,7 @@ function sendBossTimers() {
 
 
 
-	setTimeout(sendBossTimers, 15000);
+	setTimeout(sendBossTimers, 60000);
 } //end of func
 sendBossTimers();
 
@@ -213,7 +213,7 @@ function settheGame() {
 
 
 	};
-	setTimeout(settheGame, 60000);
+	setTimeout(settheGame, 160000);
 };
 settheGame();
 
