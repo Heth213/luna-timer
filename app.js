@@ -229,6 +229,7 @@ bot.on('message', async message => {
 		if (message.member.roles.find("name", "Lunarium Officer")) {
 
 			if (args[0]) {
+				message.delete();
 				Purge(args[0]);
 			} else {
 				message.reply("اكتب عدد الرسائل الذي تريد مسحها")
@@ -240,10 +241,8 @@ bot.on('message', async message => {
 	}
 
 	function Purge(num) {
-
-		message.channel.bulkDelete(num).then(() => {
-			message.channel.send("تم الحذف.").then(msg => msg.delete(3000));
-		  });
+		
+		message.channel.bulkDelete(num).catch(error => console.log('error deleted messages'));
 
 		// message.channel.fetchMessages({
 		// 		limit: num
