@@ -154,7 +154,7 @@ function sendBossTimers() {
 
 		if (bossHrs.kzarka.kzHrs != null && bossHrs.kutum.kuHrs != null && bossHrs.dastardBheg.bhHrs != null && bossHrs.dimTreeSpirit.dtHrs != null && bossHrs.giantMudster.mdHrs != null && bossHrs.redNose.rnHrs != null) {
 			if (bossHrs.kzarka.kzHrs !== kzAfter || bossHrs.kutum.kzHrs !== kuAfter || bossHrs.dastardBheg.bhHrs !== bhAfter || bossHrs.dimTreeSpirit.dtHrs !== dtAfter || bossHrs.giantMudster.mdHrs !== mdAfter || bossHrs.redNose.rnHrs !== rnAfter) {
-				var bossChannel = bot.channels.get('429950207250137088'); //#timers [Lunarium]
+				var bossChannel = bot.channels.get('443588073603858433'); //#timers [Lunarium]
 				//deleting & sending embed 
 				if (bossChannel) {
 					bossChannel.fetchMessages({
@@ -240,15 +240,27 @@ bot.on('message', async message => {
 	}
 
 	function Purge(num) {
-		message.channel.fetchMessages({
-				limit: num
-			})
-			.then(messages => {
-				const fetchedMsg = messages.first();
-				fetchedMsg.delete();
-			});
 
+		message.channel.bulkDelete(num).then(() => {
+			message.channel.send("تم الحذف.").then(msg => msg.delete(3000));
+		  });
+
+		// message.channel.fetchMessages({
+		// 		limit: num
+		// 	})
+		// 	.then(messages => {
+		// 		const fetchedMsg = messages.first();
+		// 		fetchedMsg.delete();
+		// 	});
 	}
+
+
+
+
+
+
+
+
 	//           if (command === 'vname') {
 	//  if (message.member.roles.find("name", "Lunarium Officer")){
 
