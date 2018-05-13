@@ -171,7 +171,7 @@ function sendBossTimers() {
 						});
 
 
-					bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Kzarka  \n <المتوقع: " + kzTime + ">                          " + kzDone + "\n# Kutum  \n <المتوقع: " + kuTime + ">                          " + kuDone + " \n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` \n المصدر: <https://goo.gl/812LxH>  \n نسخة الويب: <http://lunarium-bdo.com/Apps/Bosses/> ");
+					bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Kzarka  \n <المتوقع: " + kzTime + ">                          " + kzDone + "\n# Kutum  \n <المتوقع: " + kuTime + ">                          " + kuDone + " \n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` \n المصدر: <https://goo.gl/812LxH>  \n نسخة الويب: <http://lunarium-bdo.com/BDO/Apps/Bosses/> ");
 					bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 					bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
 					bossHrs.dastardBheg.bhHrs = moment.duration(bh - now).humanize();
@@ -236,12 +236,12 @@ bot.on('message', async message => {
 			}
 
 
-			
+
 		}
 	}
 
 	function Purge(num) {
-		
+
 		message.channel.bulkDelete(num).catch(error => console.log('error deleted messages'));
 
 		// message.channel.fetchMessages({
