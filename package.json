@@ -10,6 +10,7 @@
     "cheerio": "1.0.0-rc.2",
     "discord.js": "11.2.1",
     "request": "2.82.0",
-    "moment": "2.20.1"
+    "moment": "2.20.1",
+    "later": "1.2.0"
   }
 }

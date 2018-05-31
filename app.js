@@ -4,7 +4,9 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 //var emitter = require('./emitter');
 var bossTime = require('./bdoBossTimes')
+var timers = require('./Addons/LT/laterTimer');
 var moment = require('moment');
+var later = require('later');
 
 /////////////////////////////////////////
 ////Discord Bot
@@ -14,6 +16,77 @@ bot.on('ready', () => {
 
 	console.log('Online...');
 });
+
+
+
+
+
+//World Boss TIMERS STUFF
+function randomColorOut() {
+	var colors = [0xe44d5b,0x4aba69,0xa528bc,0x12137d,0xbddf1f,0x240c48,0xee37ae,0x6ab5be,0x8ef556,0xe1add5,0x089b30,0xccdc6c,0x4bd591,0x4610f6,0xa51dd9,0x4fde33,0x17b173,0xbb3002,0xe70bc5,0x668045,0xd17a37,0x2ddfac,0x926ff0];
+	var rnumber = Math.floor(Math.random() * colors.length);
+	return colors[rnumber];
+}
+
+
+//World Boss TIMERS STUFF
+function timerFeed(cond,chID) {
+
+	var generalChannel = bot.channels.get(chID);  //220663535854813195 -> General
+
+	for(var i=0; i<timers.t.timez.length ;i++){
+		// console.log("cond: "+cond+" "+timers.t.timez[i].name + "< Name Info >" + timers.t.timez[i].info);
+		if(timers.t.timez[i].name == cond){
+			generalChannel.send('<@&392042343517388800>');
+			// console.log(`name: ${timers.t.timez[i].name} time: ${timers.t.timez[i].time} info: ${timers.t.timez[i].info}`);
+			
+			generalChannel.send({embed: {
+				color: randomColorOut(),
+				author: {
+					name: timers.t.timez[i].info,
+					icon_url: timers.t.timez[i].img
+				  }
+			  }});
+			  
+		}
+	}
+  }
+
+//ADD World Boss TIMERS IN Addons/LT/timers.txt DONT TOUCH THIS
+  var timer_Timers = setTimeout(getTimers, 1000)
+  var timerLaterobj = [];
+	function getTimers() {
+		if(timers.allTimersReady === true){
+			later.date.UTC();
+			for(var i=0; i<timers.t.timez.length ;i++){
+				timerLaterobj[i] = timers.dailyTimes[i];
+				setIntvs(timers.t.timez[i].name, timers.t.timez[i].channelID , timerLaterobj[i]);
+			}
+			console.log('boss timers has been set');
+			clearTimeout(timer_Timers);
+		}
+	}
+
+function setIntvs(condis,chID , laterobj) {
+	later.setInterval(function() { timerFeed(condis, chID);} , laterobj);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 var bossHrs = {
@@ -171,7 +244,7 @@ function sendBossTimers() {
 						});
 
 
-					bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Kzarka  \n <المتوقع: " + kzTime + ">                          " + kzDone + "\n# Kutum  \n <المتوقع: " + kuTime + ">                          " + kuDone + " \n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` \n المصدر: <https://goo.gl/812LxH>  \n نسخة الويب: <http://lunarium-bdo.com/BDO/Apps/Bosses/> ");
+					bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` \n المصدر: <https://goo.gl/812LxH>  \n نسخة الويب: <http://lunarium-bdo.com/BDO/Apps/Bosses/> \n مواعيد زعماء العالم: https://i.imgur.com/IsvaTW4.png ");
 					bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 					bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
 					bossHrs.dastardBheg.bhHrs = moment.duration(bh - now).humanize();
@@ -201,14 +274,14 @@ sendBossTimers();
 
 //setting the bot's game name :)
 function settheGame() {
-	if (!bossTime.kzarkaT) {
-		console.log("kzarka time is undefined");
+	if (!bossTime.dtT) {
+		console.log("dimtree time is undefined");
 
 	} else {
 
-		let kzTime = bossTime.kzarkaT.slice(8, -6);
+		let dtTime = bossTime.dtT.slice(8, -6);
 
-		bot.user.setGame("توقع كزاركا: " + kzTime.trim());
+		bot.user.setGame("توقع الشجرة: " + dtTime.trim());
 
 
 
@@ -224,6 +297,10 @@ bot.on('message', async message => {
 
 	if (message.author.bot) return;
 	if (message.content.indexOf(prefix) !== 0) return;
+
+	if (command === 'test3983742') {
+		timerFeed("kzarka10p1","375285109701738496")
+	}
 
 	if (command === 'purge') {
 		if (message.member.roles.find("name", "Lunarium Officer")) {
