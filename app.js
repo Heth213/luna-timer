@@ -298,9 +298,9 @@ bot.on('message', async message => {
 	if (message.author.bot) return;
 	if (message.content.indexOf(prefix) !== 0) return;
 
-	if (command === 'test3983742') {
-		timerFeed("kzarka10p1","375285109701738496")
-	}
+	// if (command === 'test3983742') {
+	// 	timerFeed("kzarka10p1","375285109701738496")
+	// }
 
 	if (command === 'purge') {
 		if (message.member.roles.find("name", "Lunarium Officer")) {

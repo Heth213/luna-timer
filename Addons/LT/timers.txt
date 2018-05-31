@@ -21,6 +21,13 @@
 			"img":"http://urzasarchives.com/wp-content/uploads/wbt_kutum.png"
 		},
 		{
+			"name": "test10p1",
+			"commandParser": "at 14:28 on Thursday",
+			"channelID": "375285109701738496",
+			"info": "[Test10p1] تمت التجربة بنجاح",
+			"img":"http://urzasarchives.com/wp-content/uploads/wbt_kutum.png"
+		},
+		{
 			"name": "kutum10p2",
 			"commandParser": "at 12:50 also at 22:50 on Monday,Wednesday,Friday and Sunday",
 			"channelID": "375285109701738496",
