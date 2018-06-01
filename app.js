@@ -118,36 +118,37 @@ var bossHrs = {
 
 //bot timer stuff
 function sendBossTimers() {
-	if (!bossTime.kutumT && !bossTime.kzarkaT && !bossTime.bhegT && !bossTime.dtT && !bossTime.mudT && !bossTime.rnT) {
+	//!bossTime.kutumT && !bossTime.kzarkaT &&
+	if (!bossTime.bhegT && !bossTime.dtT && !bossTime.mudT && !bossTime.rnT) {
 		console.log("Not all times ready.");
 
 	} else {
 
 
-		kzTrimed = bossTime.kzarkaN.trim();
-		kuTrimed = bossTime.kutumN.trim();
+		// kzTrimed = bossTime.kzarkaN.trim();
+		// kuTrimed = bossTime.kutumN.trim();
 		bhTrimed = bossTime.bhegN.trim();
 		dtTrimed = bossTime.dtN.trim();
 		mdTrimed = bossTime.mudN.trim();
 		rnTrimed = bossTime.rnN.trim();
 
-		kzSliced = kzTrimed.slice(22, -4);
-		kuSliced = kuTrimed.slice(22, -4);
+		// kzSliced = kzTrimed.slice(22, -4);
+		// kuSliced = kuTrimed.slice(22, -4);
 		bhSliced = bhTrimed.slice(22, -4);
 		dtSliced = dtTrimed.slice(22, -4);
 		mdSliced = mdTrimed.slice(22, -4);
 		rnSliced = rnTrimed.slice(22, -4);
 
-		kzSliced2 = kzTrimed.slice(0, -21);
-		kuSliced2 = kuTrimed.slice(0, -21);
+		// kzSliced2 = kzTrimed.slice(0, -21);
+		// kuSliced2 = kuTrimed.slice(0, -21);
 		bhSliced2 = bhTrimed.slice(0, -21);
 		dtSliced2 = dtTrimed.slice(0, -21);
 		mdSliced2 = mdTrimed.slice(0, -21);
 		rnSliced2 = rnTrimed.slice(0, -21);
 
 		//get all times and silce the shit out of them
-		let kzTime = bossTime.kzarkaT.slice(3, -6);
-		let kuTime = bossTime.kutumT.slice(3, -6);
+		// let kzTime = bossTime.kzarkaT.slice(3, -6);
+		// let kuTime = bossTime.kutumT.slice(3, -6);
 		let bhTime = bossTime.bhegT.slice(3, -6);
 		let dtTime = bossTime.dtT.slice(3, -6);
 		let mdTime = bossTime.mudT.slice(3, -6);
@@ -159,74 +160,69 @@ function sendBossTimers() {
 		//render numbers/days in english
 		moment.locale('en');
 		var serverTime = moment().add(3, 'hours').format("ddd, HH:mm");
-		//console.log('serverTime: '+ serverTime);
 		let now = moment(serverTime, 'ddd, HH:mm');
-		let kz = moment(kzTime, 'ddd, HH:mm');
-		let ku = moment(kuTime, 'ddd, HH:mm');
+		// let kz = moment(kzTime, 'ddd, HH:mm');
+		// let ku = moment(kuTime, 'ddd, HH:mm');
 		let bh = moment(bhTime, 'ddd, HH:mm');
 		let dt = moment(dtTime, 'ddd, HH:mm');
 		let md = moment(mdTime, 'ddd, HH:mm');
 		let rn = moment(rnTime, 'ddd, HH:mm');
-		// console.log('now :' + now);
-		// 	console.log('kz :' + kz);
-		// 		console.log('bh :' + bh);
-		// 			console.log('dt :' + dt);
-		// 				console.log('md :' + md);
-		// 					console.log('rn :' + rn);
+
 
 
 		//making it render in arabic
 		moment.locale('ar');
 		//checks everything
-		var kzAfter = moment.duration(kz - now).humanize();
-		var kuAfter = moment.duration(ku - now).humanize();
+		// var kzAfter = moment.duration(kz - now).humanize();
+		// var kuAfter = moment.duration(ku - now).humanize();
 		var bhAfter = moment.duration(bh - now).humanize();
 		var dtAfter = moment.duration(dt - now).humanize();
 		var mdAfter = moment.duration(md - now).humanize();
 		var rnAfter = moment.duration(rn - now).humanize();
-		if (kz > now) {
-			var kzDone = '[-](بعد ' + kzAfter + ')\n <البداية: ' + kzSliced2 + '>\n';
-		} else {
-			kzDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + kzSliced + ']\n';
-		}
+		// if (kz > now) {
+		// 	var kzDone = '[-](بعد ' + kzAfter + ')\n <البداية: ' + kzSliced2 + '>\n';
+		// } else {
+		// 	kzDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + kzSliced + ']\n';
+		// }
 
-		if (ku > now) {
-			var kuDone = '[-](بعد ' + kuAfter + ')\n <البداية: ' + kuSliced2 + '>\n';
-		} else {
-			kuDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + kuSliced + ']\n';
-		}
+		// if (ku > now) {
+		// 	var kuDone = '[-](بعد ' + kuAfter + ')\n <البداية: ' + kuSliced2 + '>\n';
+		// } else {
+		// 	kuDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + kuSliced + ']\n';
+		// }
 
 		if (bh > now) {
 			var bhDone = '[-](بعد ' + bhAfter + ')\n <البداية: ' + bhSliced2 + '>\n';
 		} else {
-			bhDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + bhSliced + ']\n';
+			var bhDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + bhSliced + ']\n';
 		}
 
 		if (dt > now) {
 			var dtDone = '[-](بعد ' + dtAfter + ')\n <البداية: ' + dtSliced2 + '>\n';
 		} else {
-			dtDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + dtSliced + ']\n';
+			var dtDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + dtSliced + ']\n';
 		}
 
 		if (md > now) {
 			var mdDone = '[-](بعد ' + mdAfter + ')\n <البداية: ' + mdSliced2 + '>\n';
 		} else {
-			mdDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + mdSliced + ']\n';
+			var mdDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + mdSliced + ']\n';
 		}
 
 		if (rn > now) {
 			var rnDone = '[-](بعد ' + rnAfter + ')\n <البداية: ' + rnSliced2 + '>\n';
 		} else {
-			rnDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + rnSliced + ']\n';
+			var rnDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + rnSliced + ']\n';
 		}
 
 
 
 		// SEND TO CHANNEL
 		//set channel id
-
-		if (bossHrs.kzarka.kzHrs != null && bossHrs.kutum.kuHrs != null && bossHrs.dastardBheg.bhHrs != null && bossHrs.dimTreeSpirit.dtHrs != null && bossHrs.giantMudster.mdHrs != null && bossHrs.redNose.rnHrs != null) {
-			if (bossHrs.kzarka.kzHrs !== kzAfter || bossHrs.kutum.kzHrs !== kuAfter || bossHrs.dastardBheg.bhHrs !== bhAfter || bossHrs.dimTreeSpirit.dtHrs !== dtAfter || bossHrs.giantMudster.mdHrs !== mdAfter || bossHrs.redNose.rnHrs !== rnAfter) {
+		//bossHrs.kzarka.kzHrs != null && bossHrs.kutum.kuHrs != null &&
+		//bossHrs.kzarka.kzHrs !== kzAfter || bossHrs.kutum.kzHrs !== kuAfter ||
+		if ( bossHrs.dastardBheg.bhHrs != null && bossHrs.dimTreeSpirit.dtHrs != null && bossHrs.giantMudster.mdHrs != null && bossHrs.redNose.rnHrs != null) {
+			if ( bossHrs.dastardBheg.bhHrs !== bhAfter || bossHrs.dimTreeSpirit.dtHrs !== dtAfter || bossHrs.giantMudster.mdHrs !== mdAfter || bossHrs.redNose.rnHrs !== rnAfter) {
 				var bossChannel = bot.channels.get('443588073603858433'); //#timers [Lunarium]
 				//deleting & sending embed 
 				if (bossChannel) {
@@ -245,8 +241,8 @@ function sendBossTimers() {
 
 
 					bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` \n المصدر: <https://goo.gl/812LxH>  \n نسخة الويب: <http://lunarium-bdo.com/BDO/Apps/Bosses/> \n مواعيد زعماء العالم: https://i.imgur.com/IsvaTW4.png ");
-					bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
-					bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
+					// bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
+					// bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
 					bossHrs.dastardBheg.bhHrs = moment.duration(bh - now).humanize();
 					bossHrs.dimTreeSpirit.dtHrs = moment.duration(dt - now).humanize();
 					bossHrs.giantMudster.mdHrs = moment.duration(md - now).humanize();
@@ -436,11 +432,11 @@ bot.on('message', async message => {
 	//        }
 
 
-	function sleep(ms) {
-		return new Promise(resolve => {
-			setTimeout(resolve, ms)
-		});
-	}
+	// function sleep(ms) {
+	// 	return new Promise(resolve => {
+	// 		setTimeout(resolve, ms)
+	// 	});
+	// }
 
 });
 //Login Bot User
