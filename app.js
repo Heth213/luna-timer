@@ -240,7 +240,7 @@ function sendBossTimers() {
 						});
 
 
-					bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` \n المصدر: <https://goo.gl/812LxH>  \n نسخة الويب: <http://lunarium-bdo.com/BDO/Apps/Bosses/> \n مواعيد زعماء العالم: https://i.imgur.com/IsvaTW4.png ");
+					bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` \n المصدر: <https://goo.gl/812LxH>  \n نسخة الويب: <http://lunarium-bdo.com/BDO/Apps/Bosses/> \n مواعيد زعماء العالم: https://i.imgur.com/MUXGyGl.png ");
 					// bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 					// bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
 					bossHrs.dastardBheg.bhHrs = moment.duration(bh - now).humanize();
