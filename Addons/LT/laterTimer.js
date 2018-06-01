@@ -14,6 +14,7 @@ fs.readFile(__dirname +'/timers.json', (err, data) => {
   for(var i=0; i<t.timez.length ;i++){
     dailyTimes[i] = later.parse.text(t.timez[i].commandParser);
     // console.log('FROM laterTimer: ' + t.timez[i].name);
+    console.log(dailyTimes[i].error);
   }
   // module.exports.waterTimer = later.parse.recur().on( t.timez[0].time).time();
   // module.exports.waterTimer2 = later.parse.recur().on( t.timez[1].time).time();
