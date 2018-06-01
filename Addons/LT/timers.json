@@ -22,7 +22,7 @@
 		},
 		{
 			"name": "kutum10p2",
-			"commandParser": "at 12:50 and at 22:50 on Monday,Wednesday,Friday and Sunday",
+			"commandParser": "at 12:50 and 22:50 on Monday,Wednesday,Friday and Sunday",
 			"channelID": "375285109701738496",
 			"info": "Kutum ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kutum.png"
