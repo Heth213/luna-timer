@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 //var emitter = require('./emitter');
 var bossTime = require('./bdoBossTimes')
-var timers = require('./Addons/LT/laterTimer');
+// var timers = require('./Addons/LT/laterTimer');
 var moment = require('moment');
 var later = require('later');
 
