@@ -53,7 +53,7 @@ function timerFeed(cond,chID) {
   }
 
 //ADD World Boss TIMERS IN Addons/LT/timers.txt DONT TOUCH THIS
-  var timer_Timers = setTimeout(getTimers, 1000)
+//   var timer_Timers = setTimeout(getTimers, 1000)
   var timerLaterobj = [];
 	function getTimers() {
 		if(timers.allTimersReady === true){
