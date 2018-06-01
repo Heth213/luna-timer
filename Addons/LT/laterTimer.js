@@ -6,7 +6,7 @@ var later = require('later');
 var t = {};
 var dailyTimes = [];
 
-fs.readFile(__dirname +'/timers.txt', (err, data) => {
+fs.readFile(__dirname +'/timers.json', (err, data) => {
     if (err) throw err;
     t = JSON.parse(data);
     

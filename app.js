@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 //var emitter = require('./emitter');
 var bossTime = require('./bdoBossTimes')
-// var timers = require('./Addons/LT/laterTimer');
+var timers = require('./Addons/LT/laterTimer');
 var moment = require('moment');
 var later = require('later');
 
@@ -53,7 +53,7 @@ function timerFeed(cond,chID) {
   }
 
 //ADD World Boss TIMERS IN Addons/LT/timers.txt DONT TOUCH THIS
-//   var timer_Timers = setTimeout(getTimers, 1000)
+  var timer_Timers = setTimeout(getTimers, 1000)
   var timerLaterobj = [];
 	function getTimers() {
 		if(timers.allTimersReady === true){
