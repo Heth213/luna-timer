@@ -62,13 +62,14 @@ function timerFeed(cond,chID) {
 				timerLaterobj[i] = timers.dailyTimes[i];
 				setIntvs(timers.t.timez[i].name, timers.t.timez[i].channelID , timerLaterobj[i]);
 			}
-			console.log('boss timers has been set');
+			console.log('got world boss timers.');
 			clearTimeout(timer_Timers);
 		}
 	}
 
 function setIntvs(condis,chID , laterobj) {
 	later.setInterval(function() { timerFeed(condis, chID);} , laterobj);
+	console.log("Timer: "+ condis +" has been set.");
 }
 
 
