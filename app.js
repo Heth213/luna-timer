@@ -39,7 +39,7 @@ function timerFeed(cond,chID) {
 		if(timers.t.timez[i].name == cond){
 			generalChannel.send('<@&392042343517388800>');
 			// console.log(`name: ${timers.t.timez[i].name} time: ${timers.t.timez[i].time} info: ${timers.t.timez[i].info}`);
-			
+			console.log(timers.t.timez[i].info);
 			generalChannel.send({embed: {
 				color: randomColorOut(),
 				author: {
