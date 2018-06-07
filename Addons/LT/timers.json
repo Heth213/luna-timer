@@ -2,35 +2,35 @@
 {
 	"timez": [{
 			"name": "kzarka10pm",
-			"commandParser": "at 9:50 pm on Tuesday and Friday",
+			"commandParser": "at 9:49 pm on Tuesday and Friday",
 			"channelID": "387393026382888962",
 			"info": "Kzarka ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png"
 		},
 		{
 			"name": "kzarka8pm",
-			"commandParser": "at 7:50 pm on Monday,Thursday and Sunday",
+			"commandParser": "at 7:49 pm on Monday,Thursday and Sunday",
 			"channelID": "387393026382888962",
 			"info": "Kzarka ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png"
 		},
 		{
 			"name": "kzarka5pm",
-			"commandParser": "at 4:50 pm on Thursday and Saturday",
+			"commandParser": "at 4:49 pm on Thursday and Saturday",
 			"channelID": "387393026382888962",
 			"info": "Kzarka ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png"
 		},
 		{
 			"name": "kzarka1pm",
-			"commandParser": "at 12:50 pm on Monday,Wednesday,Thursday,Friday and Sunday",
+			"commandParser": "at 12:49 pm on Monday,Wednesday,Thursday,Friday and Sunday",
 			"channelID": "387393026382888962",
 			"info": "Kzarka ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png"
 		},
 		{
 			"name": "kzarka8am",
-			"commandParser": "at 7:50 am on Tuesday and Saturday",
+			"commandParser": "at 7:49 am on Tuesday and Saturday",
 			"channelID": "387393026382888962",
 			"info": "Kzarka ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png"
