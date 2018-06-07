@@ -1,102 +1,97 @@
-var moment = require('moment');
-// var fs = require('fs');
+$(document).ready(function() {
+    var serverTime = moment.utc().add(3, 'hours').format("ddd, HH:mm:ss");
+    var now = moment(serverTime,"ddd, HH:mm:ss");
+    
 
-var serverTime = moment.utc().add(3, 'hours').format("ddd, HH:mm");
-var now = moment(serverTime,"ddd, HH:mm");
-
-
-
-
-
-
-
-var kzarkaWB = "جاري الحسب";
-var kutumWB = "جاري الحسب";
-var karandaWB = "جاري الحسب";
-
-var nearestKz = [];
-var nearestKu = [];
-var nearestKa = [];
-
-
-var bossesTimes = {
-	"kzarka": [
-        moment("Mon, 16:00", 'ddd, HH:mm'), 
-        moment("Mon, 23:00", 'ddd, HH:mm'),
-        moment("Tue, 11:00", 'ddd, HH:mm'),
-        moment("Wed, 1:00", 'ddd, HH:mm'), 
-        moment("Wed, 16:00", 'ddd, HH:mm'),
-        moment("Thu, 16:00", 'ddd, HH:mm'),
-        moment("Thu, 20:00", 'ddd, HH:mm'),
-        moment("Thu, 23:00", 'ddd, HH:mm'),
-        moment("Fri, 16:00", 'ddd, HH:mm'),
-        moment("Sat, 1:00", 'ddd, HH:mm'),
-        moment("Sat, 11:00", 'ddd, HH:mm'),
-        moment("Sat, 20:00", 'ddd, HH:mm'),
-        moment("Sun, 16:00", 'ddd, HH:mm'),
-        moment("Sun, 23:00", 'ddd, HH:mm') 
-    ],
-	"kutum": [
-        moment("Mon, 16:00", 'ddd, HH:mm'),
-        moment("Mon, 20:00", 'ddd, HH:mm'),
-        moment("Tue, 1:00", 'ddd, HH:mm'),
-        moment("Tue, 16:00", 'ddd, HH:mm'),
-        moment("Tue, 23:00", 'ddd, HH:mm'),
-        moment("Wed, 11:00", 'ddd, HH:mm'),
-        moment("Wed, 20:00", 'ddd, HH:mm'),
-        moment("Thu, 16:00", 'ddd, HH:mm'),
-        moment("Fri, 16:00", 'ddd, HH:mm'),
-        moment("Fri, 20:00", 'ddd, HH:mm'),
-        moment("Fri, 23:00", 'ddd, HH:mm'),
-        moment("Sat, 16:00", 'ddd, HH:mm'),
-        moment("Sun, 11:00", 'ddd, HH:mm')
-    ],
-	"karanda": [
-        moment("Mon, 1:00", 'ddd, HH:mm')
-    ]
-};
-
-
-
-function sortTimes() {
-    for(var i=0;i<bossesTimes.kzarka.length;i++){
-        if(bossesTimes.kzarka[i] > now){
-            nearestKz.push(bossesTimes.kzarka[i]);
-        }
+    //show current time.
+    function nowTime() {
+        $('#noww').text(moment.utc().locale('ar-kw').add(3, 'hours').format("dddd, HH:mm"))
     }
+ 
 
-    for(var i=0;i<bossesTimes.kutum.length;i++){
-        if(bossesTimes.kutum[i] > now){
-            nearestKu.push(bossesTimes.kutum[i]);
-        }
-    }
 
-        showNearest();
-        setTimeout(sortTimes, 10000);
+
+    
+    var Nearst = [];
+
+    var bossTimes = {
+        // 1:00
+        Mon100 : moment("Mon, 1:00", 'ddd, HH:mm'), 
+        Tue100 : moment("Tue, 1:00", 'ddd, HH:mm'),
+        Wed100 : moment("Wed, 1:00", 'ddd, HH:mm'), 
+        Thu100 : moment("Thu, 1:00", 'ddd, HH:mm'),
+        Fri100 : moment("Fri, 1:00", 'ddd, HH:mm'),
+        Sat100 : moment("Sat, 1:00", 'ddd, HH:mm'),
+
+        
+        // 11:00
+        Tue1100 : moment("Tue, 11:00", 'ddd, HH:mm'),
+        Wed1100 : moment("Wed, 11:00", 'ddd, HH:mm'), 
+        Sat1100 : moment("Sat, 11:00", 'ddd, HH:mm'), 
+        Sun1100 : moment("Sun, 11:00", 'ddd, HH:mm'),
+
+        //16:00
+        Mon1600 : moment("Mon, 16:00", 'ddd, HH:mm'), 
+        Tue1600 : moment("Tue, 16:00", 'ddd, HH:mm'),
+        Wed1600 : moment("Wed, 16:00", 'ddd, HH:mm'), 
+        Thu1600 : moment("Thu, 16:00", 'ddd, HH:mm'),
+        Fri1600 : moment("Fri, 16:00", 'ddd, HH:mm'),
+        Sat1600 : moment("Sat, 16:00", 'ddd, HH:mm'), 
+        Sun1600 : moment("Sun, 16:00", 'ddd, HH:mm'),
+
+        //20:00
+        Mon2000 : moment("Mon, 20:00", 'ddd, HH:mm'), 
+        Tue2000 : moment("Tue, 20:00", 'ddd, HH:mm'),
+        Wed2000 : moment("Wed, 20:00", 'ddd, HH:mm'), 
+        Thu2000 : moment("Thu, 20:00", 'ddd, HH:mm'),
+        Fri2000 : moment("Fri, 20:00", 'ddd, HH:mm'),
+        Sat2000 : moment("Sat, 20:00", 'ddd, HH:mm'), 
+        Sun2000 : moment("Sun, 20:00", 'ddd, HH:mm'),
+
+        //23:00
+        Mon2300 : moment("Mon, 23:00", 'ddd, HH:mm'), 
+        Tue2300 : moment("Tue, 23:00", 'ddd, HH:mm'),
+        Wed2300 : moment("Wed, 23:00", 'ddd, HH:mm'),
+        Thu2300 : moment("Thu, 23:00", 'ddd, HH:mm'),
+        Fri2300 : moment("Fri, 23:00", 'ddd, HH:mm'),
+        Sat2300 : moment("Sat, 23:00", 'ddd, HH:mm'),
+        Sun2300 : moment("Sun, 23:00", 'ddd, HH:mm')
     }
 
 
-    function showNearest() {
-        var nnKz = getClosestNum(nearestKz,now);
-        var nnKu = getClosestNum(nearestKu,now);
-
-        for(var i=0;i<bossesTimes.kzarka.length;i++){
-            if(bossesTimes.kzarka[i] === nnKz){
-                kzarkaWB = moment.duration(bossesTimes.kzarka[i] - now);
-                module.exports.kzarkaWB = kzarkaWB;
-            }
-        }
-
-        for(var i=0;i<bossesTimes.kutum.length;i++){
-            if(bossesTimes.kutum[i] === nnKu){
-                kutumWB = moment.duration(bossesTimes.kutum[i] - now);
-                module.exports.kutumWB = kutumWB;
-            }
+    
+//للعربي .locale('ar')
+//display times
+    function getTimes() {
+for(x in bossTimes){
+    var Dur = moment.duration(bossTimes[x] - now);
+    if(bossTimes[x] > now){
+        Nearst.push(bossTimes[x]);
+    $("#"+x).text(Dur.locale('ar').humanize(true));
+    }
+}
+    showNearest();
+    nowTime();
+}
+//color nearest bosses
+function showNearest() {
+    var nearestBoss = getClosestNum(Nearst,now);
+    for(x in bossTimes){
+        if(bossTimes[x] === nearestBoss){
+            $("#"+x).addClass("Active");
+        }else{
+            // $("#Kz"+x).css("display","none");
         }
     }
+}
 
 
-    function getClosestNum(ar,num)
+//call getTimes function
+getTimes();
+setTimeout(getTimes,10000);
+
+
+function getClosestNum(ar,num)
         {
         var i = 0, closest, closestDiff, currentDiff;
         if(ar.length)
@@ -117,8 +112,4 @@ function sortTimes() {
         }
         return false;
         }
-
-
-
-        //start funcs
-        sortTimes();
+});
