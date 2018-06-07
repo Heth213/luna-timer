@@ -78,14 +78,14 @@ function setIntvs(condis,chID , laterobj) {
 
 
 
-function testlol(){
-	if(WB.kzarkaWB && WB.kutumWB){
-		console.log(WB.kzarkaWB);
-		console.log(WB.kutumWB);
-	}
-	setTimeout(testlol, 10000);
-}
-testlol();
+// function testlol(){
+// 	if(WB.kzarkaWB && WB.kutumWB){
+// 		console.log(WB.kzarkaWB);
+// 		console.log(WB.kutumWB);
+// 	}
+// 	setTimeout(testlol, 10000);
+// }
+// testlol();
 
 
 
@@ -247,7 +247,7 @@ function sendBossTimers() {
 						});
 
 
-					bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` \n المصدر: <https://goo.gl/812LxH>  \n نسخة الويب: <https://goo.gl/58mkMh> \n مواعيد زعماء العالم: https://i.imgur.com/9VJW3S7.jpg ");
+					bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` \n ```md\n# Kzarka \n [-]("+WB.kzarkaWB+")  \n\n# Kutum \n [-]("+WB.kutumWB+") \n\n# Karanda \n [-]("+WB.karandaWB+") ```  \n نسخة الويب: <https://goo.gl/58mkMh> \n مواعيد زعماء العالم: https://i.imgur.com/9VJW3S7.jpg ");
 					// bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 					// bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
 					

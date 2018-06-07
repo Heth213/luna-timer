@@ -52,7 +52,15 @@ var bossesTimes = {
         moment("Sun, 11:00", 'ddd, HH:mm')
     ],
 	"karanda": [
-        moment("Mon, 1:00", 'ddd, HH:mm')
+        moment("Mon, 1:00", 'ddd, HH:mm'),
+        moment("Tue, 20:00", 'ddd, HH:mm'),
+        moment("Wed, 23:00", 'ddd, HH:mm'),
+        moment("Thu, 1:00", 'ddd, HH:mm'),
+        moment("Thu, 23:00", 'ddd, HH:mm'),
+        moment("Fri, 1:00", 'ddd, HH:mm'),
+        moment("Sat, 23:00", 'ddd, HH:mm'),
+        moment("Sun, 16:00", 'ddd, HH:mm'),
+        moment("Sun, 20:00", 'ddd, HH:mm'),
     ]
 };
 
@@ -71,19 +79,27 @@ function sortTimes() {
         }
     }
 
+
+    for(var i=0;i<bossesTimes.karanda.length;i++){
+        if(bossesTimes.karanda[i] > now){
+            nearestKa.push(bossesTimes.karanda[i]);
+        }
+    }
+
         showNearest();
-        setTimeout(sortTimes, 10000);
+        setTimeout(sortTimes, 60000);
     }
 
 
     function showNearest() {
         var nnKz = getClosestNum(nearestKz,now);
         var nnKu = getClosestNum(nearestKu,now);
+        var nnKa = getClosestNum(nearestKa,now);
 
         for(var i=0;i<bossesTimes.kzarka.length;i++){
             if(bossesTimes.kzarka[i] === nnKz){
                 var Dur = moment.duration(bossesTimes.kzarka[i] - now);
-                kzarkaWB = Dur.locale('ar').humanize(true)
+                kzarkaWB = Dur.locale('ar').humanize(true);
                 module.exports.kzarkaWB = kzarkaWB;
             }
         }
@@ -91,8 +107,16 @@ function sortTimes() {
         for(var i=0;i<bossesTimes.kutum.length;i++){
             if(bossesTimes.kutum[i] === nnKu){
                 var Dur = moment.duration(bossesTimes.kutum[i] - now);
-                kutumWB = Dur.locale('ar').humanize(true)
+                kutumWB = Dur.locale('ar').humanize(true);
                 module.exports.kutumWB = kutumWB;
+            }
+        }
+
+        for(var i=0;i<bossesTimes.karanda.length;i++){
+            if(bossesTimes.karanda[i] === nnKa){
+                var Dur = moment.duration(bossesTimes.karanda[i] - now);
+                karandaWB = Dur.locale('ar').humanize(true);
+                module.exports.karandaWB = karandaWB;
             }
         }
     }
