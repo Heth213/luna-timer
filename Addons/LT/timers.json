@@ -3,35 +3,35 @@
 	"timez": [{
 			"name": "kzarka10pm",
 			"commandParser": "at 9:49 pm on Tuesday and Friday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Kzarka ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png"
 		},
 		{
 			"name": "kzarka8pm",
 			"commandParser": "at 7:49 pm on Monday,Thursday and Sunday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Kzarka ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png"
 		},
 		{
 			"name": "kzarka5pm",
 			"commandParser": "at 4:49 pm on Thursday and Saturday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Kzarka ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png"
 		},
 		{
 			"name": "kzarka1pm",
 			"commandParser": "at 12:49 pm on Monday,Wednesday,Thursday,Friday and Sunday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Kzarka ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png"
 		},
 		{
 			"name": "kzarka8am",
 			"commandParser": "at 7:49 am on Tuesday and Saturday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Kzarka ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png"
 		},
@@ -44,35 +44,35 @@
 		{
 			"name": "Kutum10pm",
 			"commandParser": "at 9:50 pm on Monday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Kutum ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kutum.png"
 		},
 		{
 			"name": "Kutum8pm",
 			"commandParser": "at 7:50 pm on Tuesday and Friday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Kutum ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kutum.png"
 		},
 		{
 			"name": "Kutum5pm",
 			"commandParser": "at 4:50 pm on Monday,Wednesday and Friday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Kutum ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kutum.png"
 		},
 		{
 			"name": "Kutum1pm",
 			"commandParser": "at 12:50 pm on Monday,Tuesday,Thursday,Friday and Saturday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Kutum ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kutum.png"
 		},
 		{
 			"name": "Kutum8am",
 			"commandParser": "at 7:50 am on Wednesday and Sunday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Kutum ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_kutum.png"
 		},
@@ -85,28 +85,28 @@
 		{
 			"name": "Karanda10pm",
 			"commandParser": "at 9:50 pm on Wednesday,Thursday and Sunday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Karanda ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_karanda.png"
 		},
 		{
 			"name": "Karanda8pm",
 			"commandParser": "at 7:50 pm on Wednesday,Thursday and Saturday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Karanda ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_karanda.png"
 		},
 		{
 			"name": "Karanda5pm",
 			"commandParser": "at 4:50 pm on Tuesday and Sunday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Karanda ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_karanda.png"
 		},
 		{
 			"name": "Karanda1pm",
 			"commandParser": "at 12:50 pm on Sunday",
-			"channelID": "387393026382888962",
+			"channelID": "375285109701738496",
 			"info": "Karanda ⤑ سيظهر بعد 10 دقائق",
 			"img": "http://urzasarchives.com/wp-content/uploads/wbt_karanda.png"
 		}
