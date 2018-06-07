@@ -78,7 +78,7 @@ function sortTimes() {
 
     function showNearest() {
         var nnKz = getClosestNum(nearestKz,now);
-        var nnKa = getClosestNum(nearestKu,now);
+        var nnKu = getClosestNum(nearestKu,now);
 
         for(var i=0;i<bossesTimes.kzarka.length;i++){
             if(bossesTimes.kzarka[i] === nnKz){
