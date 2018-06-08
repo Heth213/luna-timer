@@ -1,10 +1,10 @@
 var moment = require('moment');
 // var fs = require('fs');
 
+
+
 var serverTime = moment.utc().add(3, 'hours').format("ddd, HH:mm");
 var now = moment(serverTime,"ddd, HH:mm");
-
-
 
 
 
@@ -67,6 +67,9 @@ var bossesTimes = {
 
 
 function sortTimes() {
+    serverTime = moment.utc().add(3, 'hours').format("ddd, HH:mm");
+    now = moment(serverTime,"ddd, HH:mm");
+
     for(var i=0;i<bossesTimes.kzarka.length;i++){
         if(bossesTimes.kzarka[i] > now){
             nearestKz.push(bossesTimes.kzarka[i]);
