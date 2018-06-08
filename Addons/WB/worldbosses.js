@@ -69,7 +69,9 @@ var bossesTimes = {
 function sortTimes() {
     serverTime = moment.utc().add(3, 'hours').format("ddd, HH:mm");
     now = moment(serverTime,"ddd, HH:mm");
-
+    nearestKz = [];
+    nearestKu = [];
+    nearestKa = [];
     for(var i=0;i<bossesTimes.kzarka.length;i++){
         if(bossesTimes.kzarka[i] > now){
             nearestKz.push(bossesTimes.kzarka[i]);
@@ -90,7 +92,7 @@ function sortTimes() {
     }
 
         showNearest();
-        setTimeout(sortTimes, 60000);
+        setTimeout(sortTimes, 150000);
     }
 
 

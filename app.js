@@ -53,7 +53,7 @@ function timerFeed(cond,chID) {
 	}
   }
 
-//ADD World Boss TIMERS IN Addons/LT/timers.txt DONT TOUCH THIS
+//ADD World Boss TIMERS IN Addons/LT/timers.json DONT TOUCH THIS
   var timer_Timers = setTimeout(getTimers, 1000)
   var timerLaterobj = [];
 	function getTimers() {
@@ -70,7 +70,7 @@ function timerFeed(cond,chID) {
 
 function setIntvs(condis,chID , laterobj) {
 	later.setInterval(function() { timerFeed(condis, chID);} , laterobj);
-	console.log("Timer: "+ condis +" has been set.");
+	// console.log("Timer: "+ condis +" has been set.");
 }
 
 
@@ -271,7 +271,7 @@ function sendBossTimers() {
 
 
 
-	setTimeout(sendBossTimers, 60000);
+	setTimeout(sendBossTimers, 160000);
 } //end of func
 sendBossTimers();
 
