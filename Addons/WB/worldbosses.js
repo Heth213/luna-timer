@@ -3,7 +3,7 @@ var moment = require('moment');
 
 
 
-var serverTime = moment.utc().add(3, 'hours').format("ddd, HH:mm");
+var serverTime = moment.utc().format("ddd, HH:mm");
 var now = moment(serverTime,"ddd, HH:mm");
 
 
@@ -21,53 +21,53 @@ var nearestKa = [];
 
 var bossesTimes = {
 	"kzarka": [
-        moment("Mon, 16:00", 'ddd, HH:mm'), 
-        moment("Mon, 23:00", 'ddd, HH:mm'),
-        moment("Tue, 11:00", 'ddd, HH:mm'),
-        moment("Wed, 1:00", 'ddd, HH:mm'), 
-        moment("Wed, 16:00", 'ddd, HH:mm'),
-        moment("Thu, 16:00", 'ddd, HH:mm'),
+        moment("Mon, 13:00", 'ddd, HH:mm'), 
+        moment("Mon, 20:00", 'ddd, HH:mm'),
+        moment("Tue, 8:00", 'ddd, HH:mm'),
+        moment("Tue, 22:00", 'ddd, HH:mm'), 
+        moment("Wed, 13:00", 'ddd, HH:mm'),
+        moment("Thu, 13:00", 'ddd, HH:mm'),
+        moment("Thu, 17:00", 'ddd, HH:mm'),
         moment("Thu, 20:00", 'ddd, HH:mm'),
-        moment("Thu, 23:00", 'ddd, HH:mm'),
-        moment("Fri, 16:00", 'ddd, HH:mm'),
-        moment("Sat, 1:00", 'ddd, HH:mm'),
-        moment("Sat, 11:00", 'ddd, HH:mm'),
-        moment("Sat, 20:00", 'ddd, HH:mm'),
-        moment("Sun, 16:00", 'ddd, HH:mm'),
-        moment("Sun, 23:00", 'ddd, HH:mm') 
+        moment("Fri, 13:00", 'ddd, HH:mm'),
+        moment("Fri, 22:00", 'ddd, HH:mm'),
+        moment("Sat, 8:00", 'ddd, HH:mm'),
+        moment("Sat, 17:00", 'ddd, HH:mm'),
+        moment("Sun, 13:00", 'ddd, HH:mm'),
+        moment("Sun, 20:00", 'ddd, HH:mm') 
     ],
 	"kutum": [
-        moment("Mon, 16:00", 'ddd, HH:mm'),
-        moment("Mon, 20:00", 'ddd, HH:mm'),
-        moment("Tue, 1:00", 'ddd, HH:mm'),
-        moment("Tue, 16:00", 'ddd, HH:mm'),
-        moment("Tue, 23:00", 'ddd, HH:mm'),
-        moment("Wed, 11:00", 'ddd, HH:mm'),
-        moment("Wed, 20:00", 'ddd, HH:mm'),
-        moment("Thu, 16:00", 'ddd, HH:mm'),
-        moment("Fri, 16:00", 'ddd, HH:mm'),
+        moment("Mon, 13:00", 'ddd, HH:mm'),
+        moment("Mon, 17:00", 'ddd, HH:mm'),
+        moment("Mon, 22:00", 'ddd, HH:mm'),
+        moment("Tue, 13:00", 'ddd, HH:mm'),
+        moment("Tue, 20:00", 'ddd, HH:mm'),
+        moment("Wed, 8:00", 'ddd, HH:mm'),
+        moment("Wed, 17:00", 'ddd, HH:mm'),
+        moment("Thu, 13:00", 'ddd, HH:mm'),
+        moment("Fri, 13:00", 'ddd, HH:mm'),
+        moment("Fri, 17:00", 'ddd, HH:mm'),
         moment("Fri, 20:00", 'ddd, HH:mm'),
-        moment("Fri, 23:00", 'ddd, HH:mm'),
-        moment("Sat, 16:00", 'ddd, HH:mm'),
-        moment("Sun, 11:00", 'ddd, HH:mm')
+        moment("Sat, 13:00", 'ddd, HH:mm'),
+        moment("Sun, 8:00", 'ddd, HH:mm')
     ],
 	"karanda": [
-        moment("Mon, 1:00", 'ddd, HH:mm'),
-        moment("Tue, 20:00", 'ddd, HH:mm'),
-        moment("Wed, 23:00", 'ddd, HH:mm'),
-        moment("Thu, 1:00", 'ddd, HH:mm'),
-        moment("Thu, 23:00", 'ddd, HH:mm'),
-        moment("Fri, 1:00", 'ddd, HH:mm'),
-        moment("Sat, 23:00", 'ddd, HH:mm'),
-        moment("Sun, 16:00", 'ddd, HH:mm'),
-        moment("Sun, 20:00", 'ddd, HH:mm'),
+        moment("Sun, 22:00", 'ddd, HH:mm'),
+        moment("Tue, 17:00", 'ddd, HH:mm'),
+        moment("Wed, 20:00", 'ddd, HH:mm'),
+        moment("Wed, 22:00", 'ddd, HH:mm'),
+        moment("Thu, 20:00", 'ddd, HH:mm'),
+        moment("Thu, 22:00", 'ddd, HH:mm'),
+        moment("Sat, 20:00", 'ddd, HH:mm'),
+        moment("Sun, 13:00", 'ddd, HH:mm'),
+        moment("Sun, 17:00", 'ddd, HH:mm'),
     ]
 };
 
 
 
 function sortTimes() {
-    serverTime = moment.utc().add(3, 'hours').format("ddd, HH:mm");
+    serverTime = moment.utc().format("ddd, HH:mm");
     now = moment(serverTime,"ddd, HH:mm");
     nearestKz = [];
     nearestKu = [];
