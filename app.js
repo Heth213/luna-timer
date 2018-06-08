@@ -229,7 +229,7 @@ function sendBossTimers() {
 		//bossHrs.kzarka.kzHrs != null && bossHrs.kutum.kuHrs != null &&
 		//bossHrs.kzarka.kzHrs !== kzAfter || bossHrs.kutum.kzHrs !== kuAfter ||
 		if ( bossHrs.dastardBheg.bhHrs != null && bossHrs.dimTreeSpirit.dtHrs != null && bossHrs.giantMudster.mdHrs != null && bossHrs.redNose.rnHrs != null) {
-			if ( bossHrs.dastardBheg.bhHrs !== bhAfter || bossHrs.dimTreeSpirit.dtHrs !== dtAfter || bossHrs.giantMudster.mdHrs !== mdAfter || bossHrs.redNose.rnHrs !== rnAfter) {
+			if ( bossHrs.dastardBheg.bhHrs !== bhAfter || bossHrs.dimTreeSpirit.dtHrs !== dtAfter || bossHrs.giantMudster.mdHrs !== mdAfter || bossHrs.redNose.rnHrs !== rnAfter || bossHrs.kzarka.kzHrs !== WB.kzarkaWB || bossHrs.kutum.kuHrs !== WB.kutumWB|| bossHrs.karanda.kaHrs !== WB.karandaWB) {
 				var bossChannel = bot.channels.get('443588073603858433'); //#timers [Lunarium]
 				//deleting & sending embed 
 				if (bossChannel) {
@@ -251,7 +251,9 @@ function sendBossTimers() {
 					// bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 					// bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
 					
-					
+					bossHrs.kzarka.kzHrs = WB.kzarkaWB;
+					bossHrs.kutum.kuHrs = WB.kutumWB;
+					bossHrs.karanda.kaHrs = WB.karandaWB;
 					bossHrs.dastardBheg.bhHrs = moment.duration(bh - now).humanize();
 					bossHrs.dimTreeSpirit.dtHrs = moment.duration(dt - now).humanize();
 					bossHrs.giantMudster.mdHrs = moment.duration(md - now).humanize();
