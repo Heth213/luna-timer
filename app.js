@@ -314,7 +314,8 @@ bot.on('message', async message => {
 
 	if (command === 'reset') {
 		if (message.member.roles.find("name", "Lunarium Officer")) {
-			resetBot();
+			message.reply("OK..");
+			process.exit();
 			
 		}
 	}
@@ -347,11 +348,11 @@ bot.on('message', async message => {
 	}
 
 
-	function resetBot() {
-		// send channel a message that you're resetting bot [optional]
-		message.reply('Resetting...')
-		.then(() => process.exit());
-	}
+	// function resetBot() {
+	// 	// send channel a message that you're resetting bot [optional]
+	// 	message.reply('Resetting...')
+	// 	.then(() => process.exit());
+	// }
 
 
 
