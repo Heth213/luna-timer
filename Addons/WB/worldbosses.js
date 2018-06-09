@@ -113,7 +113,10 @@ function sortTimes() {
             if(bossesTimes.kutum[i] === nnKu){
                 var Dur = moment.duration(bossesTimes.kutum[i] - now);
                 kutumWB = Dur.locale('ar').humanize(true);
-                module.exports.kutumWB = kutumWB;
+                if(kutumWB){
+                    module.exports.kutumWB = kutumWB;
+                }else{module.exports.kutumWB = "...";}
+                
             }
         }
 
