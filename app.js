@@ -350,7 +350,7 @@ bot.on('message', async message => {
 	function resetBot() {
 		// send channel a message that you're resetting bot [optional]
 		message.reply('Resetting...')
-		.then(() => process.exit(143));
+		.then(() => process.exit());
 	}
 
 
