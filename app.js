@@ -315,7 +315,7 @@ bot.on('message', async message => {
 	if (command === 'reset') {
 		if (message.member.roles.find("name", "Lunarium Officer")) {
 			resetBot();
-			process.exit(143);
+			
 		}
 	}
 	if (command === 'purge') {
@@ -350,8 +350,7 @@ bot.on('message', async message => {
 	function resetBot() {
 		// send channel a message that you're resetting bot [optional]
 		message.reply('Resetting...')
-		.then(msg => bot.destroy())
-		.then(() => bot.login(process.env.B0T_ToKEN));
+		.then(() => process.exit(143));
 	}
 
 
