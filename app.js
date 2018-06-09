@@ -315,6 +315,7 @@ bot.on('message', async message => {
 	if (command === 'reset') {
 		if (message.member.roles.find("name", "Lunarium Officer")) {
 			resetBot();
+			process.exit(143);
 		}
 	}
 	if (command === 'purge') {
