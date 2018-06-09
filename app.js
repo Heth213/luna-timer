@@ -311,6 +311,12 @@ bot.on('message', async message => {
 	// 	timerFeed("kzarka10p1","375285109701738496")
 	// }
 
+
+	if (command === 'reset') {
+		if (message.member.roles.find("name", "Lunarium Officer")) {
+			resetBot();
+		}
+	}
 	if (command === 'purge') {
 		if (message.member.roles.find("name", "Lunarium Officer")) {
 
@@ -340,7 +346,12 @@ bot.on('message', async message => {
 	}
 
 
-
+	function resetBot() {
+		// send channel a message that you're resetting bot [optional]
+		message.reply('Resetting...')
+		.then(msg => bot.destroy())
+		.then(() => bot.login(process.env.B0T_ToKEN));
+	}
 
 
 
