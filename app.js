@@ -275,7 +275,7 @@ function sendBossTimers() {
 
 
 
-	setTimeout(sendBossTimers, 160000);
+	setTimeout(sendBossTimers, 70000);
 } //end of func
 sendBossTimers();
 
