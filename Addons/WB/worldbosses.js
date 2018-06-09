@@ -72,6 +72,9 @@ function sortTimes() {
     nearestKz = [];
     nearestKu = [];
     nearestKa = [];
+    kzarkaWB = "...";
+    kutumWB = "...";
+    karandaWB = "...";
     for(var i=0;i<bossesTimes.kzarka.length;i++){
         if(bossesTimes.kzarka[i] > now){
             nearestKz.push(bossesTimes.kzarka[i]);
@@ -92,7 +95,7 @@ function sortTimes() {
     }
 
         showNearest();
-        setTimeout(sortTimes, 150000);
+        setTimeout(sortTimes, 60000);
     }
 
 
@@ -103,27 +106,29 @@ function sortTimes() {
 
         for(var i=0;i<bossesTimes.kzarka.length;i++){
             if(bossesTimes.kzarka[i] === nnKz){
-                var Dur = moment.duration(bossesTimes.kzarka[i] - now);
-                kzarkaWB = Dur.locale('ar').humanize(true);
+                // var Dur = moment.duration(bossesTimes.kzarka[i] - now);
+                var BT = bossesTimes.kzarka[i];
+                kzarkaWB = BT.locale('ar').fromNow();
                 module.exports.kzarkaWB = kzarkaWB;
             }
         }
 
         for(var i=0;i<bossesTimes.kutum.length;i++){
             if(bossesTimes.kutum[i] === nnKu){
-                var Dur = moment.duration(bossesTimes.kutum[i] - now);
-                kutumWB = Dur.locale('ar').humanize(true);
-                if(kutumWB){
-                    module.exports.kutumWB = kutumWB;
-                }else{module.exports.kutumWB = "...";}
+                // var Dur = moment.duration(bossesTimes.kutum[i] - now);
+                var BT = bossesTimes.kutum[i];
+                kutumWB = BT.locale('ar').fromNow();
+                module.exports.kutumWB = kutumWB;
+                
                 
             }
         }
 
         for(var i=0;i<bossesTimes.karanda.length;i++){
             if(bossesTimes.karanda[i] === nnKa){
-                var Dur = moment.duration(bossesTimes.karanda[i] - now);
-                karandaWB = Dur.locale('ar').humanize(true);
+                // var Dur = moment.duration(bossesTimes.karanda[i] - now);
+                var BT = bossesTimes.karanda[i];
+                karandaWB = BT.locale('ar').fromNow();
                 module.exports.karandaWB = karandaWB;
             }
         }
