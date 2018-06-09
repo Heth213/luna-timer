@@ -197,7 +197,10 @@ function sendBossTimers() {
 		// 	kuDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + kuSliced + ']\n';
 		// }
 
-		if (bh > now) {
+
+		if(bhAfter == undefined){
+			var bhDone = '[-](-)[الحد الاقصى :' + bhSliced + ']\n';
+		}else if (bh > now) {
 			var bhDone = '[-](بعد ' + bhAfter + ')\n <البداية: ' + bhSliced2 + '>\n';
 		} else {
 			var bhDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + bhSliced + ']\n';
