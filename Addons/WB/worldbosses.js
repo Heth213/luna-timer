@@ -156,8 +156,8 @@ function sortTimes() {
             if(bossesTimes.kzarka[i] === nnKz){
                 // var Dur = moment.duration(bossesTimes.kzarka[i] - now);
                 var BT = bossesTimes.kzarka[i];
-                var TT = bossesTimes.kzarka[i];
-                var kzarkaTT = TT.add(3, 'hours').format("ddd, HH:mm");
+                var TT = moment(bossesTimes.kzarka[i]).add(3, 'hours');
+                var kzarkaTT = TT.format("ddd, HH:mm");
                 kzarkaWB = BT.locale('ar').fromNow();
                 module.exports.kzarkaWB = kzarkaWB;
                 module.exports.kzarkaTT = kzarkaTT;
@@ -168,8 +168,8 @@ function sortTimes() {
             if(bossesTimes.kutum[i] === nnKu){
                 // var Dur = moment.duration(bossesTimes.kutum[i] - now);
                 var BT = bossesTimes.kutum[i];
-                var TT = bossesTimes.kutum[i];
-                var kutumTT = TT.add(3, 'hours').format("ddd, HH:mm");
+                var TT = moment(bossesTimes.kutum[i]).add(3, 'hours');
+                var kutumTT = TT.format("ddd, HH:mm");
                 kutumWB = BT.locale('ar').fromNow();
                 module.exports.kutumWB = kutumWB;
                 module.exports.kutumTT = kutumTT;
@@ -181,8 +181,8 @@ function sortTimes() {
             if(bossesTimes.karanda[i] === nnKa){
                 // var Dur = moment.duration(bossesTimes.karanda[i] - now);
                 var BT = bossesTimes.karanda[i];
-                var TT = bossesTimes.karanda[i];
-                var karandaTT = TT.add(3, 'hours').format("ddd, HH:mm");
+                var TT = moment(bossesTimes.karanda[i]).add(3, 'hours');
+                var karandaTT = TT.format("ddd, HH:mm");
                 karandaWB = BT.locale('ar').fromNow();
                 module.exports.karandaWB = karandaWB;
                 module.exports.karandaTT = karandaTT;
