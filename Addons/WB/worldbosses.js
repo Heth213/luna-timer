@@ -159,8 +159,7 @@ function sortTimes() {
                 // var Dur = moment.duration(bossesTimes.kzarka[i] - now);
                 var BT = bossesTimes.kzarka[i];
                 kzarkaWB = BT.locale('ar').fromNow();
-                kzarkaTT = BT.add(3, 'hours').locale('ar').format("dddd, HH:mm");
-                console.log(kzarkaTT);
+                kzarkaTT = BT.add(3, 'hours').locale('ar-kw').format("dddd, HH:mm");
                 module.exports.kzarkaWB = kzarkaWB;
                 module.exports.kzarkaTT = kzarkaTT;
             }
@@ -171,7 +170,7 @@ function sortTimes() {
                 // var Dur = moment.duration(bossesTimes.kutum[i] - now);
                 var BT = bossesTimes.kutum[i];
                 kutumWB = BT.locale('ar').fromNow();
-                kutumTT = BT.add(3, 'hours').locale('ar').format("dddd, HH:mm");
+                kutumTT = BT.add(3, 'hours').locale('ar-kw').format("dddd, HH:mm");
                 module.exports.kutumWB = kutumWB;
                 module.exports.kutumTT = kutumTT;
                 
@@ -183,7 +182,7 @@ function sortTimes() {
                 // var Dur = moment.duration(bossesTimes.karanda[i] - now);
                 var BT = bossesTimes.karanda[i];
                 karandaWB = BT.locale('ar').fromNow();
-                karandaTT = BT.add(3, 'hours').locale('ar').format("dddd, HH:mm");
+                karandaTT = BT.add(3, 'hours').locale('ar-kw').format("dddd, HH:mm");
                 module.exports.karandaWB = karandaWB;
                 module.exports.karandaTT = karandaTT;
             }
