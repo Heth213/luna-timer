@@ -124,7 +124,8 @@ var bossesTimes = {
         moment("Fri, 17:00", 'ddd, HH:mm'),
         moment("Sat, 13:00", 'ddd, HH:mm'),
         moment("Sat, 20:00", 'ddd, HH:mm'),
-        moment("Sat, 22:00", 'ddd, HH:mm')
+        moment("Sat, 22:00", 'ddd, HH:mm'),
+        moment("Sun, 17:00", 'ddd, HH:mm')
     ]
 };
 

@@ -30,7 +30,7 @@ function randomColorOut() {
 
 
 function timerFeed(cond) {
-	var generalChannel = bot.channels.get(375285109701738496);  //375285109701738496 -> General
+	var generalChannel = bot.channels.get(375285109701738496);  //375285109701738496 -> تجارب
 	switch (cond) {
 		case 'kzarka':
 			generalChannel.send({embed: {

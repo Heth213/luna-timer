@@ -55,7 +55,163 @@
 		{
 			"name": "kzarka",
 			"commandParser": "at 19:50 on Sunday"
-		}
+		},
+
+
+
+
+
 		
+		{
+			"name": "kutum",
+			"commandParser": "at 12:50 on Monday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 21:50 on Monday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 12:50 on Tuesday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 7:50 on Wednesday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 16:50 on Wednesday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 12:50 on Thursday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 16:50 on Thursday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 12:50 on Friday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 19:50 on Friday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 12:50 on Saturday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 7:50 on Saturday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 19:50 on Sunday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 7:50 on Sunday"
+		},
+
+
+
+		{
+			"name": "karanda",
+			"commandParser": "at 21:50 on Sunday"
+		},
+		{
+			"name": "karanda",
+			"commandParser": "at 16:50 on Tuesday"
+		},
+		{
+			"name": "karanda",
+			"commandParser": "at 19:50 on Wednesday"
+		},
+		{
+			"name": "karanda",
+			"commandParser": "at 21:50 on Wednesday"
+		},
+		{
+			"name": "karanda",
+			"commandParser": "at 19:50 on Thursday"
+		},
+		{
+			"name": "karanda",
+			"commandParser": "at 21:50 on Thursday"
+		},
+		{
+			"name": "karanda",
+			"commandParser": "at 19:50 on Saturday"
+		},
+		{
+			"name": "karanda",
+			"commandParser": "at 12:50 on Sunday"
+		},
+		{
+			"name": "karanda",
+			"commandParser": "at 16:50 on Sunday"
+		},
+
+		
+
+
+		{
+			"name": "nouver",
+			"commandParser": "at 7:50 on Monday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 16:50 on Monday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 12:50 on Tuesday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 19:50 on Tuesday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 12:50 on Wednesday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 16:50 on Wednesday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 7:50 on Thursday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 16:50 on Thursday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 7:50 on Friday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 16:50 on Friday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 12:50 on Saturday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 19:50 on Saturday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 21:50 on Saturday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 16:50 on Sunday"
+		}
 	]
 }
