@@ -249,11 +249,13 @@ function sendBossTimers() {
 						if(WB.kzarkaWB == undefined){WB.kzarkaWB = "يوم الاحد"}
 						if(WB.kutumWB == undefined){WB.kutumWB = "يوم الاحد"}
 						if(WB.karandaWB == undefined){WB.karandaWB = "يوم الاحد"}
+						if(WB.nouverWB == undefined){WB.nouverWB = "يوم الاحد"}
 						if(WB.kzarkaTT == undefined){WB.kzarkaTT = "..."}
 						if(WB.kutumTT == undefined){WB.kutumTT = "..."}
 						if(WB.karandaTT == undefined){WB.karandaTT = "..."}
+						if(WB.nouverTT == undefined){WB.nouverTT = "..."}
 
-					bossChannel.send(" ** توقعات ظهور الزعماء ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ```  ```md\n# Kzarka \n ["+WB.kzarkaTT+"]("+WB.kzarkaWB+")  \n\n# Kutum \n ["+WB.kutumTT+"]("+WB.kutumWB+") \n\n# Karanda \n ["+WB.karandaTT+"]("+WB.karandaWB+") \n\n# Nouver \n ["+WB.nouverTT+"]("+WB.nouverWB+")```  \n نسخة الويب: <https://goo.gl/58mkMh> \n مواعيد زعماء العالم: <https://i.imgur.com/9VJW3S7.jpg> ");
+					bossChannel.send(" ** الزعماء العاديين ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` زعماء العالم ```md\n# Kzarka \n ["+WB.kzarkaTT+"]("+WB.kzarkaWB+")  \n\n# Kutum \n ["+WB.kutumTT+"]("+WB.kutumWB+") \n\n# Karanda \n ["+WB.karandaTT+"]("+WB.karandaWB+") \n\n# Nouver \n ["+WB.nouverTT+"]("+WB.nouverWB+")```  \n نسخة الويب: <https://goo.gl/58mkMh> \n مواعيد زعماء العالم: <https://i.imgur.com/3EhXGpv.jpg> ");
 					// bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 					// bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
 					
