@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 //var emitter = require('./emitter');
 var bossTime = require('./bdoBossTimes')
-// var timers = require('./Addons/LT/laterTimer');
+var timers = require('./Addons/LT/laterTimer');
 var WB = require('./Addons/WB/worldbosses');
 var moment = require('moment');
 var later = require('later');
@@ -26,6 +26,72 @@ function randomColorOut() {
 	var colors = [0xe44d5b,0x4aba69,0xa528bc,0x12137d,0xbddf1f,0x240c48,0xee37ae,0x6ab5be,0x8ef556,0xe1add5,0x089b30,0xccdc6c,0x4bd591,0x4610f6,0xa51dd9,0x4fde33,0x17b173,0xbb3002,0xe70bc5,0x668045,0xd17a37,0x2ddfac,0x926ff0];
 	var rnumber = Math.floor(Math.random() * colors.length);
 	return colors[rnumber];
+}
+
+
+function timerFeed(cond) {
+	var generalChannel = bot.channels.get(375285109701738496);  //375285109701738496 -> General
+	switch (cond) {
+		case 'kzarka':
+			generalChannel.send({embed: {
+				color: randomColorOut(),
+				author: {
+					name: 'Kzarka ⤑ سيظهر بعد 10 دقائق',
+					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png'
+				  }
+			  }});
+			break;
+
+			case 'kutum':
+			generalChannel.send({embed: {
+				color: randomColorOut(),
+				author: {
+					name: 'Kutum ⤑ سيظهر بعد 10 دقائق',
+					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kutum.png'
+				  }
+			  }});
+			break;
+
+			case 'karanda':
+			generalChannel.send({embed: {
+				color: randomColorOut(),
+				author: {
+					name: 'Karanda ⤑ سيظهر بعد 10 دقائق',
+					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_karanda.png'
+				  }
+			  }});
+			break;
+	
+			case 'nouver':
+			generalChannel.send({embed: {
+				color: randomColorOut(),
+				author: {
+					name: 'Nouver ⤑ سيظهر بعد 10 دقائق',
+					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_nouver.png'
+				  }
+			  }});
+			break;
+	}
+}
+
+// //ADD World Boss TIMERS IN Addons/LT/timers.json DONT TOUCH THIS
+var timer_Timers = setTimeout(getTimers, 1000)
+var timerLaterobj = [];
+  function getTimers() {
+	  if(timers.allTimersReady === true){
+		  later.date.UTC();
+		  for(var i=0; i<timers.t.timez.length ;i++){
+			  timerLaterobj[i] = timers.dailyTimes[i];
+			  setIntvs(timers.t.timez[i].name , timerLaterobj[i]);
+		  }
+		  console.log('got world boss timers.');
+		  clearTimeout(timer_Timers);
+	  }
+  }
+
+function setIntvs(condis, laterobj) {
+  later.setInterval(function() { timerFeed(condis);} , laterobj);
+  console.log("Timer: "+ condis +" has been set. ");
 }
 
 
@@ -52,25 +118,7 @@ function randomColorOut() {
 // 	}
 //   }
 
-// //ADD World Boss TIMERS IN Addons/LT/timers.json DONT TOUCH THIS
-//   var timer_Timers = setTimeout(getTimers, 1000)
-//   var timerLaterobj = [];
-// 	function getTimers() {
-// 		if(timers.allTimersReady === true){
-// 			later.date.UTC();
-// 			for(var i=0; i<timers.t.timez.length ;i++){
-// 				timerLaterobj[i] = timers.dailyTimes[i];
-// 				setIntvs(timers.t.timez[i].name, timers.t.timez[i].channelID , timerLaterobj[i]);
-// 			}
-// 			console.log('got world boss timers.');
-// 			clearTimeout(timer_Timers);
-// 		}
-// 	}
 
-// function setIntvs(condis,chID , laterobj) {
-// 	later.setInterval(function() { timerFeed(condis, chID);} , laterobj);
-// 	// console.log("Timer: "+ condis +" has been set.");
-// }
 
 
 
