@@ -179,7 +179,7 @@ function showNearest() {
             // var Dur = moment.duration(bossesTimes.kzarka[i] - now);
             var BT = bossesTimes.kzarka[i];
             var TT = moment(bossesTimes.kzarka[i]).add(3, 'hours');
-            var kzarkaTT = TT.locale('en').format("HH:mm");
+            var kzarkaTT = TT.locale('en').format("ddd, HH:mm");
             kzarkaWB = BT.locale('ar').fromNow();
             module.exports.kzarkaWB = kzarkaWB;
             module.exports.kzarkaTT = kzarkaTT;
@@ -191,7 +191,7 @@ function showNearest() {
             // var Dur = moment.duration(bossesTimes.kutum[i] - now);
             var BT = bossesTimes.kutum[i];
             var TT = moment(bossesTimes.kutum[i]).add(3, 'hours');
-            var kutumTT = TT.locale('en').format("HH:mm");
+            var kutumTT = TT.locale('en').format("ddd, HH:mm");
             kutumWB = BT.locale('ar').fromNow();
             module.exports.kutumWB = kutumWB;
             module.exports.kutumTT = kutumTT;
@@ -204,7 +204,7 @@ function showNearest() {
             // var Dur = moment.duration(bossesTimes.karanda[i] - now);
             var BT = bossesTimes.karanda[i];
             var TT = moment(bossesTimes.karanda[i]).add(3, 'hours');
-            var karandaTT = TT.locale('en').format("HH:mm");
+            var karandaTT = TT.locale('en').format("ddd, HH:mm");
             karandaWB = BT.locale('ar').fromNow();
             module.exports.karandaWB = karandaWB;
             module.exports.karandaTT = karandaTT;
@@ -216,7 +216,7 @@ function showNearest() {
             // var Dur = moment.duration(bossesTimes.nouver[i] - now);
             var BT = bossesTimes.nouver[i];
             var TT = moment(bossesTimes.nouver[i]).add(3, 'hours');
-            var nouverTT = TT.locale('en').format("HH:mm");
+            var nouverTT = TT.locale('en').format("ddd, HH:mm");
             nouverWB = BT.locale('ar').fromNow();
             module.exports.nouverWB = nouverWB;
             module.exports.nouverTT = nouverTT;
