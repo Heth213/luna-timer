@@ -164,7 +164,7 @@ function sortTimes() {
     }
 
     showNearest();
-    setTimeout(sortTimes, 60000);
+    setTimeout(sortTimes, 50000);
 }
 
 
@@ -180,7 +180,7 @@ function showNearest() {
             var BT = bossesTimes.kzarka[i];
             var TT = moment(bossesTimes.kzarka[i]).add(3, 'hours');
             var kzarkaTT = TT.locale('en').format("ddd, HH:mm");
-            kzarkaWB = BT.locale('ar').fromNow();
+            kzarkaWB = BT.locale('ar-kw').fromNow();
             module.exports.kzarkaWB = kzarkaWB;
             module.exports.kzarkaTT = kzarkaTT;
         }
@@ -192,7 +192,7 @@ function showNearest() {
             var BT = bossesTimes.kutum[i];
             var TT = moment(bossesTimes.kutum[i]).add(3, 'hours');
             var kutumTT = TT.locale('en').format("ddd, HH:mm");
-            kutumWB = BT.locale('ar').fromNow();
+            kutumWB = BT.locale('ar-kw').fromNow();
             module.exports.kutumWB = kutumWB;
             module.exports.kutumTT = kutumTT;
 
@@ -205,7 +205,7 @@ function showNearest() {
             var BT = bossesTimes.karanda[i];
             var TT = moment(bossesTimes.karanda[i]).add(3, 'hours');
             var karandaTT = TT.locale('en').format("ddd, HH:mm");
-            karandaWB = BT.locale('ar').fromNow();
+            karandaWB = BT.locale('ar-kw').fromNow();
             module.exports.karandaWB = karandaWB;
             module.exports.karandaTT = karandaTT;
         }
@@ -217,7 +217,7 @@ function showNearest() {
             var BT = bossesTimes.nouver[i];
             var TT = moment(bossesTimes.nouver[i]).add(3, 'hours');
             var nouverTT = TT.locale('en').format("ddd, HH:mm");
-            nouverWB = BT.locale('ar').fromNow();
+            nouverWB = BT.locale('ar-kw').fromNow();
             module.exports.nouverWB = nouverWB;
             module.exports.nouverTT = nouverTT;
         }
