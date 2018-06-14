@@ -29,7 +29,11 @@ function randomColorOut() {
 }
 
 
-function timerFeed(cond) {
+var intvArray = [];
+var timer_Timers = setTimeout(getTimers, 1000)
+var timerLaterobj = [];
+
+function timerFeed(cond, num) {
 	var generalChannel = bot.channels.get(375285109701738496);  //375285109701738496 -> تجارب
 	switch (cond) {
 		case 'kzarka':
@@ -40,6 +44,7 @@ function timerFeed(cond) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png'
 				  }
 			  }});
+			  intvArray[num].clear();
 			break;
 
 			case 'kutum':
@@ -50,6 +55,7 @@ function timerFeed(cond) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kutum.png'
 				  }
 			  }});
+			  intvArray[num].clear();
 			break;
 
 			case 'karanda':
@@ -60,6 +66,7 @@ function timerFeed(cond) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_karanda.png'
 				  }
 			  }});
+			  intvArray[num].clear();
 			break;
 	
 			case 'nouver':
@@ -70,28 +77,28 @@ function timerFeed(cond) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_nouver.png'
 				  }
 			  }});
+			  intvArray[num].clear();
 			break;
 	}
 }
 
 // //ADD World Boss TIMERS IN Addons/LT/timers.json DONT TOUCH THIS
-var timer_Timers = setTimeout(getTimers, 1000)
-var timerLaterobj = [];
+
   function getTimers() {
 	  if(timers.allTimersReady === true){
 		  later.date.UTC();
 		  for(var i=0; i<timers.t.timez.length ;i++){
 			  timerLaterobj[i] = timers.dailyTimes[i];
-			  setIntvs(timers.t.timez[i].name , timerLaterobj[i]);
+			  setIntvs(timers.t.timez[i].name , timerLaterobj[i], i);
 		  }
 		  console.log('got world boss timers.');
 		  clearTimeout(timer_Timers);
 	  }
   }
 
-function setIntvs(condis, laterobj) {
-  later.setInterval(function() { timerFeed(condis);} , laterobj);
-  console.log("Timer: "+ condis +" has been set. ");
+function setIntvs(condis, laterobj, num) {
+	intvArray[num] = later.setTimeout(function() { timerFeed(condis,num);} , laterobj);
+  console.log("Timer: "+ condis + " " + num + " has been set. ");
 }
 
 
