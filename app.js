@@ -35,7 +35,7 @@ var timerLaterobj = [];
 
 
 function timerFeed(cond) {
-	var generalChannel = bot.channels.get('375285109701738496');  //'375285109701738496' -> تجارب
+	var generalChannel = bot.channels.get('385473030220021761');  //'375285109701738496' -> تجارب
 	switch (cond) {
 		case 'kzarka':
 		console.log("kzarka up [inside switch]");
@@ -103,7 +103,7 @@ function timerFeed(cond) {
 
 function setIntvs(condis, laterobj, num) {
 	intvArray[num] = later.setInterval(function() { timerFeed(condis);} , laterobj);
-  console.log("Timer: "+ condis + " " + num + " has been set. ");
+//   console.log("Timer: "+ condis + " " + num + " has been set. ");
 }
 
 
