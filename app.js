@@ -35,7 +35,7 @@ var timerLaterobj = [];
 
 
 function timerFeed(cond) {
-	var generalChannel = bot.channels.get('385473030220021761');  //'375285109701738496' -> تجارب
+	var generalChannel = bot.channels.get('387393026382888962');  //'375285109701738496' -> تجارب
 	switch (cond) {
 		case 'kzarka':
 		console.log("kzarka up [inside switch]");
