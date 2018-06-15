@@ -33,10 +33,12 @@ var intvArray = [];
 var timer_Timers = setTimeout(getTimers, 1000)
 var timerLaterobj = [];
 
-function timerFeed(cond, num) {
-	var generalChannel = bot.channels.get(375285109701738496);  //375285109701738496 -> تجارب
+
+function timerFeed(cond) {
+	var generalChannel = bot.channels.get('375285109701738496');  //'375285109701738496' -> تجارب
 	switch (cond) {
 		case 'kzarka':
+		console.log("kzarka up [inside switch]");
 			generalChannel.send({embed: {
 				color: randomColorOut(),
 				author: {
@@ -44,10 +46,11 @@ function timerFeed(cond, num) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png'
 				  }
 			  }});
-			  intvArray[num].clear();
+			  
 			break;
 
 			case 'kutum':
+			console.log("kutum up [inside switch]");
 			generalChannel.send({embed: {
 				color: randomColorOut(),
 				author: {
@@ -55,10 +58,11 @@ function timerFeed(cond, num) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kutum.png'
 				  }
 			  }});
-			  intvArray[num].clear();
+			  
 			break;
 
 			case 'karanda':
+			console.log("karanda up [inside switch]");
 			generalChannel.send({embed: {
 				color: randomColorOut(),
 				author: {
@@ -66,10 +70,11 @@ function timerFeed(cond, num) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_karanda.png'
 				  }
 			  }});
-			  intvArray[num].clear();
+			  
 			break;
 	
 			case 'nouver':
+			console.log("kzarka up [inside switch]");
 			generalChannel.send({embed: {
 				color: randomColorOut(),
 				author: {
@@ -77,7 +82,7 @@ function timerFeed(cond, num) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_nouver.png'
 				  }
 			  }});
-			  intvArray[num].clear();
+			  
 			break;
 	}
 }
@@ -97,7 +102,7 @@ function timerFeed(cond, num) {
   }
 
 function setIntvs(condis, laterobj, num) {
-	intvArray[num] = later.setTimeout(function() { timerFeed(condis,num);} , laterobj);
+	intvArray[num] = later.setInterval(function() { timerFeed(condis);} , laterobj);
   console.log("Timer: "+ condis + " " + num + " has been set. ");
 }
 
