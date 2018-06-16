@@ -182,12 +182,13 @@ function showNearest() {
             var TT = moment(bossesTimes.kzarka[i]).add(3, 'hours');
             var kzarkaTT = TT.locale('en').format("ddd, HH:mm");
             kzarkaWB = BT.locale('ar').fromNow();
-            if(kzarkaTT && kzarkaWB){
-            module.exports.kzarkaWB = kzarkaWB;
-            module.exports.kzarkaTT = kzarkaTT;
-        }else{
+            if(kzarkaTT == undefined && kzarkaWB == undefined){
+           
             module.exports.kzarkaWB = 'يوم الاحد';
             module.exports.kzarkaTT = '....';
+        }else{
+            module.exports.kzarkaWB = kzarkaWB;
+            module.exports.kzarkaTT = kzarkaTT;
         }
         }
     }
@@ -199,12 +200,13 @@ function showNearest() {
             var TT = moment(bossesTimes.kutum[i]).add(3, 'hours');
             var kutumTT = TT.locale('en').format("ddd, HH:mm");
             kutumWB = BT.locale('ar').fromNow();
-            if(kutumTT && kutumWB){
-                module.exports.kutumWB = kutumWB;
-                module.exports.kutumTT = kutumTT;
-            }else{
+            if(kutumTT == undefined && kutumWB == undefined){
+               
                 module.exports.kutumWB = 'يوم الاحد';
                 module.exports.kutumTT = '....';
+            }else{
+                module.exports.kutumWB = kutumWB;
+                module.exports.kutumTT = kutumTT;
             }
 
         }
@@ -219,12 +221,13 @@ function showNearest() {
             karandaWB = BT.locale('ar').fromNow();
             module.exports.karandaWB = karandaWB;
             module.exports.karandaTT = karandaTT;
-            if(karandaTT && karandaWB){
-                module.exports.karandaWB = karandaWB;
-                module.exports.karandaTT = karandaTT;
-            }else{
+            if(karandaTT == undefined && karandaWB == undefined){
+               
                 module.exports.karandaWB = 'يوم الاحد';
                 module.exports.karandaTT = '....';
+            }else{
+                module.exports.karandaWB = karandaWB;
+                module.exports.karandaTT = karandaTT;
             }
         }
     }
@@ -238,12 +241,12 @@ function showNearest() {
             nouverWB = BT.locale('ar').fromNow();
             module.exports.nouverWB = nouverWB;
             module.exports.nouverTT = nouverTT;
-            if(nouverTT && nouverWB){
-                module.exports.nouverWB = nouverWB;
-                module.exports.nouverTT = nouverTT;
-            }else{
+            if(nouverTT == undefined && nouverWB == undefined){
                 module.exports.nouverWB = 'يوم الاحد';
                 module.exports.nouverTT = '....';
+            }else{
+                module.exports.nouverWB = nouverWB;
+                module.exports.nouverTT = nouverTT;
             }
         }
     }
