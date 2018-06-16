@@ -163,7 +163,6 @@ function sortTimes() {
             nearestNv.push(bossesTimes.nouver[i]);
         }
     }
-
     showNearest();
     setTimeout(sortTimes, 50000);
 }
@@ -174,83 +173,77 @@ function showNearest() {
     var nnKu = getClosestNum(nearestKu, now);
     var nnKa = getClosestNum(nearestKa, now);
     var nnNv = getClosestNum(nearestNv, now);
+    if (nnKz) {
+        for (var i = 0; i < bossesTimes.kzarka.length; i++) {
 
-    for (var i = 0; i < bossesTimes.kzarka.length; i++) {
-        if (bossesTimes.kzarka[i] === nnKz) {
-            // var Dur = moment.duration(bossesTimes.kzarka[i] - now);
-            var BT = bossesTimes.kzarka[i];
-            var TT = moment(bossesTimes.kzarka[i]).add(3, 'hours');
-            var kzarkaTT = TT.locale('en').format("ddd, HH:mm");
-            kzarkaWB = BT.locale('ar').fromNow();
-            console.log('test123');
-            console.log(kzarkaWB);
-            console.log(kzarkaTT);
-            if(kzarkaTT == undefined && kzarkaWB == undefined){
-                console.log('from inside: '+ kzarkaWB);
-            module.exports.kzarkaWB = 'يوم الاحد';
-            module.exports.kzarkaTT = '....';
-        }else{
-            console.log('from else: '+ kzarkaWB);
-            module.exports.kzarkaWB = kzarkaWB;
-            module.exports.kzarkaTT = kzarkaTT;
+            if (bossesTimes.kzarka[i] === nnKz) {
+                // var Dur = moment.duration(bossesTimes.kzarka[i] - now);
+                var BT = bossesTimes.kzarka[i];
+                var TT = moment(bossesTimes.kzarka[i]).add(3, 'hours');
+                var kzarkaTT = TT.locale('en').format("ddd, HH:mm");
+                kzarkaWB = BT.locale('ar').fromNow();
+                module.exports.kzarkaWB = kzarkaWB;
+                module.exports.kzarkaTT = kzarkaTT;
+            }
         }
-        }
+    } else {
+        module.exports.kzarkaWB = 'يوم الاحد';
+        module.exports.kzarkaTT = '....';
     }
 
-    for (var i = 0; i < bossesTimes.kutum.length; i++) {
-        if (bossesTimes.kutum[i] === nnKu) {
-            // var Dur = moment.duration(bossesTimes.kutum[i] - now);
-            var BT = bossesTimes.kutum[i];
-            var TT = moment(bossesTimes.kutum[i]).add(3, 'hours');
-            var kutumTT = TT.locale('en').format("ddd, HH:mm");
-            kutumWB = BT.locale('ar').fromNow();
-            if(kutumTT == undefined && kutumWB == undefined){
-               
-                module.exports.kutumWB = 'يوم الاحد';
-                module.exports.kutumTT = '....';
-            }else{
+
+
+    if (nnKu) {
+        for (var i = 0; i < bossesTimes.kutum.length; i++) {
+            if (bossesTimes.kutum[i] === nnKu) {
+                // var Dur = moment.duration(bossesTimes.kutum[i] - now);
+                var BT = bossesTimes.kutum[i];
+                var TT = moment(bossesTimes.kutum[i]).add(3, 'hours');
+                var kutumTT = TT.locale('en').format("ddd, HH:mm");
+                kutumWB = BT.locale('ar').fromNow();
                 module.exports.kutumWB = kutumWB;
                 module.exports.kutumTT = kutumTT;
             }
 
         }
+    } else {
+        module.exports.kutumWB = 'يوم الاحد';
+        module.exports.kutumTT = '....';
     }
 
-    for (var i = 0; i < bossesTimes.karanda.length; i++) {
-        if (bossesTimes.karanda[i] === nnKa) {
-            // var Dur = moment.duration(bossesTimes.karanda[i] - now);
-            var BT = bossesTimes.karanda[i];
-            var TT = moment(bossesTimes.karanda[i]).add(3, 'hours');
-            var karandaTT = TT.locale('en').format("ddd, HH:mm");
-            karandaWB = BT.locale('ar').fromNow();
-            if(karandaTT == undefined && karandaWB == undefined){
-               
-                module.exports.karandaWB = 'يوم الاحد';
-                module.exports.karandaTT = '....';
-            }else{
+    if (nnKa) {
+        for (var i = 0; i < bossesTimes.karanda.length; i++) {
+            if (bossesTimes.karanda[i] === nnKa) {
+                // var Dur = moment.duration(bossesTimes.karanda[i] - now);
+                var BT = bossesTimes.karanda[i];
+                var TT = moment(bossesTimes.karanda[i]).add(3, 'hours');
+                var karandaTT = TT.locale('en').format("ddd, HH:mm");
+                karandaWB = BT.locale('ar').fromNow();
                 module.exports.karandaWB = karandaWB;
                 module.exports.karandaTT = karandaTT;
+
             }
         }
+    } else {
+        module.exports.karandaWB = 'يوم الاحد';
+        module.exports.karandaTT = '....';
     }
 
-    for (var i = 0; i < bossesTimes.nouver.length; i++) {
-        if (bossesTimes.nouver[i] === nnNv) {
-            // var Dur = moment.duration(bossesTimes.nouver[i] - now);
-            var BT = bossesTimes.nouver[i];
-            var TT = moment(bossesTimes.nouver[i]).add(3, 'hours');
-            var nouverTT = TT.locale('en').format("ddd, HH:mm");
-            nouverWB = BT.locale('ar').fromNow();
-            module.exports.nouverWB = nouverWB;
-            module.exports.nouverTT = nouverTT;
-            if(nouverTT == undefined && nouverWB == undefined){
-                module.exports.nouverWB = 'يوم الاحد';
-                module.exports.nouverTT = '....';
-            }else{
+    if (nnNv) {
+        for (var i = 0; i < bossesTimes.nouver.length; i++) {
+            if (bossesTimes.nouver[i] === nnNv) {
+                // var Dur = moment.duration(bossesTimes.nouver[i] - now);
+                var BT = bossesTimes.nouver[i];
+                var TT = moment(bossesTimes.nouver[i]).add(3, 'hours');
+                var nouverTT = TT.locale('en').format("ddd, HH:mm");
+                nouverWB = BT.locale('ar').fromNow();
                 module.exports.nouverWB = nouverWB;
                 module.exports.nouverTT = nouverTT;
             }
         }
+    } else {
+        module.exports.nouverWB = 'يوم الاحد';
+        module.exports.nouverTT = '....';
     }
 }
 
