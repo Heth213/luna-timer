@@ -13,17 +13,20 @@ var later = require('later');
 ////Discord Bot
 ////////////////////////////////////////
 //Run On Bot Login
-var logChannel = bot.channels.get('375285109701738496'); // تجارب
+
 bot.on('ready', () => {
+	var logChannel = bot.channels.get('375285109701738496'); // تجارب
 	logChannel.send('**تم تشغيل البوت**');
 	console.log('Online...');
 });
 
 bot.on('reconnecting', () => {
+	var logChannel = bot.channels.get('375285109701738496'); // تجارب
 	logChannel.send('**تمت اعادة البوت**');
 });
 
 bot.on('disconnect', () => {
+	var logChannel = bot.channels.get('375285109701738496'); // تجارب
 	logChannel.send('<@123086354451136513> ** تم اغلاق البوت يرجى تشغيله من جديد **');
 });
 
