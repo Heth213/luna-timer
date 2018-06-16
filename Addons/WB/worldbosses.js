@@ -182,11 +182,14 @@ function showNearest() {
             var TT = moment(bossesTimes.kzarka[i]).add(3, 'hours');
             var kzarkaTT = TT.locale('en').format("ddd, HH:mm");
             kzarkaWB = BT.locale('ar').fromNow();
+            console.log(kzarkaWB);
+            console.log(kzarkaTT);
             if(kzarkaTT == undefined && kzarkaWB == undefined){
-           
+                console.log('from inside: '+ kzarkaWB);
             module.exports.kzarkaWB = 'يوم الاحد';
             module.exports.kzarkaTT = '....';
         }else{
+            console.log('from else: '+ kzarkaWB);
             module.exports.kzarkaWB = kzarkaWB;
             module.exports.kzarkaTT = kzarkaTT;
         }
@@ -219,8 +222,6 @@ function showNearest() {
             var TT = moment(bossesTimes.karanda[i]).add(3, 'hours');
             var karandaTT = TT.locale('en').format("ddd, HH:mm");
             karandaWB = BT.locale('ar').fromNow();
-            module.exports.karandaWB = karandaWB;
-            module.exports.karandaTT = karandaTT;
             if(karandaTT == undefined && karandaWB == undefined){
                
                 module.exports.karandaWB = 'يوم الاحد';
