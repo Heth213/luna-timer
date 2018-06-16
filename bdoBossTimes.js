@@ -34,12 +34,12 @@ function retrieveTimeData(){
 						rnNext = $("table").next().next().next().find("tbody > tr").next().next().find("td").next().html();
 						rnEst = $("table").next().next().next().find("tbody > tr").next().next().next().find("td").next().html();
 
-							module.exports.kzarkaN = kzarkaNext;
-							module.exports.kzarkaT = kzarkaEst;
+							// module.exports.kzarkaN = kzarkaNext;
+							// module.exports.kzarkaT = kzarkaEst;
 							
 							
-							module.exports.kutumN = kutumNext;
-							module.exports.kutumT = kutumEst;
+							// module.exports.kutumN = kutumNext;
+							// module.exports.kutumT = kutumEst;
 				
 							module.exports.bhegN = bhegNext;
 							module.exports.bhegT = bhegEst;
