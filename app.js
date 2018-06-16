@@ -13,13 +13,19 @@ var later = require('later');
 ////Discord Bot
 ////////////////////////////////////////
 //Run On Bot Login
+var logChannel = bot.channels.get('375285109701738496'); // تجارب
 bot.on('ready', () => {
-
+	logChannel.send('**تم تشغيل البوت**');
 	console.log('Online...');
 });
 
+bot.on('reconnecting', () => {
+	logChannel.send('**تمت اعادة البوت**');
+});
 
-
+bot.on('disconnect', () => {
+	logChannel.send('<@123086354451136513> ** تم اغلاق البوت يرجى تشغيله من جديد **');
+});
 
 
 function randomColorOut() {
@@ -38,7 +44,6 @@ function timerFeed(cond) {
 	var generalChannel = bot.channels.get('385473030220021761');  //'375285109701738496' -> تجارب
 	switch (cond) {
 		case 'kzarka':
-		
 		generalChannel.send('<@&392042343517388800>');
 			generalChannel.send({embed: {
 				color: randomColorOut(),
@@ -385,8 +390,8 @@ bot.on('message', async message => {
 
 	if (command === 'reset') {
 		if (message.member.roles.find("name", "Lunarium Officer")) {
-			message.reply("OK..");
-			process.exit();
+			message.reply("OK..")
+			.then(() => process.exit());
 			
 		}
 	}
