@@ -397,7 +397,7 @@ bot.on('message', async message => {
 			// .then(() => process.exit());
 			// message.reply("Doing It..");
 			message.channel.send('OK..');
-			resetBot();
+			process.exit();
 		}
 	}
 	if (command === 'purge') {
@@ -547,12 +547,6 @@ bot.on('message', async message => {
 
 
 });
-function resetBot() {
-	process.exit();
-	console.log('ye');
-	// channel.send('OK...')
-	// .then(() => bot.destroy())
-	// .then(() => bot.login(process.env.B0T_ToKEN));
-}
+
 //Login Bot User
 bot.login(process.env.B0T_ToKEN);
