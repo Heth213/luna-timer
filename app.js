@@ -393,9 +393,10 @@ bot.on('message', async message => {
 
 	if (command === 'reset' ||  command === 'restart') {
 		if (message.member.roles.find("name", "Lunarium Officer")) {
-			message.reply("OK..")
-			.then(() => process.exit(), console.log("OK.."));
-			console.log("reset");
+			// message.reply("OK..")
+			// .then(() => process.exit());
+			// message.reply("Doing It..");
+			resetBot(message.channel);
 		}
 	}
 	if (command === 'purge') {
@@ -541,6 +542,13 @@ bot.on('message', async message => {
 	// 		setTimeout(resolve, ms)
 	// 	});
 	// }
+
+	function resetBot(channel) {
+		// send channel a message that you're resetting bot [optional]
+		channel.send('OK...')
+		.then(() => bot.destroy())
+		.then(() => bot.login(process.env.B0T_ToKEN));
+	}
 
 });
 //Login Bot User
