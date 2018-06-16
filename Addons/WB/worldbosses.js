@@ -182,8 +182,13 @@ function showNearest() {
             var TT = moment(bossesTimes.kzarka[i]).add(3, 'hours');
             var kzarkaTT = TT.locale('en').format("ddd, HH:mm");
             kzarkaWB = BT.locale('ar').fromNow();
+            if(kzarkaTT && kzarkaWB){
             module.exports.kzarkaWB = kzarkaWB;
             module.exports.kzarkaTT = kzarkaTT;
+        }else{
+            module.exports.kzarkaWB = 'يوم الاحد';
+            module.exports.kzarkaTT = '....';
+        }
         }
     }
 
@@ -194,8 +199,13 @@ function showNearest() {
             var TT = moment(bossesTimes.kutum[i]).add(3, 'hours');
             var kutumTT = TT.locale('en').format("ddd, HH:mm");
             kutumWB = BT.locale('ar').fromNow();
-            module.exports.kutumWB = kutumWB;
-            module.exports.kutumTT = kutumTT;
+            if(kutumTT && kutumWB){
+                module.exports.kutumWB = kutumWB;
+                module.exports.kutumTT = kutumTT;
+            }else{
+                module.exports.kutumWB = 'يوم الاحد';
+                module.exports.kutumTT = '....';
+            }
 
         }
     }
@@ -209,6 +219,13 @@ function showNearest() {
             karandaWB = BT.locale('ar').fromNow();
             module.exports.karandaWB = karandaWB;
             module.exports.karandaTT = karandaTT;
+            if(karandaTT && karandaWB){
+                module.exports.karandaWB = karandaWB;
+                module.exports.karandaTT = karandaTT;
+            }else{
+                module.exports.karandaWB = 'يوم الاحد';
+                module.exports.karandaTT = '....';
+            }
         }
     }
 
@@ -221,6 +238,13 @@ function showNearest() {
             nouverWB = BT.locale('ar').fromNow();
             module.exports.nouverWB = nouverWB;
             module.exports.nouverTT = nouverTT;
+            if(nouverTT && nouverWB){
+                module.exports.nouverWB = nouverWB;
+                module.exports.nouverTT = nouverTT;
+            }else{
+                module.exports.nouverWB = 'يوم الاحد';
+                module.exports.nouverTT = '....';
+            }
         }
     }
 }

@@ -40,18 +40,18 @@ function retrieveTimeData(){
 							
 							// module.exports.kutumN = kutumNext;
 							// module.exports.kutumT = kutumEst;
-				
+						
+							//if not undefinded -> export them to app.js :)
+							if(bhegNext && bhegEst && dtNext && dtEst && mudNext && mudEst && rnNext && rnEst){
 							module.exports.bhegN = bhegNext;
 							module.exports.bhegT = bhegEst;
-
 							module.exports.dtN = dtNext;
 							module.exports.dtT = dtEst;
-
 							module.exports.mudN = mudNext;
 							module.exports.mudT = mudEst;
-
 							module.exports.rnN = rnNext;
 							module.exports.rnT = rnEst;
+						}
 			    	}
 					catch(htmlError){
                         console.log(htmlError+"\nCould not find HTML element!"+"\n Retrying Now!... ");
