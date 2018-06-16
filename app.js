@@ -35,7 +35,7 @@ var timerLaterobj = [];
 
 
 function timerFeed(cond) {
-	var generalChannel = bot.channels.get('387393026382888962');  //'375285109701738496' -> تجارب
+	var generalChannel = bot.channels.get('375285109701738496');  //'375285109701738496' -> تجارب
 	switch (cond) {
 		case 'kzarka':
 		console.log("kzarka up [inside switch]");
@@ -193,6 +193,7 @@ function sendBossTimers() {
 
 		// kzTrimed = bossTime.kzarkaN.trim();
 		// kuTrimed = bossTime.kutumN.trim();
+		if(bossTime.bhegN == null || bossTime.dtN == null || bossTime.mudN == null || bossTime.rnN == null){console.log('error cant get bossTimes.'); return;}
 		bhTrimed = bossTime.bhegN.trim();
 		dtTrimed = bossTime.dtN.trim();
 		mdTrimed = bossTime.mudN.trim();
@@ -341,7 +342,7 @@ function sendBossTimers() {
 
 
 
-	setTimeout(sendBossTimers, 70000);
+	setTimeout(sendBossTimers, 80000);
 } //end of func
 sendBossTimers();
 

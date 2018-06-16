@@ -16,23 +16,23 @@ function retrieveTimeData(){
 			    
 			    	try{
 
-                        kzarkaNext = $("table").next().next().next().next().next().find("tbody > tr").next().next().find("td").next().html();
-						kzarkaEst = $("table").next().next().next().next().next().find("tbody > tr").next().next().next().find("td").next().html();
+                        // kzarkaNext = $("table").next().next().next().next().next().find("tbody > tr").next().next().find("td").next().html();
+						// kzarkaEst = $("table").next().next().next().next().next().find("tbody > tr").next().next().next().find("td").next().html();
 						
-						kutumNext = $("table").find("tbody > tr").next().next().find("td").next().html();
-						kutumEst = $("table").find("tbody > tr").next().next().next().find("td").next().html();
+						// kutumNext = $("table").find("tbody > tr").next().next().find("td").next().html();
+						// kutumEst = $("table").find("tbody > tr").next().next().next().find("td").next().html();
 						
-						bhegNext = $("table").next().find("tbody > tr").next().next().find("td").next().html();
-						bhegEst = $("table").next().find("tbody > tr").next().next().next().find("td").next().html();
+						bhegNext = $("table").find("tbody > tr").next().next().find("td").next().html();
+						bhegEst = $("table").find("tbody > tr").next().next().next().find("td").next().html();
 						
-						dtNext = $("table").next().next().find("tbody > tr").next().next().find("td").next().html();
-						dtEst = $("table").next().next().find("tbody > tr").next().next().next().find("td").next().html();	
+						dtNext = $("table").next().find("tbody > tr").next().next().find("td").next().html();
+						dtEst = $("table").next().find("tbody > tr").next().next().next().find("td").next().html();	
 
-						mudNext = $("table").next().next().next().find("tbody > tr").next().next().find("td").next().html();
-						mudEst = $("table").next().next().next().find("tbody > tr").next().next().next().find("td").next().html();	
+						mudNext = $("table").next().next().find("tbody > tr").next().next().find("td").next().html();
+						mudEst = $("table").next().next().find("tbody > tr").next().next().next().find("td").next().html();	
 
-						rnNext = $("table").next().next().next().next().next().next().find("tbody > tr").next().next().find("td").next().html();
-						rnEst = $("table").next().next().next().next().next().next().find("tbody > tr").next().next().next().find("td").next().html();
+						rnNext = $("table").next().next().next().find("tbody > tr").next().next().find("td").next().html();
+						rnEst = $("table").next().next().next().find("tbody > tr").next().next().next().find("td").next().html();
 
 							module.exports.kzarkaN = kzarkaNext;
 							module.exports.kzarkaT = kzarkaEst;
@@ -64,7 +64,7 @@ function retrieveTimeData(){
 
 function endlessLoop(){
     retrieveTimeData();
-    setTimeout(endlessLoop, 15000);
+    setTimeout(endlessLoop, 40000);
 }
 endlessLoop();
 retrieveTimeData();
