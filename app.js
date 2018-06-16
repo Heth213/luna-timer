@@ -543,13 +543,14 @@ bot.on('message', async message => {
 	// 	});
 	// }
 
-	function resetBot(channel) {
-		// send channel a message that you're resetting bot [optional]
-		channel.send('OK...')
-		.then(() => bot.destroy())
-		.then(() => bot.login(process.env.B0T_ToKEN));
-	}
+
 
 });
+function resetBot(channel) {
+	// send channel a message that you're resetting bot [optional]
+	channel.send('OK...')
+	.then(() => bot.destroy())
+	.then(() => bot.login(process.env.B0T_ToKEN));
+}
 //Login Bot User
 bot.login(process.env.B0T_ToKEN);
