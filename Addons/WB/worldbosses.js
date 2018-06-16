@@ -188,7 +188,7 @@ function showNearest() {
         }
     } else {
         module.exports.kzarkaWB = 'يوم الاحد';
-        module.exports.kzarkaTT = '....';
+        module.exports.kzarkaTT = 'Sun, 16:00';
     }
 
 
@@ -208,7 +208,7 @@ function showNearest() {
         }
     } else {
         module.exports.kutumWB = 'يوم الاحد';
-        module.exports.kutumTT = '....';
+        module.exports.kutumTT = 'Sun, 11:00';
     }
 
     if (nnKa) {
@@ -226,7 +226,7 @@ function showNearest() {
         }
     } else {
         module.exports.karandaWB = 'يوم الاحد';
-        module.exports.karandaTT = '....';
+        module.exports.karandaTT = 'Sun, 16:00';
     }
 
     if (nnNv) {
@@ -243,7 +243,7 @@ function showNearest() {
         }
     } else {
         module.exports.nouverWB = 'يوم الاحد';
-        module.exports.nouverTT = '....';
+        module.exports.nouverTT = 'Sun, 1:00';
     }
 }
 
