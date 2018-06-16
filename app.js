@@ -35,10 +35,11 @@ var timerLaterobj = [];
 
 
 function timerFeed(cond) {
-	var generalChannel = bot.channels.get('375285109701738496');  //'375285109701738496' -> تجارب
+	var generalChannel = bot.channels.get('385473030220021761');  //'375285109701738496' -> تجارب
 	switch (cond) {
 		case 'kzarka':
-		console.log("kzarka up [inside switch]");
+		
+		generalChannel.send('<@&392042343517388800>');
 			generalChannel.send({embed: {
 				color: randomColorOut(),
 				author: {
@@ -50,7 +51,8 @@ function timerFeed(cond) {
 			break;
 
 			case 'kutum':
-			console.log("kutum up [inside switch]");
+			
+			generalChannel.send('<@&392042343517388800>');
 			generalChannel.send({embed: {
 				color: randomColorOut(),
 				author: {
@@ -62,7 +64,8 @@ function timerFeed(cond) {
 			break;
 
 			case 'karanda':
-			console.log("karanda up [inside switch]");
+			
+			generalChannel.send('<@&392042343517388800>');
 			generalChannel.send({embed: {
 				color: randomColorOut(),
 				author: {
@@ -74,7 +77,8 @@ function timerFeed(cond) {
 			break;
 	
 			case 'nouver':
-			console.log("kzarka up [inside switch]");
+			
+			generalChannel.send('<@&392042343517388800>');
 			generalChannel.send({embed: {
 				color: randomColorOut(),
 				author: {
@@ -316,7 +320,7 @@ function sendBossTimers() {
 						if(WB.karandaTT == undefined){WB.karandaTT = "..."}
 						if(WB.nouverTT == undefined){WB.nouverTT = "..."}
 
-					bossChannel.send(" ** الزعماء العاديين ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` زعماء العالم ```md\n# Kzarka \n ["+WB.kzarkaTT+"]("+WB.kzarkaWB+")  \n\n# Kutum \n ["+WB.kutumTT+"]("+WB.kutumWB+") \n\n# Karanda \n ["+WB.karandaTT+"]("+WB.karandaWB+") \n\n# Nouver \n ["+WB.nouverTT+"]("+WB.nouverWB+")```  \n نسخة الويب: <https://goo.gl/58mkMh> \n مواعيد زعماء العالم: <https://i.imgur.com/3EhXGpv.jpg> ");
+					bossChannel.send(" ** الزعماء العاديين ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` زعماء العالم ```md\n# Kzarka \n ["+WB.kzarkaTT+"]("+WB.kzarkaWB+")  \n\n# Kutum \n ["+WB.kutumTT+"]("+WB.kutumWB+") \n\n# Karanda \n ["+WB.karandaTT+"]("+WB.karandaWB+") \n\n# Nouver \n ["+WB.nouverTT+"]("+WB.nouverWB+")```  \n نسخة الويب: <https://goo.gl/58mkMh> \n مواعيد زعماء العالم: <https://i.imgur.com/w0F6yBe.jpg> ");
 					// bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 					// bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
 					
