@@ -182,6 +182,7 @@ function showNearest() {
             var TT = moment(bossesTimes.kzarka[i]).add(3, 'hours');
             var kzarkaTT = TT.locale('en').format("ddd, HH:mm");
             kzarkaWB = BT.locale('ar').fromNow();
+            console.log('test123');
             console.log(kzarkaWB);
             console.log(kzarkaTT);
             if(kzarkaTT == undefined && kzarkaWB == undefined){
