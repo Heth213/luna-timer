@@ -391,11 +391,11 @@ bot.on('message', async message => {
 	// }
 
 
-	if (command === 'reset') {
+	if (command === 'reset' ||  command === 'restart') {
 		if (message.member.roles.find("name", "Lunarium Officer")) {
 			message.reply("OK..")
-			.then(() => process.exit());
-			
+			.then(() => process.exit(), console.log("OK.."));
+			console.log("reset");
 		}
 	}
 	if (command === 'purge') {
