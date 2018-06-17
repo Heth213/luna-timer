@@ -38,7 +38,7 @@ function settheGame() {
 		bot.user.setGame(gameTime.nightCalc);
 	}
 	
-	setTimeout(settheGame, 30000);
+	setTimeout(settheGame, 60000);
 };
 
 

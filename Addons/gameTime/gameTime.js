@@ -20,7 +20,7 @@ function getTime() {
 
 
             module.exports.nightCalc = nightCalc;
-            setTimeout(getTime, 29900);
+            setTimeout(getTime, 59900);
 		}
         
 
