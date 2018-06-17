@@ -428,6 +428,7 @@ bot.on('message', async message => {
 			  }
 		  }});
 		  DeleteOwn(10000);
+		  DeleteOwn(10000);
 		  message.channel.send('<@&457842269651730433>');
 		  message.channel.send({embed: {
 			  color: 0x78b0e5,
@@ -436,7 +437,8 @@ bot.on('message', async message => {
 				  icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_karanda.png'
 				}
 			}});
-
+			DeleteOwn(10000);
+			DeleteOwn(10000);
 			message.channel.send('<@&457842332608364544>');
 			message.channel.send({embed: {
 				color: 0xd4af4d,
@@ -445,8 +447,10 @@ bot.on('message', async message => {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kutum.png'
 				  }
 			  }});
-
-			  message.channel.send('<@&457842228312670228>'+{embed: {
+			  DeleteOwn(10000);
+			  DeleteOwn(10000);
+			  message.channel.send({"content": '<@&457842228312670228>',
+				  embed: {
 				  color: 0x00eeb0,
 				  author: {
 					  name: 'nouver ⤑ سيظهر بعد 10 دقائق',
