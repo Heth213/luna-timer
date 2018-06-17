@@ -169,10 +169,15 @@ function sortTimes() {
 
 
 function showNearest() {
-    var nnKz = getClosestNum(nearestKz, now);
-    var nnKu = getClosestNum(nearestKu, now);
-    var nnKa = getClosestNum(nearestKa, now);
-    var nnNv = getClosestNum(nearestNv, now);
+
+    if(nearestKz){var nnKz = getClosestNum(nearestKz, now);}else{var nnKz;}
+    if(nearestKu){var nnKu = getClosestNum(nearestKu, now);}else{var nnKu;}
+    if(nearestKa){var nnKa = getClosestNum(nearestKa, now);}else{var nnKa;}
+    if(nearestNv){var nnNv = getClosestNum(nearestNv, now);}else{var nnNv;}
+    
+    
+    
+
     if (nnKz) {
         for (var i = 0; i < bossesTimes.kzarka.length; i++) {
 
