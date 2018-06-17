@@ -420,6 +420,7 @@ bot.on('message', async message => {
 	if(command === 'allbossuptest'){
 
 		message.channel.send('<@&457842065804361731>');
+		DeleteOwn(10000);
 		message.channel.send({embed: {
 			color: 0xa781f3,
 			author: {
@@ -428,8 +429,9 @@ bot.on('message', async message => {
 			  }
 		  }});
 		  DeleteOwn(10000);
-		  DeleteOwn(10000);
+
 		  message.channel.send('<@&457842269651730433>');
+		  DeleteOwn(10000);
 		  message.channel.send({embed: {
 			  color: 0x78b0e5,
 			  author: {
@@ -438,8 +440,9 @@ bot.on('message', async message => {
 				}
 			}});
 			DeleteOwn(10000);
-			DeleteOwn(10000);
+			
 			message.channel.send('<@&457842332608364544>');
+			DeleteOwn(10000);
 			message.channel.send({embed: {
 				color: 0xd4af4d,
 				author: {
@@ -448,15 +451,17 @@ bot.on('message', async message => {
 				  }
 			  }});
 			  DeleteOwn(10000);
+
+			  message.channel.send('<@&457842228312670228>');
 			  DeleteOwn(10000);
-			  message.channel.send({"content": '<@&457842228312670228>',
-				  embed: {
+			  message.channel.send({embed: {
 				  color: 0x00eeb0,
 				  author: {
 					  name: 'nouver ⤑ سيظهر بعد 10 دقائق',
 					  icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_nouver.png'
 					}
 				}});
+				DeleteOwn(10000);
 	}
 	function Purge(num) {
 
