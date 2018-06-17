@@ -56,11 +56,11 @@ var timerLaterobj = [];
 
 
 function timerFeed(cond) {
-	var generalChannel = bot.channels.get('375285109701738496');  // #early-notification 457922596332240905
+	var generalChannel = bot.channels.get('457922596332240905');  // #early-notification 457922596332240905
 	switch (cond) {
 		case 'kzarka':
 		generalChannel.send('<@&457842065804361731>');
-		DeleteOwn(10000,generalChannel);
+		DeleteOwn(900000,generalChannel);
 			generalChannel.send({embed: {
 				color: 0xa781f3,
 				author: {
@@ -68,13 +68,13 @@ function timerFeed(cond) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png'
 				  }
 			  }});
-			  DeleteOwn(10000,generalChannel);
+			  DeleteOwn(900000,generalChannel);
 			break;
 
 			case 'kutum':
 			
 			generalChannel.send('<@&457842332608364544>');
-			DeleteOwn(10000,generalChannel);
+			DeleteOwn(900000,generalChannel);
 			generalChannel.send({embed: {
 				color: 0xd4af4d,
 				author: {
@@ -83,13 +83,13 @@ function timerFeed(cond) {
 				  }
 			  }});
 			  
-			  DeleteOwn(10000,generalChannel);
+			  DeleteOwn(900000,generalChannel);
 			break;
 
 			case 'karanda':
 			
 			generalChannel.send('<@&457842269651730433>');
-			DeleteOwn(10000,generalChannel);
+			DeleteOwn(900000,generalChannel);
 			generalChannel.send({embed: {
 				color: 0x78b0e5,
 				author: {
@@ -98,13 +98,13 @@ function timerFeed(cond) {
 				  }
 			  }});
 			  
-			  DeleteOwn(10000,generalChannel);
+			  DeleteOwn(900000,generalChannel);
 			break;
 	
 			case 'nouver':
 			
 			generalChannel.send('<@&457842228312670228>');
-			DeleteOwn(10000,generalChannel);
+			DeleteOwn(900000,generalChannel);
 			generalChannel.send({embed: {
 				color: 0x00eeb0,
 				author: {
@@ -113,7 +113,7 @@ function timerFeed(cond) {
 				  }
 			  }});
 			  
-			  DeleteOwn(10000,generalChannel);
+			  DeleteOwn(900000,generalChannel);
 			break;
 	}
 }
@@ -437,23 +437,23 @@ bot.on('message', async message => {
 		}
 	}
 
-	if(command === 'timer1test'){
-		timerFeed('kzarka');
-	}
+	// if(command === 'timer1test'){
+	// 	timerFeed('kzarka');
+	// }
 
-	if(command === 'timer2test'){
-		timerFeed('kutum');
-	}
-
-
-	if(command === 'timer3test'){
-		timerFeed('karanda');
-	}
+	// if(command === 'timer2test'){
+	// 	timerFeed('kutum');
+	// }
 
 
-	if(command === 'timer4test'){
-		timerFeed('nouver');
-	}
+	// if(command === 'timer3test'){
+	// 	timerFeed('karanda');
+	// }
+
+
+	// if(command === 'timer4test'){
+	// 	timerFeed('nouver');
+	// }
 
 
 	function Purge(num) {
