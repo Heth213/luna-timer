@@ -60,7 +60,7 @@ function timerFeed(cond) {
 	switch (cond) {
 		case 'kzarka':
 		generalChannel.send('<@&457842065804361731>');
-		DeleteOwn(900000);
+		DeleteOwn(10000,generalChannel);
 			generalChannel.send({embed: {
 				color: 0xa781f3,
 				author: {
@@ -68,13 +68,13 @@ function timerFeed(cond) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png'
 				  }
 			  }});
-			  DeleteOwn(900000);
+			  DeleteOwn(10000,generalChannel);
 			break;
 
 			case 'kutum':
 			
 			generalChannel.send('<@&457842332608364544>');
-			DeleteOwn(900000);
+			DeleteOwn(10000,generalChannel);
 			generalChannel.send({embed: {
 				color: 0xd4af4d,
 				author: {
@@ -83,13 +83,13 @@ function timerFeed(cond) {
 				  }
 			  }});
 			  
-			  DeleteOwn(900000);
+			  DeleteOwn(10000,generalChannel);
 			break;
 
 			case 'karanda':
 			
 			generalChannel.send('<@&457842269651730433>');
-			DeleteOwn(900000);
+			DeleteOwn(10000,generalChannel);
 			generalChannel.send({embed: {
 				color: 0x78b0e5,
 				author: {
@@ -98,13 +98,13 @@ function timerFeed(cond) {
 				  }
 			  }});
 			  
-			  DeleteOwn(900000);
+			  DeleteOwn(10000,generalChannel);
 			break;
 	
 			case 'nouver':
 			
 			generalChannel.send('<@&457842228312670228>');
-			DeleteOwn(900000);
+			DeleteOwn(10000,generalChannel);
 			generalChannel.send({embed: {
 				color: 0x00eeb0,
 				author: {
@@ -113,14 +113,14 @@ function timerFeed(cond) {
 				  }
 			  }});
 			  
-			  DeleteOwn(900000);
+			  DeleteOwn(10000,generalChannel);
 			break;
 	}
 }
 
 //Delete Own Message
-function DeleteOwn(CD) {
-	message.channel.fetchMessages({
+function DeleteOwn(CD,CH) {
+	CH.fetchMessages({
 			limit: 1
 		})
 		.then(messages => {
