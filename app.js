@@ -56,57 +56,61 @@ var timerLaterobj = [];
 
 
 function timerFeed(cond) {
-	var generalChannel = bot.channels.get('385473030220021761');  //'375285109701738496' -> تجارب
+	var generalChannel = bot.channels.get('457922596332240905');  // #early-notification 457922596332240905
 	switch (cond) {
 		case 'kzarka':
-		generalChannel.send('<@&392042343517388800>');
+		generalChannel.send('<@&457842065804361731>');
 			generalChannel.send({embed: {
-				color: randomColorOut(),
+				color: 0xa781f3,
 				author: {
 					name: 'Kzarka ⤑ سيظهر بعد 10 دقائق',
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png'
 				  }
 			  }});
-			  
+			  DeleteOwn(900000);
+			  DeleteOwn(900000);
 			break;
 
 			case 'kutum':
 			
-			generalChannel.send('<@&392042343517388800>');
+			generalChannel.send('<@&457842332608364544>');
 			generalChannel.send({embed: {
-				color: randomColorOut(),
+				color: 0xd4af4d,
 				author: {
 					name: 'Kutum ⤑ سيظهر بعد 10 دقائق',
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kutum.png'
 				  }
 			  }});
-			  
+			  DeleteOwn(900000);
+			  DeleteOwn(900000);
 			break;
 
 			case 'karanda':
 			
-			generalChannel.send('<@&392042343517388800>');
+			generalChannel.send('<@&457842269651730433>');
 			generalChannel.send({embed: {
-				color: randomColorOut(),
+				color: 0x78b0e5,
 				author: {
 					name: 'Karanda ⤑ سيظهر بعد 10 دقائق',
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_karanda.png'
 				  }
 			  }});
-			  
+			  DeleteOwn(900000);
+			  DeleteOwn(900000);
 			break;
 	
 			case 'nouver':
 			
-			generalChannel.send('<@&392042343517388800>');
+			generalChannel.send('<@&457842228312670228>');
 			generalChannel.send({embed: {
-				color: randomColorOut(),
+				color: 0x00eeb0,
 				author: {
 					name: 'Nouver ⤑ سيظهر بعد 10 دقائق',
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_nouver.png'
 				  }
 			  }});
-			  
+			  DeleteOwn(900000);
+			  DeleteOwn(900000);
 			break;
 	}
 }
@@ -129,6 +133,8 @@ function setIntvs(condis, laterobj, num) {
 	intvArray[num] = later.setInterval(function() { timerFeed(condis);} , laterobj);
 //   console.log("Timer: "+ condis + " " + num + " has been set. ");
 }
+
+
 
 
 //World Boss TIMERS STUFF
@@ -411,6 +417,43 @@ bot.on('message', async message => {
 		}
 	}
 
+	if(command === 'allbossuptest'){
+
+		message.channel.send('<@&457842065804361731>');
+		message.channel.send({embed: {
+			color: 0xa781f3,
+			author: {
+				name: 'Kzarka ⤑ سيظهر بعد 10 دقائق',
+				icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png'
+			  }
+		  }});
+		  DeleteOwn(10000);
+		  message.channel.send('<@&457842269651730433>');
+		  message.channel.send({embed: {
+			  color: 0x78b0e5,
+			  author: {
+				  name: 'karanda ⤑ سيظهر بعد 10 دقائق',
+				  icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_karanda.png'
+				}
+			}});
+
+			message.channel.send('<@&457842332608364544>');
+			message.channel.send({embed: {
+				color: 0xd4af4d,
+				author: {
+					name: 'kutum ⤑ سيظهر بعد 10 دقائق',
+					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kutum.png'
+				  }
+			  }});
+
+			  message.channel.send('<@&457842228312670228>'+{embed: {
+				  color: 0x00eeb0,
+				  author: {
+					  name: 'nouver ⤑ سيظهر بعد 10 دقائق',
+					  icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_nouver.png'
+					}
+				}});
+	}
 	function Purge(num) {
 
 		message.channel.bulkDelete(num).catch(error => console.log('error deleted messages'));
@@ -540,6 +583,23 @@ bot.on('message', async message => {
 	// 	});
 	// }
 
+
+//Delete Own Message
+function DeleteOwn(CD) {
+	message.channel.fetchMessages({
+			limit: 1
+		})
+		.then(messages => {
+			const fetchedMsg = messages.first();
+			if (fetchedMsg) {
+				fetchedMsg.delete(CD);
+			} else {
+				console.log('no message to delete');
+			}
+
+		}).catch(error => console.log(error));
+
+}
 
 
 });
