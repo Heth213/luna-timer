@@ -56,7 +56,7 @@ var timerLaterobj = [];
 
 
 function timerFeed(cond) {
-	var generalChannel = bot.channels.get('457922596332240905');  // #early-notification 457922596332240905
+	var generalChannel = bot.channels.get('375285109701738496');  // #early-notification 457922596332240905
 	switch (cond) {
 		case 'kzarka':
 		generalChannel.send('<@&457842065804361731>');
@@ -437,6 +437,23 @@ bot.on('message', async message => {
 		}
 	}
 
+	if(command === 'timer1test'){
+		timerFeed('kzarka');
+	}
+
+	if(command === 'timer2test'){
+		timerFeed('kutum');
+	}
+
+
+	if(command === 'timer3test'){
+		timerFeed('karanda');
+	}
+
+
+	if(command === 'timer4test'){
+		timerFeed('nouver');
+	}
 
 
 	function Purge(num) {
