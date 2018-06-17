@@ -43,11 +43,11 @@ function settheGame() {
 
 
 
-function randomColorOut() {
-	var colors = [0xe44d5b,0x4aba69,0xa528bc,0x12137d,0xbddf1f,0x240c48,0xee37ae,0x6ab5be,0x8ef556,0xe1add5,0x089b30,0xccdc6c,0x4bd591,0x4610f6,0xa51dd9,0x4fde33,0x17b173,0xbb3002,0xe70bc5,0x668045,0xd17a37,0x2ddfac,0x926ff0];
-	var rnumber = Math.floor(Math.random() * colors.length);
-	return colors[rnumber];
-}
+// function randomColorOut() {
+// 	var colors = [0xe44d5b,0x4aba69,0xa528bc,0x12137d,0xbddf1f,0x240c48,0xee37ae,0x6ab5be,0x8ef556,0xe1add5,0x089b30,0xccdc6c,0x4bd591,0x4610f6,0xa51dd9,0x4fde33,0x17b173,0xbb3002,0xe70bc5,0x668045,0xd17a37,0x2ddfac,0x926ff0];
+// 	var rnumber = Math.floor(Math.random() * colors.length);
+// 	return colors[rnumber];
+// }
 
 
 var intvArray = [];
@@ -60,6 +60,7 @@ function timerFeed(cond) {
 	switch (cond) {
 		case 'kzarka':
 		generalChannel.send('<@&457842065804361731>');
+		DeleteOwn(900000);
 			generalChannel.send({embed: {
 				color: 0xa781f3,
 				author: {
@@ -68,12 +69,12 @@ function timerFeed(cond) {
 				  }
 			  }});
 			  DeleteOwn(900000);
-			  DeleteOwn(900000);
 			break;
 
 			case 'kutum':
 			
 			generalChannel.send('<@&457842332608364544>');
+			DeleteOwn(900000);
 			generalChannel.send({embed: {
 				color: 0xd4af4d,
 				author: {
@@ -81,13 +82,14 @@ function timerFeed(cond) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kutum.png'
 				  }
 			  }});
-			  DeleteOwn(900000);
+			  
 			  DeleteOwn(900000);
 			break;
 
 			case 'karanda':
 			
 			generalChannel.send('<@&457842269651730433>');
+			DeleteOwn(900000);
 			generalChannel.send({embed: {
 				color: 0x78b0e5,
 				author: {
@@ -95,13 +97,14 @@ function timerFeed(cond) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_karanda.png'
 				  }
 			  }});
-			  DeleteOwn(900000);
+			  
 			  DeleteOwn(900000);
 			break;
 	
 			case 'nouver':
 			
 			generalChannel.send('<@&457842228312670228>');
+			DeleteOwn(900000);
 			generalChannel.send({embed: {
 				color: 0x00eeb0,
 				author: {
@@ -109,10 +112,27 @@ function timerFeed(cond) {
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_nouver.png'
 				  }
 			  }});
-			  DeleteOwn(900000);
+			  
 			  DeleteOwn(900000);
 			break;
 	}
+}
+
+//Delete Own Message
+function DeleteOwn(CD) {
+	message.channel.fetchMessages({
+			limit: 1
+		})
+		.then(messages => {
+			const fetchedMsg = messages.first();
+			if (fetchedMsg) {
+				fetchedMsg.delete(CD);
+			} else {
+				console.log('no message to delete');
+			}
+
+		}).catch(error => console.log(error));
+
 }
 
 // //ADD World Boss TIMERS IN Addons/LT/timers.json DONT TOUCH THIS
@@ -417,52 +437,8 @@ bot.on('message', async message => {
 		}
 	}
 
-	if(command === 'allbossuptest'){
 
-		message.channel.send('<@&457842065804361731>');
-		DeleteOwn(10000);
-		message.channel.send({embed: {
-			color: 0xa781f3,
-			author: {
-				name: 'Kzarka ⤑ سيظهر بعد 10 دقائق',
-				icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png'
-			  }
-		  }});
-		  DeleteOwn(10000);
 
-		  message.channel.send('<@&457842269651730433>');
-		  DeleteOwn(10000);
-		  message.channel.send({embed: {
-			  color: 0x78b0e5,
-			  author: {
-				  name: 'karanda ⤑ سيظهر بعد 10 دقائق',
-				  icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_karanda.png'
-				}
-			}});
-			DeleteOwn(10000);
-			
-			message.channel.send('<@&457842332608364544>');
-			DeleteOwn(10000);
-			message.channel.send({embed: {
-				color: 0xd4af4d,
-				author: {
-					name: 'kutum ⤑ سيظهر بعد 10 دقائق',
-					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kutum.png'
-				  }
-			  }});
-			  DeleteOwn(10000);
-
-			  message.channel.send('<@&457842228312670228>');
-			  DeleteOwn(10000);
-			  message.channel.send({embed: {
-				  color: 0x00eeb0,
-				  author: {
-					  name: 'nouver ⤑ سيظهر بعد 10 دقائق',
-					  icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_nouver.png'
-					}
-				}});
-				DeleteOwn(10000);
-	}
 	function Purge(num) {
 
 		message.channel.bulkDelete(num).catch(error => console.log('error deleted messages'));
@@ -593,22 +569,7 @@ bot.on('message', async message => {
 	// }
 
 
-//Delete Own Message
-function DeleteOwn(CD) {
-	message.channel.fetchMessages({
-			limit: 1
-		})
-		.then(messages => {
-			const fetchedMsg = messages.first();
-			if (fetchedMsg) {
-				fetchedMsg.delete(CD);
-			} else {
-				console.log('no message to delete');
-			}
 
-		}).catch(error => console.log(error));
-
-}
 
 
 });
