@@ -12,7 +12,7 @@ function getTime() {
 				var secsUntilNightStart = 12000 - secsIntoGameDaytime;
 			}
 
-            if (secsUntilNightEnd != 0){
+            if (secsUntilNightStart !== undefined){
                 nightCalc = filterSecs(secsUntilNightStart) + " :الليل بعد";
               } else{
                 nightCalc = filterSecs(secsUntilNightEnd) + " :الصبح بعد";
