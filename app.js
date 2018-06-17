@@ -3,9 +3,10 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 //var emitter = require('./emitter');
-var bossTime = require('./bdoBossTimes')
+var bossTime = require('./bdoBossTimes');
 var timers = require('./Addons/LT/laterTimer');
 var WB = require('./Addons/WB/worldbosses');
+var gameTime = require('./Addons/gameTime/gameTime');
 var moment = require('moment');
 var later = require('later');
 
@@ -18,6 +19,7 @@ bot.on('ready', () => {
 	var logChannel = bot.channels.get('375285109701738496'); // تجارب
 	logChannel.send('**تم تشغيل البوت**');
 	console.log('Online...');
+	setTimeout(settheGame, 2000);
 });
 
 bot.on('reconnecting', () => {
@@ -30,6 +32,16 @@ bot.on('disconnect', () => {
 	logChannel.send('<@123086354451136513> ** تم اغلاق البوت يرجى تشغيله من جديد **');
 });
 
+//setting the bot's game name :)
+function settheGame() {
+	if(gameTime.nightCalc){
+		bot.user.setGame(gameTime.nightCalc);
+	}
+	
+	setTimeout(settheGame, 30000);
+};
+
+
 
 function randomColorOut() {
 	var colors = [0xe44d5b,0x4aba69,0xa528bc,0x12137d,0xbddf1f,0x240c48,0xee37ae,0x6ab5be,0x8ef556,0xe1add5,0x089b30,0xccdc6c,0x4bd591,0x4610f6,0xa51dd9,0x4fde33,0x17b173,0xbb3002,0xe70bc5,0x668045,0xd17a37,0x2ddfac,0x926ff0];
@@ -39,7 +51,7 @@ function randomColorOut() {
 
 
 var intvArray = [];
-var timer_Timers = setTimeout(getTimers, 1000)
+var timer_Timers = setTimeout(getTimers, 1000);
 var timerLaterobj = [];
 
 
@@ -360,23 +372,7 @@ sendBossTimers();
 
 
 
-//setting the bot's game name :)
-function settheGame() {
-	if (!bossTime.dtT) {
-		console.log("dimtree time is undefined");
 
-	} else {
-
-		let dtTime = bossTime.dtT.slice(8, -6);
-
-		bot.user.setGame("توقع الشجرة: " + dtTime.trim());
-
-
-
-	};
-	setTimeout(settheGame, 160000);
-};
-settheGame();
 
 bot.on('message', async message => {
 	const prefix = "%";
