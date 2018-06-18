@@ -60,60 +60,60 @@ function timerFeed(cond) {
 	switch (cond) {
 		case 'kzarka':
 		generalChannel.send('<@&457842065804361731>');
-		DeleteOwn(900000,generalChannel);
+		DeleteOwn(1200000,generalChannel);
 			generalChannel.send({embed: {
 				color: 0xa781f3,
 				author: {
-					name: 'Kzarka ⤑ سيظهر بعد 10 دقائق',
+					name: 'Kzarka ⤑ سيظهر بعد 15 دقائق',
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png'
 				  }
 			  }});
-			  DeleteOwn(900000,generalChannel);
+			  DeleteOwn(1200000,generalChannel);
 			break;
 
 			case 'kutum':
 			
 			generalChannel.send('<@&457842332608364544>');
-			DeleteOwn(900000,generalChannel);
+			DeleteOwn(1200000,generalChannel);
 			generalChannel.send({embed: {
 				color: 0xd4af4d,
 				author: {
-					name: 'Kutum ⤑ سيظهر بعد 10 دقائق',
+					name: 'Kutum ⤑ سيظهر بعد 15 دقائق',
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kutum.png'
 				  }
 			  }});
 			  
-			  DeleteOwn(900000,generalChannel);
+			  DeleteOwn(1200000,generalChannel);
 			break;
 
 			case 'karanda':
 			
 			generalChannel.send('<@&457842269651730433>');
-			DeleteOwn(900000,generalChannel);
+			DeleteOwn(1200000,generalChannel);
 			generalChannel.send({embed: {
 				color: 0x78b0e5,
 				author: {
-					name: 'Karanda ⤑ سيظهر بعد 10 دقائق',
+					name: 'Karanda ⤑ ستظهر بعد 15 دقائق',
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_karanda.png'
 				  }
 			  }});
 			  
-			  DeleteOwn(900000,generalChannel);
+			  DeleteOwn(1200000,generalChannel);
 			break;
 	
 			case 'nouver':
 			
 			generalChannel.send('<@&457842228312670228>');
-			DeleteOwn(900000,generalChannel);
+			DeleteOwn(1200000,generalChannel);
 			generalChannel.send({embed: {
 				color: 0x00eeb0,
 				author: {
-					name: 'Nouver ⤑ سيظهر بعد 10 دقائق',
+					name: 'Nouver ⤑ سيظهر بعد 15 دقائق',
 					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_nouver.png'
 				  }
 			  }});
 			  
-			  DeleteOwn(900000,generalChannel);
+			  DeleteOwn(1200000,generalChannel);
 			break;
 	}
 }
