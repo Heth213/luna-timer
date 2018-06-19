@@ -34,10 +34,10 @@ bot.on('disconnect', () => {
 
 //setting the bot's game name :)
 function settheGame() {
-	if(gameTime.nightCalc){
+	if (gameTime.nightCalc) {
 		bot.user.setGame(gameTime.nightCalc);
 	}
-	
+
 	setTimeout(settheGame, 60000);
 };
 
@@ -56,69 +56,83 @@ var timerLaterobj = [];
 
 
 function timerFeed(cond) {
-	var generalChannel = bot.channels.get('457922596332240905');  // #early-notification 457922596332240905
+	var generalChannel = bot.channels.get('457922596332240905'); // #early-notification 457922596332240905
 	console.log(cond);
 	switch (cond) {
 		
+		
 		case 'kzarka':
-		generalChannel.send('<@&457842065804361731>');
-		DeleteOwn(1200000,generalChannel);
-			generalChannel.send({embed: {
-				color: 0xa781f3,
-				author: {
-					name: 'Kzarka ⤑ سيظهر بعد 15 دقيقة',
-					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png'
-				  }
-			  }});
-			  DeleteOwn(1200000,generalChannel);
+		var embed = {
+			color: 0xa781f3,
+			author: {
+				name: 'Kzarka ⤑ سيظهر بعد 15 دقيقة',
+				icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kzarka.png'
+			}
+		};
+
+
+			generalChannel.send('<@&457842065804361731>');
+			DeleteOwn(1200000, generalChannel);
+			generalChannel.send({embed});
+			DeleteOwn(1200000, generalChannel);
+			sendDMtoRole("Kzarka", {embed});
 			break;
 
-			case 'kutum':
+		case 'kutum':
+		var embed = {
+			color: 0xd4af4d,
+			author: {
+				name: 'Kutum ⤑ سيظهر بعد 15 دقيقة',
+				icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kutum.png'
+			}
+		};
+
+
 			generalChannel.send('<@&457842332608364544>');
-			DeleteOwn(1200000,generalChannel);
-			generalChannel.send({embed: {
-				color: 0xd4af4d,
-				author: {
-					name: 'Kutum ⤑ سيظهر بعد 15 دقيقة',
-					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_kutum.png'
-				  }
-			  }});
-			  
-			  DeleteOwn(1200000,generalChannel);
+			DeleteOwn(1200000, generalChannel);
+			generalChannel.send({embed});
+			DeleteOwn(1200000, generalChannel);
+			sendDMtoRole("Kutum", {embed});
 			break;
 
-			case 'karanda':
+		case 'karanda':
+		var embed = {
+			color: 0x78b0e5,
+			author: {
+				name: 'Karanda ⤑ ستظهر بعد 15 دقيقة',
+				icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_karanda.png'
+			}
+		};
+
+
 			generalChannel.send('<@&457842269651730433>');
-			DeleteOwn(1200000,generalChannel);
-			generalChannel.send({embed: {
-				color: 0x78b0e5,
-				author: {
-					name: 'Karanda ⤑ ستظهر بعد 15 دقيقة',
-					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_karanda.png'
-				  }
-			  }});
-			  
-			  DeleteOwn(1200000,generalChannel);
+			DeleteOwn(1200000, generalChannel);
+			generalChannel.send({embed});
+			DeleteOwn(1200000, generalChannel);
+			sendDMtoRole("Karanda", {embed});
 			break;
-	
-			case 'nouver':
+
+		case 'nouver':
+		var embed = {
+			color: 0x00eeb0,
+			author: {
+				name: 'Nouver ⤑ سيظهر بعد 15 دقيقة',
+				icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_nouver.png'
+			}
+		};
+
+
 			generalChannel.send('<@&457842228312670228>');
-			DeleteOwn(1200000,generalChannel);
-			generalChannel.send({embed: {
-				color: 0x00eeb0,
-				author: {
-					name: 'Nouver ⤑ سيظهر بعد 15 دقيقة',
-					icon_url: 'http://urzasarchives.com/wp-content/uploads/wbt_nouver.png'
-				  }
-			  }});
-			  
-			  DeleteOwn(1200000,generalChannel);
+			DeleteOwn(1200000, generalChannel);
+			generalChannel.send({embed});
+			DeleteOwn(1200000, generalChannel);
+			sendDMtoRole("Nouver", {embed});
 			break;
 	}
 }
 
 //Delete Own Message
-function DeleteOwn(CD,CH) {
+function DeleteOwn(CD, CH) {
 	CH.fetchMessages({
 			limit: 1
 		})
@@ -136,64 +150,43 @@ function DeleteOwn(CD,CH) {
 
 // //ADD World Boss TIMERS IN Addons/LT/timers.json DONT TOUCH THIS
 
-  function getTimers() {
-	  if(timers.allTimersReady === true){
-		  later.date.UTC();
-		  for(var i=0; i<timers.t.timez.length ;i++){
-			  timerLaterobj[i] = timers.dailyTimes[i];
-			  setIntvs(timers.t.timez[i].name , timerLaterobj[i], i);
-		  }
-		  console.log('got world boss timers.');
-		  clearTimeout(timer_Timers);
-	  }
-  }
-
-function setIntvs(condis, laterobj, num) {
-	intvArray[num] = later.setInterval(function() { timerFeed(condis);} , laterobj);
-//   console.log("Timer: "+ condis + " " + num + " has been set. ");
+function getTimers() {
+	if (timers.allTimersReady === true) {
+		later.date.UTC();
+		for (var i = 0; i < timers.t.timez.length; i++) {
+			timerLaterobj[i] = timers.dailyTimes[i];
+			setIntvs(timers.t.timez[i].name, timerLaterobj[i], i);
+		}
+		console.log('got world boss timers.');
+		clearTimeout(timer_Timers);
+	}
 }
 
+function setIntvs(condis, laterobj, num) {
+	intvArray[num] = later.setInterval(function () {
+		timerFeed(condis);
+	}, laterobj);
+	//   console.log("Timer: "+ condis + " " + num + " has been set. ");
+}
 
+//get users with spes role and send the a DM
+function sendDMtoRole(role, message) {
+	// var roleID = 265617141451980816;
+	var firstGuild = bot.guilds.array();
+	console.log('guild name: ' + firstGuild[0].name + ' and ID: ' + firstGuild[0].id);
+	var theRole = firstGuild[0].roles.find("name", role);
+	if (!theRole) return;
+	var mems = theRole.members.array();
+	if (!mems) return;
+	for (var i = 0; i < mems.length; i++) {
+		var guildMember = mems[i];
+		guildMember.send(message)
+		.catch(() => console.log(`Failed to send to: ${guildMember.user.username}`));
+		
+	}
+	console.log(`WB Notification\n ${role} Subs: ${mems.length}`);
+}
 
-
-//World Boss TIMERS STUFF
-// function timerFeed(cond,chID) {
-
-// 	var generalChannel = bot.channels.get(chID);  //220663535854813195 -> General
-
-// 	for(var i=0; i<timers.t.timez.length ;i++){
-// 		// console.log("cond: "+cond+" "+timers.t.timez[i].name + "< Name Info >" + timers.t.timez[i].info);
-// 		if(timers.t.timez[i].name == cond){
-// 			generalChannel.send('<@&392042343517388800>');
-// 			// console.log(`name: ${timers.t.timez[i].name} time: ${timers.t.timez[i].time} info: ${timers.t.timez[i].info}`);
-// 			console.log(timers.t.timez[i].info);
-// 			generalChannel.send({embed: {
-// 				color: randomColorOut(),
-// 				author: {
-// 					name: timers.t.timez[i].info,
-// 					icon_url: timers.t.timez[i].img
-// 				  }
-// 			  }});
-			  
-// 		}
-// 	}
-//   }
-
-
-
-
-
-
-
-
-// function testlol(){
-// 	if(WB.kzarkaWB && WB.kutumWB){
-// 		console.log(WB.kzarkaWB);
-// 		console.log(WB.kutumWB);
-// 	}
-// 	setTimeout(testlol, 10000);
-// }
-// testlol();
 
 
 
@@ -242,7 +235,10 @@ function sendBossTimers() {
 
 		// kzTrimed = bossTime.kzarkaN.trim();
 		// kuTrimed = bossTime.kutumN.trim();
-		if(bossTime.bhegN == null || bossTime.dtN == null || bossTime.mudN == null || bossTime.rnN == null){console.log('error cant get bossTimes.'); return;}
+		if (bossTime.bhegN == null || bossTime.dtN == null || bossTime.mudN == null || bossTime.rnN == null) {
+			console.log('error cant get bossTimes.');
+			return;
+		}
 		bhTrimed = bossTime.bhegN.trim();
 		dtTrimed = bossTime.dtN.trim();
 		mdTrimed = bossTime.mudN.trim();
@@ -338,8 +334,8 @@ function sendBossTimers() {
 		//set channel id
 		//bossHrs.kzarka.kzHrs != null && bossHrs.kutum.kuHrs != null &&
 		//bossHrs.kzarka.kzHrs !== kzAfter || bossHrs.kutum.kzHrs !== kuAfter ||
-		if ( bossHrs.dastardBheg.bhHrs != null && bossHrs.dimTreeSpirit.dtHrs != null && bossHrs.giantMudster.mdHrs != null && bossHrs.redNose.rnHrs != null) {
-			if ( bossHrs.dastardBheg.bhHrs !== bhAfter || bossHrs.dimTreeSpirit.dtHrs !== dtAfter || bossHrs.giantMudster.mdHrs !== mdAfter || bossHrs.redNose.rnHrs !== rnAfter || bossHrs.kzarka.kzHrs !== WB.kzarkaWB || bossHrs.kutum.kuHrs !== WB.kutumWB|| bossHrs.karanda.kaHrs !== WB.karandaWB) {
+		if (bossHrs.dastardBheg.bhHrs != null && bossHrs.dimTreeSpirit.dtHrs != null && bossHrs.giantMudster.mdHrs != null && bossHrs.redNose.rnHrs != null) {
+			if (bossHrs.dastardBheg.bhHrs !== bhAfter || bossHrs.dimTreeSpirit.dtHrs !== dtAfter || bossHrs.giantMudster.mdHrs !== mdAfter || bossHrs.redNose.rnHrs !== rnAfter || bossHrs.kzarka.kzHrs !== WB.kzarkaWB || bossHrs.kutum.kuHrs !== WB.kutumWB || bossHrs.karanda.kaHrs !== WB.karandaWB) {
 				var bossChannel = bot.channels.get('443588073603858433'); //#timers [Lunarium]
 				//deleting & sending embed 
 				if (bossChannel) {
@@ -355,20 +351,36 @@ function sendBossTimers() {
 							}
 
 						});
-						//change undefineds to something
-						if(WB.kzarkaWB == undefined){WB.kzarkaWB = "-"}
-						if(WB.kutumWB == undefined){WB.kutumWB = "-"}
-						if(WB.karandaWB == undefined){WB.karandaWB = "-"}
-						if(WB.nouverWB == undefined){WB.nouverWB = "-"}
-						if(WB.kzarkaTT == undefined){WB.kzarkaTT = "--"}
-						if(WB.kutumTT == undefined){WB.kutumTT = "--"}
-						if(WB.karandaTT == undefined){WB.karandaTT = "--"}
-						if(WB.nouverTT == undefined){WB.nouverTT = "--"}
+					//change undefineds to something
+					if (WB.kzarkaWB == undefined) {
+						WB.kzarkaWB = "-"
+					}
+					if (WB.kutumWB == undefined) {
+						WB.kutumWB = "-"
+					}
+					if (WB.karandaWB == undefined) {
+						WB.karandaWB = "-"
+					}
+					if (WB.nouverWB == undefined) {
+						WB.nouverWB = "-"
+					}
+					if (WB.kzarkaTT == undefined) {
+						WB.kzarkaTT = "--"
+					}
+					if (WB.kutumTT == undefined) {
+						WB.kutumTT = "--"
+					}
+					if (WB.karandaTT == undefined) {
+						WB.karandaTT = "--"
+					}
+					if (WB.nouverTT == undefined) {
+						WB.nouverTT = "--"
+					}
 
-					bossChannel.send(" ** الزعماء العاديين ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` زعماء العالم ```md\n# Kzarka \n ["+WB.kzarkaTT+"]("+WB.kzarkaWB+")  \n\n# Kutum \n ["+WB.kutumTT+"]("+WB.kutumWB+") \n\n# Karanda \n ["+WB.karandaTT+"]("+WB.karandaWB+") \n\n# Nouver \n ["+WB.nouverTT+"]("+WB.nouverWB+")```  \n نسخة الويب: <https://goo.gl/58mkMh> \n مواعيد زعماء العالم: <https://i.imgur.com/w0F6yBe.jpg> ");
+					bossChannel.send(" ** الزعماء العاديين ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` زعماء العالم ```md\n# Kzarka \n [" + WB.kzarkaTT + "](" + WB.kzarkaWB + ")  \n\n# Kutum \n [" + WB.kutumTT + "](" + WB.kutumWB + ") \n\n# Karanda \n [" + WB.karandaTT + "](" + WB.karandaWB + ") \n\n# Nouver \n [" + WB.nouverTT + "](" + WB.nouverWB + ")```  \n نسخة الويب: <https://goo.gl/58mkMh> \n مواعيد زعماء العالم: <https://i.imgur.com/w0F6yBe.jpg> ");
 					// bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 					// bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
-					
+
 					bossHrs.kzarka.kzHrs = WB.kzarkaWB;
 					bossHrs.kutum.kuHrs = WB.kutumWB;
 					bossHrs.karanda.kaHrs = WB.karandaWB;
@@ -412,7 +424,7 @@ bot.on('message', async message => {
 	// }
 
 
-	if (command === 'reset' ||  command === 'restart') {
+	if (command === 'reset' || command === 'restart') {
 		if (message.member.roles.find("name", "Lunarium Officer")) {
 			// message.reply("OK..")
 			// .then(() => process.exit());
@@ -467,122 +479,6 @@ bot.on('message', async message => {
 		// 		fetchedMsg.delete();
 		// 	});
 	}
-
-
-	// function resetBot() {
-	// 	// send channel a message that you're resetting bot [optional]
-	// 	message.reply('Resetting...')
-	// 	.then(() => process.exit());
-	// }
-
-
-
-
-
-	//           if (command === 'vname') {
-	//  if (message.member.roles.find("name", "Lunarium Officer")){
-
-	// 		if(arg[0]){
-	// 			voiceNMembers(arg[0])
-	//             if (arg[1]){voiceNMembers(arg[1])}
-	//             if (arg[2]){voiceNMembers(arg[2])}
-	//             if (arg[3]){voiceNMembers(arg[3])}
-	//             if (arg[4]){voiceNMembers(arg[4])}
-	//             if (arg[5]){voiceNMembers(arg[5])}
-	//             if (arg[6]){voiceNMembers(arg[6])}
-	// 		}else{
-	// 			message.reply("voice channel ID please.")
-	// 		}
-
-
-
-	// 	   }
-	//        }else{};
-
-	//            	if (command === 'voice-all') {
-	//                  if (message.member.roles.find("name", "Lunarium Officer")){
-	// 		voiceAll();
-	//                  }else{message.channel.send('لا تملك الصلاحية');}
-	// 	};
-
-	// if (command === 'voice') {
-	//        if (message.member.roles.find("name", "Lunarium Officer")){
-
-	//           if (isNaN(args[0])){
-	// 		message.channel.send('voice channel ID please.');
-	// 		return;
-	// 	}
-	// 	if(args[0]){
-	// 		voiceMembers(args[0])
-	//         if (args[1]){voiceMembers(args[1])}
-	//         if (args[2]){voiceMembers(args[2])}
-	//         if (args[3]){voiceMembers(args[3])}
-	//         if (args[4]){voiceMembers(args[4])}
-	//         if (args[5]){voiceMembers(args[5])}
-	//         if (args[6]){voiceMembers(args[6])}
-	// 	}else{
-	// 		message.reply("voice channel ID please.")
-	// 	}
-
-
-
-	//    }
-	//    }else{message.channel.send('لا تملك الصلاحية');};
-
-
-
-	//get members in voice channel ID
-	//    	  async function voiceMembers(ChID) {
-	// 	var vChannel = bot.channels.get(ChID);
-	//         if (vChannel){
-	//         var vMembers = vChannel.members;
-	//             if (vMembers){
-	//         for (let [snowflake, guildMember] of vMembers)
-	//         {
-	//             message.channel.send('<@'+guildMember.user.id+'>'); 
-	//             await sleep(1000);
-
-	//         }     
-
-	//             }
-
-
-	//         }else{message.channel.send('WRONG CHANNEL ID');};
-	// }
-
-	//         async function voiceNMembers(ChN) {
-	// 	var vChannel = bot.channels.find("name", ChN);
-	//         if (vChannel){
-	//         var vMembers = vChannel.members;
-	//             if (vMembers){
-	//         for (let [snowflake, guildMember] of vMembers)
-	//         {
-	//             message.channel.send('<@'+guildMember.user.id+'>'); 
-	//             await sleep(1000);
-
-	//         }     
-
-	//             }
-
-
-	//         }else{};
-	// }
-
-	//            function voiceAll() {
-	// 	var vChannel = bot.channels;
-	//    for (let [snowflake, Channel] of vChannel){
-	//        if (Channel.type == "voice"){
-	//        voiceMembers(Channel.id);
-	//        }
-	// }
-	//        }
-
-
-	// function sleep(ms) {
-	// 	return new Promise(resolve => {
-	// 		setTimeout(resolve, ms)
-	// 	});
-	// }
 
 
 
