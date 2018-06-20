@@ -162,7 +162,7 @@ function getTimers() {
 			setIntvs(timers.t.timez[i].name, timerLaterobj[i], i);
 		}
 		console.log('got world boss timers.');
-		logChannel.send('Got world boss timers. There is '+ timers.t.timez.length +' timers');
+		logChannel.send('Got world boss timers. There is '+ timers.t.timez.length +' timers.');
 		clearTimeout(timer_Timers);
 	}
 }
@@ -179,7 +179,7 @@ function sendDMtoRole(role, message) {
 	// var roleID = 265617141451980816;
 	var logChannel = bot.channels.get('458722383503556619'); // timer-logs
 	var firstGuild = bot.guilds.array();
-	console.log('guild name: ' + firstGuild[0].name + ' and ID: ' + firstGuild[0].id);
+	// console.log('guild name: ' + firstGuild[0].name + ' and ID: ' + firstGuild[0].id);
 	var theRole = firstGuild[0].roles.find("name", role);
 	if (!theRole) return;
 	var mems = theRole.members.array();
@@ -187,7 +187,7 @@ function sendDMtoRole(role, message) {
 	for (var i = 0; i < mems.length; i++) {
 		var guildMember = mems[i];
 		guildMember.send(message)
-		.catch(() => logChannel.send(`Failed to send to: ${guildMember.user.username}`));
+		.catch(() => logChannel.send(`Failed to send DM to: ${guildMember.user.username}`));
 		
 	}
 	// console.log(`WB Notification\n ${role} Subs: ${mems.length}`);
@@ -233,9 +233,11 @@ var bossHrs = {
 
 //bot timer stuff
 function sendBossTimers() {
+	var logChannel = bot.channels.get('458722383503556619'); // timer-logs
 	//!bossTime.kutumT && !bossTime.kzarkaT &&
 	if (!bossTime.bhegT && !bossTime.dtT && !bossTime.mudT && !bossTime.rnT) {
 		console.log("Not all times ready.");
+		logChannel.send("Field Boss times is not ready [ما اقدر اخذهم من الموقع]");
 
 	} else {
 
@@ -243,7 +245,7 @@ function sendBossTimers() {
 		// kzTrimed = bossTime.kzarkaN.trim();
 		// kuTrimed = bossTime.kutumN.trim();
 		if (bossTime.bhegN == null || bossTime.dtN == null || bossTime.mudN == null || bossTime.rnN == null) {
-			console.log('error cant get bossTimes.');
+			logChannel.send("Field Boss times is null.");
 			return;
 		}
 		bhTrimed = bossTime.bhegN.trim();
