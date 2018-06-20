@@ -238,7 +238,8 @@ function sendBossTimers() {
 	if (!bossTime.bhegT && !bossTime.dtT && !bossTime.mudT && !bossTime.rnT) {
 		var logChannel = bot.channels.get('458722383503556619'); // timer-logs
 		console.log("Not all times ready.");
-		logChannel.send("Field Boss times is not ready [ما اقدر اخذهم من الموقع]");
+		if(logChannel){logChannel.send("Field Boss times is not ready [ما اقدر اخذهم من الموقع]");}
+		
 
 	} else {
 
