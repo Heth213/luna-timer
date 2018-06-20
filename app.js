@@ -239,7 +239,7 @@ function sendBossTimers() {
 	if (!bossTime.bhegT && !bossTime.dtT && !bossTime.mudT && !bossTime.rnT) {
 		
 		console.log("Not all times ready.");
-		if(logChannel){logChannel.send("Field Boss times is not ready [ما اقدر اخذهم من الموقع]");}
+		if(logChannel){logChannel.send("Field Boss times is not ready yet.");}
 		
 
 	} else {
@@ -252,6 +252,7 @@ function sendBossTimers() {
 			logChannel.send("Field Boss times is null.");
 			return;
 		}
+
 		bhTrimed = bossTime.bhegN.trim();
 		dtTrimed = bossTime.dtN.trim();
 		mdTrimed = bossTime.mudN.trim();
@@ -340,7 +341,6 @@ function sendBossTimers() {
 		} else {
 			var rnDone = '[سيظهر قريبا](-)[الحد الاقصى: ' + rnSliced + ']\n';
 		}
-
 
 
 		// SEND TO CHANNEL
