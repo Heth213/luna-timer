@@ -20,6 +20,7 @@ bot.on('ready', () => {
 	logChannel.send('**تم تشغيل البوت**');
 	console.log('Online...');
 	setTimeout(settheGame, 2000);
+	sendBossTimers();
 });
 
 bot.on('reconnecting', () => {
@@ -233,10 +234,10 @@ var bossHrs = {
 
 //bot timer stuff
 function sendBossTimers() {
-	// var logChannel = bot.channels.get('458722383503556619'); // timer-logs
+	var logChannel = bot.channels.get('458722383503556619'); // timer-logs
 	//!bossTime.kutumT && !bossTime.kzarkaT &&
 	if (!bossTime.bhegT && !bossTime.dtT && !bossTime.mudT && !bossTime.rnT) {
-		var logChannel = bot.channels.get('458722383503556619'); // timer-logs
+		
 		console.log("Not all times ready.");
 		if(logChannel){logChannel.send("Field Boss times is not ready [ما اقدر اخذهم من الموقع]");}
 		
@@ -247,7 +248,7 @@ function sendBossTimers() {
 		// kzTrimed = bossTime.kzarkaN.trim();
 		// kuTrimed = bossTime.kutumN.trim();
 		if (bossTime.bhegN == null || bossTime.dtN == null || bossTime.mudN == null || bossTime.rnN == null) {
-			var logChannel = bot.channels.get('458722383503556619'); // timer-logs
+			
 			logChannel.send("Field Boss times is null.");
 			return;
 		}
@@ -417,7 +418,7 @@ function sendBossTimers() {
 
 	setTimeout(sendBossTimers, 80000);
 } //end of func
-sendBossTimers();
+
 
 
 
