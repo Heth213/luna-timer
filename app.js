@@ -131,10 +131,11 @@ function timerFeed(cond) {
 	}
 }
 
-var logChannel = bot.channels.get('458722383503556619'); // timer-logs
+
 
 //Delete Own Message
 function DeleteOwn(CD, CH) {
+	
 	CH.fetchMessages({
 			limit: 1
 		})
@@ -153,6 +154,7 @@ function DeleteOwn(CD, CH) {
 // //ADD World Boss TIMERS IN Addons/LT/timers.json DONT TOUCH THIS
 
 function getTimers() {
+	var logChannel = bot.channels.get('458722383503556619'); // timer-logs
 	if (timers.allTimersReady === true) {
 		later.date.UTC();
 		for (var i = 0; i < timers.t.timez.length; i++) {
@@ -175,7 +177,7 @@ function setIntvs(condis, laterobj, num) {
 //get users with spes role and send the a DM
 function sendDMtoRole(role, message) {
 	// var roleID = 265617141451980816;
-	
+	var logChannel = bot.channels.get('458722383503556619'); // timer-logs
 	var firstGuild = bot.guilds.array();
 	console.log('guild name: ' + firstGuild[0].name + ' and ID: ' + firstGuild[0].id);
 	var theRole = firstGuild[0].roles.find("name", role);
