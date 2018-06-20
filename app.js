@@ -16,19 +16,19 @@ var later = require('later');
 //Run On Bot Login
 
 bot.on('ready', () => {
-	var logChannel = bot.channels.get('375285109701738496'); // تجارب
+	var logChannel = bot.channels.get('458722383503556619'); // timer-logs
 	logChannel.send('**تم تشغيل البوت**');
 	console.log('Online...');
 	setTimeout(settheGame, 2000);
 });
 
 bot.on('reconnecting', () => {
-	var logChannel = bot.channels.get('375285109701738496'); // تجارب
+	var logChannel = bot.channels.get('458722383503556619'); // timer-logs
 	logChannel.send('**تمت اعادة البوت**');
 });
 
 bot.on('disconnect', () => {
-	var logChannel = bot.channels.get('375285109701738496'); // تجارب
+	var logChannel = bot.channels.get('458722383503556619'); // timer-logs
 	logChannel.send('<@123086354451136513> ** تم اغلاق البوت يرجى تشغيله من جديد **');
 });
 
@@ -131,6 +131,8 @@ function timerFeed(cond) {
 	}
 }
 
+var logChannel = bot.channels.get('458722383503556619'); // timer-logs
+
 //Delete Own Message
 function DeleteOwn(CD, CH) {
 	CH.fetchMessages({
@@ -158,6 +160,7 @@ function getTimers() {
 			setIntvs(timers.t.timez[i].name, timerLaterobj[i], i);
 		}
 		console.log('got world boss timers.');
+		logChannel.send('Got world boss timers. There is '+ timers.t.timez.length +' timers');
 		clearTimeout(timer_Timers);
 	}
 }
@@ -172,6 +175,7 @@ function setIntvs(condis, laterobj, num) {
 //get users with spes role and send the a DM
 function sendDMtoRole(role, message) {
 	// var roleID = 265617141451980816;
+	
 	var firstGuild = bot.guilds.array();
 	console.log('guild name: ' + firstGuild[0].name + ' and ID: ' + firstGuild[0].id);
 	var theRole = firstGuild[0].roles.find("name", role);
@@ -181,10 +185,11 @@ function sendDMtoRole(role, message) {
 	for (var i = 0; i < mems.length; i++) {
 		var guildMember = mems[i];
 		guildMember.send(message)
-		.catch(() => console.log(`Failed to send to: ${guildMember.user.username}`));
+		.catch(() => logChannel.send(`Failed to send to: ${guildMember.user.username}`));
 		
 	}
-	console.log(`WB Notification\n ${role} Subs: ${mems.length}`);
+	// console.log(`WB Notification\n ${role} Subs: ${mems.length}`);
+	logChannel.send("```css\n "+ role +" WB Notification\n "+ role +" Subs: "+ mems.length +"```")
 }
 
 
