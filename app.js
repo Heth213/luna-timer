@@ -156,6 +156,7 @@ function DeleteOwn(CD, CH) {
 
 function getTimers() {
 	var logChannel = bot.channels.get('458722383503556619'); // timer-logs
+	
 	if (timers.allTimersReady === true) {
 		later.date.UTC();
 		for (var i = 0; i < timers.t.timez.length; i++) {
@@ -163,7 +164,8 @@ function getTimers() {
 			setIntvs(timers.t.timez[i].name, timerLaterobj[i], i);
 		}
 		console.log('got world boss timers.');
-		logChannel.send('Got world boss timers. There is '+ timers.t.timez.length +' timers.');
+		if(logChannel){logChannel.send('Got world boss timers. There is '+ timers.t.timez.length +' timers.');}
+		
 		clearTimeout(timer_Timers);
 	}
 }
