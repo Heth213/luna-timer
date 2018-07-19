@@ -71,19 +71,19 @@ var nearestNv = [];
 var bossesTimes = {
     "kzarka": [
         moment("Mon, 13:00", 'ddd, HH:mm'),
-        moment("Mon, 20:00", 'ddd, HH:mm'),
+        moment("Mon, 20:15", 'ddd, HH:mm'),
         moment("Tue, 8:00", 'ddd, HH:mm'),
         moment("Tue, 22:00", 'ddd, HH:mm'),
         moment("Tue, 17:00", 'ddd, HH:mm'),
         moment("Wed, 13:00", 'ddd, HH:mm'),
         moment("Thu, 13:00", 'ddd, HH:mm'),
-        moment("Thu, 20:00", 'ddd, HH:mm'),
+        moment("Thu, 20:15", 'ddd, HH:mm'),
         moment("Fri, 13:00", 'ddd, HH:mm'),
         moment("Fri, 17:00", 'ddd, HH:mm'),
         moment("Fri, 22:00", 'ddd, HH:mm'),
         moment("Sat, 8:00", 'ddd, HH:mm'),
         moment("Sun, 13:00", 'ddd, HH:mm'),
-        moment("Sun, 20:00", 'ddd, HH:mm')
+        moment("Sun, 20:15", 'ddd, HH:mm')
     ],
     "kutum": [
         moment("Mon, 13:00", 'ddd, HH:mm'),
@@ -94,20 +94,20 @@ var bossesTimes = {
         moment("Thu, 13:00", 'ddd, HH:mm'),
         moment("Thu, 17:00", 'ddd, HH:mm'),
         moment("Fri, 13:00", 'ddd, HH:mm'),
-        moment("Fri, 20:00", 'ddd, HH:mm'),
+        moment("Fri, 20:15", 'ddd, HH:mm'),
         moment("Sat, 8:00", 'ddd, HH:mm'),
         moment("Sat, 13:00", 'ddd, HH:mm'),
         moment("Sun, 8:00", 'ddd, HH:mm'),
-        moment("Sun, 20:00", 'ddd, HH:mm')
+        moment("Sun, 20:15", 'ddd, HH:mm')
     ],
     "karanda": [
         moment("Sun, 22:00", 'ddd, HH:mm'),
         moment("Tue, 17:00", 'ddd, HH:mm'),
-        moment("Wed, 20:00", 'ddd, HH:mm'),
+        moment("Wed, 20:15", 'ddd, HH:mm'),
         moment("Wed, 22:00", 'ddd, HH:mm'),
-        moment("Thu, 20:00", 'ddd, HH:mm'),
+        moment("Thu, 20:15", 'ddd, HH:mm'),
         moment("Thu, 22:00", 'ddd, HH:mm'),
-        moment("Sat, 20:00", 'ddd, HH:mm'),
+        moment("Sat, 21:15", 'ddd, HH:mm'), //new time
         moment("Sun, 13:00", 'ddd, HH:mm'),
         moment("Sun, 17:00", 'ddd, HH:mm')
     ],
@@ -115,7 +115,7 @@ var bossesTimes = {
         moment("Mon, 8:00", 'ddd, HH:mm'),
         moment("Mon, 17:00", 'ddd, HH:mm'),
         moment("Tue, 13:00", 'ddd, HH:mm'),
-        moment("Tue, 20:00", 'ddd, HH:mm'),
+        moment("Tue, 20:15", 'ddd, HH:mm'),
         moment("Wed, 13:00", 'ddd, HH:mm'),
         moment("Wed, 17:00", 'ddd, HH:mm'),
         moment("Thu, 8:00", 'ddd, HH:mm'),
@@ -123,7 +123,7 @@ var bossesTimes = {
         moment("Fri, 8:00", 'ddd, HH:mm'),
         moment("Fri, 17:00", 'ddd, HH:mm'),
         moment("Sat, 13:00", 'ddd, HH:mm'),
-        moment("Sat, 20:00", 'ddd, HH:mm'),
+        moment("Sat, 21:15", 'ddd, HH:mm'), //new time
         moment("Sat, 22:00", 'ddd, HH:mm'),
         moment("Sun, 17:00", 'ddd, HH:mm')
     ]
