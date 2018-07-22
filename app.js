@@ -463,6 +463,18 @@ bot.on('message', async message => {
 		}
 	}
 
+	if(command === 'timer'){
+		if (!args[0]) return message.channel.send("timer what? [update]");
+		if(args[0] == "update" || args[0] == "up"){
+			message.channel.send("updating... wait 5 seconds");
+			setTimeout(sendBossTimers, 5000);
+			setTimeout(doneMessage, 5000);
+		}
+		
+	}
+function doneMessage() {
+	message.channel.send("DONE!");
+}
 	// if(command === 'timer1test'){
 	// 	timerFeed('kzarka');
 	// }
