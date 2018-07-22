@@ -164,16 +164,16 @@ function sortTimes() {
         }
     }
     showNearest();
-    setTimeout(sortTimes, 50000);
+    setTimeout(sortTimes, 299000);
 }
 
 
 function showNearest() {
 
-    if(nearestKz){var nnKz = getClosestNum(nearestKz, now);}else{var nnKz;}
-    if(nearestKu){var nnKu = getClosestNum(nearestKu, now);}else{var nnKu;}
-    if(nearestKa){var nnKa = getClosestNum(nearestKa, now);}else{var nnKa;}
-    if(nearestNv){var nnNv = getClosestNum(nearestNv, now);}else{var nnNv;}
+    if(nearestKz){var nnKz = getClosestNum(nearestKz, now);}
+    if(nearestKu){var nnKu = getClosestNum(nearestKu, now);}
+    if(nearestKa){var nnKa = getClosestNum(nearestKa, now);}
+    if(nearestNv){var nnNv = getClosestNum(nearestNv, now);}
     
     
     
