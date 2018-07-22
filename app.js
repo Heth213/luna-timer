@@ -20,7 +20,7 @@ bot.on('ready', () => {
 	logChannel.send('**تم تشغيل البوت**');
 	console.log('Online...');
 	setTimeout(settheGame, 2000);
-	sendBossTimers();
+	setTimeout(sendBossTimers, 5000);
 });
 
 bot.on('reconnecting', () => {
