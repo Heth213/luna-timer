@@ -164,7 +164,7 @@ function sortTimes() {
         }
     }
     showNearest();
-    setTimeout(sortTimes, 299000);
+    setTimeout(sortTimes, 60000);
 }
 
 
