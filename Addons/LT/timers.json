@@ -143,7 +143,7 @@
 		},
 		{
 			"name": "karanda",
-			"commandParser": "at 21:00 on Saturday"
+			"commandParser": "at 21:45 on Saturday"
 		},
 		{
 			"name": "karanda",
@@ -203,8 +203,9 @@
 		},
 		{
 			"name": "nouver",
-			"commandParser": "at 21:00 on Saturday"
+			"commandParser": "at 7:45 on Saturday"
 		},
+
 		{
 			"name": "nouver",
 			"commandParser": "at 21:45 on Saturday"
