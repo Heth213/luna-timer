@@ -107,7 +107,8 @@ var bossesTimes = {
         moment("Wed, 22:00", 'ddd, HH:mm'),
         moment("Thu, 20:15", 'ddd, HH:mm'),
         moment("Thu, 22:00", 'ddd, HH:mm'),
-        moment("Sat, 21:15", 'ddd, HH:mm'), //new time
+        // moment("Sat, 21:15", 'ddd, HH:mm'), //new time
+        moment("Sat, 22:00", 'ddd, HH:mm'),
         moment("Sun, 13:00", 'ddd, HH:mm'),
         moment("Sun, 17:00", 'ddd, HH:mm')
     ],
@@ -123,9 +124,10 @@ var bossesTimes = {
         moment("Fri, 8:00", 'ddd, HH:mm'),
         moment("Fri, 17:00", 'ddd, HH:mm'),
         moment("Sat, 13:00", 'ddd, HH:mm'),
-        moment("Sat, 21:15", 'ddd, HH:mm'), //new time
+        // moment("Sat, 21:15", 'ddd, HH:mm'), //new time
         moment("Sat, 22:00", 'ddd, HH:mm'),
-        moment("Sun, 17:00", 'ddd, HH:mm')
+        moment("Sun, 17:00", 'ddd, HH:mm'),
+        moment("Sun, 8:00", 'ddd, HH:mm')
     ]
 };
 
