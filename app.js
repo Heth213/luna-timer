@@ -392,7 +392,7 @@ function sendBossTimers() {
 						WB.nouverTT = "--"
 					}
 
-					bossChannel.send(" ** الزعماء العاديين ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` زعماء العالم ```md\n# Kzarka \n [" + WB.kzarkaTT + "](" + WB.kzarkaWB + ")  \n\n# Kutum \n [" + WB.kutumTT + "](" + WB.kutumWB + ") \n\n# Karanda \n [" + WB.karandaTT + "](" + WB.karandaWB + ") \n\n# Nouver \n [" + WB.nouverTT + "](" + WB.nouverWB + ")```  \n نسخة الويب: <https://goo.gl/58mkMh> \n مواعيد زعماء العالم: <https://i.imgur.com/w0F6yBe.jpg> ");
+					bossChannel.send(" ** الزعماء العاديين ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` زعماء العالم ```md\n# Kzarka \n [" + WB.kzarkaTT + "](" + WB.kzarkaWB + ")  \n\n# Kutum \n [" + WB.kutumTT + "](" + WB.kutumWB + ") \n\n# Karanda \n [" + WB.karandaTT + "](" + WB.karandaWB + ") \n\n# Nouver \n [" + WB.nouverTT + "](" + WB.nouverWB + ")```  \n نسخة الويب: <https://goo.gl/58mkMh> ");
 					// bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 					// bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
 
