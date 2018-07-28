@@ -201,7 +201,6 @@
 			"name": "nouver",
 			"commandParser": "at 12:45 on Saturday"
 		},
-
 		{
 			"name": "nouver",
 			"commandParser": "at 21:45 on Saturday"
@@ -209,6 +208,10 @@
 		{
 			"name": "nouver",
 			"commandParser": "at 16:45 on Sunday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 7:45 on Sunday"
 		}
 	]
 }
