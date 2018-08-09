@@ -71,10 +71,7 @@ function timerFeed(cond) {
 			}
 		};
 
-
-			generalChannel.send('<@&457842065804361731>');
-			DeleteOwn(1200000, generalChannel);
-			generalChannel.send({embed});
+			generalChannel.send('<@&457842065804361731>',{embed});
 			DeleteOwn(1200000, generalChannel);
 			sendDMtoRole("Kzarka", {embed});
 			break;
@@ -89,9 +86,7 @@ function timerFeed(cond) {
 		};
 
 
-			generalChannel.send('<@&457842332608364544>');
-			DeleteOwn(1200000, generalChannel);
-			generalChannel.send({embed});
+			generalChannel.send('<@&457842332608364544>',{embed});
 			DeleteOwn(1200000, generalChannel);
 			sendDMtoRole("Kutum", {embed});
 			break;
@@ -106,9 +101,8 @@ function timerFeed(cond) {
 		};
 
 
-			generalChannel.send('<@&457842269651730433>');
-			DeleteOwn(1200000, generalChannel);
-			generalChannel.send({embed});
+
+			generalChannel.send('<@&457842269651730433>',{embed});
 			DeleteOwn(1200000, generalChannel);
 			sendDMtoRole("Karanda", {embed});
 			break;
@@ -122,13 +116,42 @@ function timerFeed(cond) {
 			}
 		};
 
-
-			generalChannel.send('<@&457842228312670228>');
-			DeleteOwn(1200000, generalChannel);
-			generalChannel.send({embed});
+			generalChannel.send('<@&457842228312670228>',{embed});
 			DeleteOwn(1200000, generalChannel);
 			sendDMtoRole("Nouver", {embed});
 			break;
+
+
+
+			case 'quint':
+			var embed = {
+				color: 0xa781f3,
+				author: {
+					name: 'Quint ⤑ سيظهر بعد 15 دقيقة',
+					icon_url: 'https://i.imgur.com/TBVGZf0.png'
+				}
+			};
+	
+				generalChannel.send('<@&477025288371568650>',{embed});
+				DeleteOwn(1200000, generalChannel);
+				sendDMtoRole("Quint", {embed});
+				break;
+
+
+
+				case 'muraka':
+				var embed = {
+					color: 0xa781f3,
+					author: {
+						name: 'Muraka ⤑ سيظهر بعد 15 دقيقة',
+						icon_url: 'https://i.imgur.com/vl74REI.png'
+					}
+				};
+		
+					generalChannel.send('<@&477025463236165652>',{embed});
+					DeleteOwn(1200000, generalChannel);
+					sendDMtoRole("Muraka", {embed});
+					break;
 	}
 }
 
@@ -391,8 +414,14 @@ function sendBossTimers() {
 					if (WB.nouverTT == undefined) {
 						WB.nouverTT = "--"
 					}
+					if (WB.quintTT == undefined) {
+						WB.quintTT = "--"
+					}
+					if (WB.murakaTT == undefined) {
+						WB.murakaTT = "--"
+					}
 
-					bossChannel.send(" ** الزعماء العاديين ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` زعماء العالم ```md\n# Kzarka \n [" + WB.kzarkaTT + "](" + WB.kzarkaWB + ")  \n\n# Kutum \n [" + WB.kutumTT + "](" + WB.kutumWB + ") \n\n# Karanda \n [" + WB.karandaTT + "](" + WB.karandaWB + ") \n\n# Nouver \n [" + WB.nouverTT + "](" + WB.nouverWB + ")```  \n نسخة الويب: <https://goo.gl/58mkMh> ");
+					bossChannel.send(" ** الزعماء العاديين ** ```md\n# Bheg  \n <المتوقع: " + bhTime + ">                          " + bhDone + " \n# Red Nose  \n <المتوقع: " + rnTime + ">                          " + rnDone + " \n# Dim Tree Spirit  \n <المتوقع: " + dtTime + ">                          " + dtDone + " \n# Giant Mudster  \n <المتوقع: " + mdTime + ">                          " + mdDone + " ``` زعماء العالم ```md\n# Kzarka \n [" + WB.kzarkaTT + "](" + WB.kzarkaWB + ")  \n\n# Kutum \n [" + WB.kutumTT + "](" + WB.kutumWB + ") \n\n# Karanda \n [" + WB.karandaTT + "](" + WB.karandaWB + ") \n\n# Nouver \n [" + WB.nouverTT + "](" + WB.nouverWB + ") \n\n# Quint \n [" + WB.quintTT + "](" + WB.quintWB + ")\n\n# Muraka \n [" + WB.murakaTT + "](" + WB.murakaWB + ")```  \n نسخة الويب: <https://goo.gl/58mkMh> ");
 					// bossHrs.kzarka.kzHrs = moment.duration(kz - now).humanize();
 					// bossHrs.kutum.kuHrs = moment.duration(ku - now).humanize();
 
