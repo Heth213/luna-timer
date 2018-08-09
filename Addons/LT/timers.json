@@ -212,6 +212,20 @@
 		{
 			"name": "nouver",
 			"commandParser": "at 7:45 on Sunday"
+		},
+
+
+
+
+		{
+			"name": "quint",
+			"commandParser": "at 15:45 on Saturday"
+		},
+
+
+		{
+			"name": "muraka",
+			"commandParser": "at 15:45 on Saturday"
 		}
 	]
 }
