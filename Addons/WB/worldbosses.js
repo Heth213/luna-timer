@@ -14,12 +14,16 @@ var kzarkaWB = "جاري الحسب";
 var kutumWB = "جاري الحسب";
 var karandaWB = "جاري الحسب";
 var nouverWB = "جاري الحسب";
+var quintWB = "جاري الحسب";
+var murakaWB = "جاري الحسب";
 
 
 var nearestKz = [];
 var nearestKu = [];
 var nearestKa = [];
 var nearestNv = [];
+var nearestQu = [];
+var nearestMu = [];
 
 // ARABIC TIME TABLE [NOT NEEDED]
 // var bossesTimes = {
@@ -128,6 +132,12 @@ var bossesTimes = {
         moment("Sat, 22:00", 'ddd, HH:mm'),
         moment("Sun, 17:00", 'ddd, HH:mm'),
         moment("Sun, 8:00", 'ddd, HH:mm')
+    ],
+    "quint": [
+        moment("Sat, 16:00", 'ddd, HH:mm')
+    ],
+    "muraka": [
+        moment("Sat, 16:00", 'ddd, HH:mm')
     ]
 };
 
@@ -140,6 +150,8 @@ function sortTimes() {
     nearestKu = [];
     nearestKa = [];
     nearestNv = [];
+    nearestQu = [];
+    nearestMu = [];
     for (var i = 0; i < bossesTimes.kzarka.length; i++) {
         if (bossesTimes.kzarka[i] > now) {
             nearestKz.push(bossesTimes.kzarka[i]);
@@ -165,6 +177,18 @@ function sortTimes() {
             nearestNv.push(bossesTimes.nouver[i]);
         }
     }
+
+    for (var i = 0; i < bossesTimes.quint.length; i++) {
+        if (bossesTimes.quint[i] > now) {
+            nearestQu.push(bossesTimes.quint[i]);
+        }
+    }
+
+    for (var i = 0; i < bossesTimes.muraka.length; i++) {
+        if (bossesTimes.muraka[i] > now) {
+            nearestMu.push(bossesTimes.muraka[i]);
+        }
+    }
     showNearest();
     setTimeout(sortTimes, 60000);
 }
@@ -176,6 +200,8 @@ function showNearest() {
     if(nearestKu){var nnKu = getClosestNum(nearestKu, now);}
     if(nearestKa){var nnKa = getClosestNum(nearestKa, now);}
     if(nearestNv){var nnNv = getClosestNum(nearestNv, now);}
+    if(nearestQu){var nnQu = getClosestNum(nearestQu, now);}
+    if(nearestMu){var nnMu = getClosestNum(nearestMu, now);}
     
     
     
@@ -251,6 +277,43 @@ function showNearest() {
     } else {
         module.exports.nouverWB = 'يوم الاحد';
         module.exports.nouverTT = 'Sun, 1:00';
+    }
+
+
+    if (nnQu) {
+        for (var i = 0; i < bossesTimes.quint.length; i++) {
+            if (bossesTimes.quint[i] === nnQu) {
+                // var Dur = moment.duration(bossesTimes.quint[i] - now);
+                var BT = bossesTimes.quint[i];
+                var TT = moment(bossesTimes.quint[i]).add(3, 'hours');
+                var quintTT = TT.locale('en').format("ddd, HH:mm");
+                quintWB = BT.locale('ar').fromNow();
+                module.exports.quintWB = quintWB;
+                module.exports.quintTT = quintTT;
+            }
+        }
+    } else {
+        module.exports.quintWB = 'يوم السبت';
+        module.exports.quintTT = 'Sat, 19:00';
+    }
+
+
+
+    if (nnMu) {
+        for (var i = 0; i < bossesTimes.muraka.length; i++) {
+            if (bossesTimes.muraka[i] === nnMu) {
+                // var Dur = moment.duration(bossesTimes.muraka[i] - now);
+                var BT = bossesTimes.muraka[i];
+                var TT = moment(bossesTimes.muraka[i]).add(3, 'hours');
+                var murakaTT = TT.locale('en').format("ddd, HH:mm");
+                murakaWB = BT.locale('ar').fromNow();
+                module.exports.murakaWB = murakaWB;
+                module.exports.murakaTT = murakaTT;
+            }
+        }
+    } else {
+        module.exports.murakaWB = 'يوم السبت';
+        module.exports.murakaTT = 'Sat, 19:00';
     }
 }
 
