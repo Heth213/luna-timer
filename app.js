@@ -152,6 +152,20 @@ function timerFeed(cond) {
 					DeleteOwn(1200000, generalChannel);
 					sendDMtoRole("Muraka", {embed});
 					break;
+			
+				case 'offin':
+				var embed = {
+					color: 0x000000,
+					author: {
+						name: 'Offin ⤑ سيظهر بعد 15 دقيقة',
+						icon_url: 'https://i.imgur.com/TEEWpj2.png'
+					}
+				};
+
+					generalChannel.send('<@&506008396869140480>',{embed});
+					DeleteOwn(1200000, generalChannel);
+					sendDMtoRole("Quint", {embed});
+					break;
 	}
 }
 
