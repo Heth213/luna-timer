@@ -2,11 +2,15 @@
 {
 	"timez": [{
 			"name": "kzarka",
-			"commandParser": "at 12:45 on Monday"
+			"commandParser": "at 9:45 on Monday"
 		},
 		{
 			"name": "kzarka",
-			"commandParser": "at 20:00 on Monday"
+			"commandParser": "at 7:45 on Monday"
+		},
+		{
+			"name": "kzarka",
+			"commandParser": "at 12:45 on Monday"
 		},
 		{
 			"name": "kzarka",
@@ -14,11 +18,7 @@
 		},
 		{
 			"name": "kzarka",
-			"commandParser": "at 21:45 on Tuesday"
-		},
-		{
-			"name": "kzarka",
-			"commandParser": "at 16:45 on Tuesday"
+			"commandParser": "at 12:45 on Tuesday"
 		},
 		{
 			"name": "kzarka",
@@ -26,15 +26,19 @@
 		},
 		{
 			"name": "kzarka",
-			"commandParser": "at 12:45 on Thursday"
+			"commandParser": "at 16:45 on Wednesday"
 		},
 		{
 			"name": "kzarka",
-			"commandParser": "at 20:00 on Thursday"
+			"commandParser": "at 9:45 on Thursday"
 		},
 		{
 			"name": "kzarka",
-			"commandParser": "at 12:45 on Friday"
+			"commandParser": "at 7:45 on Thursday"
+		},
+		{
+			"name": "kzarka",
+			"commandParser": "at 7:45 on Friday"
 		},
 		{
 			"name": "kzarka",
@@ -42,19 +46,11 @@
 		},
 		{
 			"name": "kzarka",
-			"commandParser": "at 21:45 on Friday"
+			"commandParser": "at 12:45 on Saturday"
 		},
 		{
 			"name": "kzarka",
-			"commandParser": "at 7:45 on Saturday"
-		},
-		{
-			"name": "kzarka",
-			"commandParser": "at 12:45 on Sunday"
-		},
-		{
-			"name": "kzarka",
-			"commandParser": "at 20:00 on Sunday"
+			"commandParser": "at 7:45 on Sunday"
 		},
 
 
@@ -68,19 +64,19 @@
 		},
 		{
 			"name": "kutum",
-			"commandParser": "at 21:45 on Monday"
+			"commandParser": "at 9:45 on Tuesday"
 		},
 		{
 			"name": "kutum",
-			"commandParser": "at 12:45 on Tuesday"
+			"commandParser": "at 7:45 on Tuesday"
+		},
+		{
+			"name": "kutum",
+			"commandParser": "at 16:45 on Tuesday"
 		},
 		{
 			"name": "kutum",
 			"commandParser": "at 7:45 on Wednesday"
-		},
-		{
-			"name": "kutum",
-			"commandParser": "at 16:45 on Wednesday"
 		},
 		{
 			"name": "kutum",
@@ -92,15 +88,11 @@
 		},
 		{
 			"name": "kutum",
-			"commandParser": "at 12:45 on Friday"
+			"commandParser": "at 7:45 on Friday"
 		},
 		{
 			"name": "kutum",
-			"commandParser": "at 20:00 on Friday"
-		},
-		{
-			"name": "kutum",
-			"commandParser": "at 12:45 on Saturday"
+			"commandParser": "at 16:45 on Friday"
 		},
 		{
 			"name": "kutum",
@@ -108,18 +100,14 @@
 		},
 		{
 			"name": "kutum",
-			"commandParser": "at 20:00 on Sunday"
-		},
-		{
-			"name": "kutum",
-			"commandParser": "at 7:45 on Sunday"
+			"commandParser": "at 12:45 on Sunday"
 		},
 
 
 
 		{
 			"name": "karanda",
-			"commandParser": "at 21:45 on Sunday"
+			"commandParser": "at 16:45 on Monday"
 		},
 		{
 			"name": "karanda",
@@ -127,31 +115,31 @@
 		},
 		{
 			"name": "karanda",
-			"commandParser": "at 20:00 on Wednesday"
+			"commandParser": "at 9:45 on Wednesday"
 		},
 		{
 			"name": "karanda",
-			"commandParser": "at 21:45 on Wednesday"
+			"commandParser": "at 16:45 on Wednesday"
 		},
 		{
 			"name": "karanda",
-			"commandParser": "at 20:00 on Thursday"
+			"commandParser": "at 12:45 on Thursday"
 		},
 		{
 			"name": "karanda",
-			"commandParser": "at 21:45 on Thursday"
+			"commandParser": "at 9:45 on Saturday"
 		},
 		{
 			"name": "karanda",
-			"commandParser": "at 21:45 on Saturday"
+			"commandParser": "at 12:45 on Saturday"
+		},
+		{
+			"name": "karanda",
+			"commandParser": "at 9:45 on Sunday"
 		},
 		{
 			"name": "karanda",
 			"commandParser": "at 12:45 on Sunday"
-		},
-		{
-			"name": "karanda",
-			"commandParser": "at 16:45 on Sunday"
 		},
 
 		
@@ -171,15 +159,11 @@
 		},
 		{
 			"name": "nouver",
-			"commandParser": "at 20:00 on Tuesday"
+			"commandParser": "at 7:45 on Wednesday"
 		},
 		{
 			"name": "nouver",
 			"commandParser": "at 12:45 on Wednesday"
-		},
-		{
-			"name": "nouver",
-			"commandParser": "at 16:45 on Wednesday"
 		},
 		{
 			"name": "nouver",
@@ -191,27 +175,23 @@
 		},
 		{
 			"name": "nouver",
-			"commandParser": "at 7:45 on Friday"
+			"commandParser": "at 9:45 on Friday"
 		},
 		{
 			"name": "nouver",
-			"commandParser": "at 16:45 on Friday"
+			"commandParser": "at 12:45 on Friday"
 		},
 		{
 			"name": "nouver",
-			"commandParser": "at 12:45 on Saturday"
-		},
-		{
-			"name": "nouver",
-			"commandParser": "at 21:45 on Saturday"
-		},
-		{
-			"name": "nouver",
-			"commandParser": "at 16:45 on Sunday"
+			"commandParser": "at 7:45 on Saturday"
 		},
 		{
 			"name": "nouver",
 			"commandParser": "at 7:45 on Sunday"
+		},
+		{
+			"name": "nouver",
+			"commandParser": "at 16:45 on Sunday"
 		},
 
 
@@ -221,11 +201,21 @@
 			"name": "quint",
 			"commandParser": "at 15:45 on Saturday"
 		},
-
-
 		{
 			"name": "muraka",
 			"commandParser": "at 15:45 on Saturday"
+		},
+		{
+			"name": "offin",
+			"commandParser": "at 20:00 on Wednesday"
+		},
+		{
+			"name": "offin",
+			"commandParser": "at 20:00 on Friday"
+		},
+		{
+			"name": "offin",
+			"commandParser": "at 21:00 on Saturday"
 		}
 	]
 }
