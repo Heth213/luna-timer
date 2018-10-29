@@ -2,7 +2,7 @@
 {
 	"timez": [{
 			"name": "kzarka",
-			"commandParser": "at 9:45 on Monday"
+			"commandParser": "at 21:45 on Monday"
 		},
 		{
 			"name": "kzarka",
@@ -30,7 +30,7 @@
 		},
 		{
 			"name": "kzarka",
-			"commandParser": "at 9:45 on Thursday"
+			"commandParser": "at 21:45 on Thursday"
 		},
 		{
 			"name": "kzarka",
@@ -64,7 +64,7 @@
 		},
 		{
 			"name": "kutum",
-			"commandParser": "at 9:45 on Tuesday"
+			"commandParser": "at 21:45 on Tuesday"
 		},
 		{
 			"name": "kutum",
@@ -112,7 +112,7 @@
 		},
 		{
 			"name": "karanda",
-			"commandParser": "at 9:45 on Wednesday"
+			"commandParser": "at 21:45 on Wednesday"
 		},
 		{
 			"name": "karanda",
@@ -124,7 +124,7 @@
 		},
 		{
 			"name": "karanda",
-			"commandParser": "at 9:45 on Saturday"
+			"commandParser": "at 21:45 on Saturday"
 		},
 		{
 			"name": "karanda",
@@ -132,7 +132,7 @@
 		},
 		{
 			"name": "karanda",
-			"commandParser": "at 9:45 on Sunday"
+			"commandParser": "at 21:45 on Sunday"
 		},
 		{
 			"name": "karanda",
@@ -172,7 +172,7 @@
 		},
 		{
 			"name": "nouver",
-			"commandParser": "at 9:45 on Friday"
+			"commandParser": "at 21:45 on Friday"
 		},
 		{
 			"name": "nouver",
