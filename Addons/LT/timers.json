@@ -212,7 +212,7 @@
 		},
 		{
 			"name": "offin",
-			"commandParser": "at 21:00 on Saturday"
+			"commandParser": "at 21:00 on Sunday"
 		}
 	]
 }
